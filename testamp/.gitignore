@@ -1,0 +1,6 @@
+**/.cache
+**/*.swp
+**/compile_commands.json
+**/*.a
+**/*.so
+**/*.o

@@ -1,0 +1,10 @@
+**/*.o
+**/*.so
+**/user
+**/.gdb_history
+**/.vscode
+**/compile_commands.json
+**/a.out
+**/.cache
+**/*.swp
+**/__pycache__
