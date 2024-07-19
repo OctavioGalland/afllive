@@ -59,6 +59,7 @@ typedef struct sharedmem {
 u8  *afl_shm_init(sharedmem_t *, size_t, unsigned char non_instrumented_mode);
 u8  *afl_arg_shm_init(sharedmem_t *, size_t);
 void afl_shm_deinit(sharedmem_t *);
+void afl_shm_deinit_no_unset(sharedmem_t *);
 
 #endif
 

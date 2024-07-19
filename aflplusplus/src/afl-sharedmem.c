@@ -64,6 +64,69 @@ static list_t shm_list = {.element_prealloc_count = 0};
 
 /* Get rid of shared memory. */
 
+void afl_shm_deinit_no_unset(sharedmem_t *shm) {
+
+  if (shm == NULL) { return; }
+  list_remove(&shm_list, shm);
+
+#ifdef USEMMAP
+  if (shm->map != NULL) {
+
+    munmap(shm->map, shm->map_size);
+    shm->map = NULL;
+
+  }
+
+  if (shm->g_shm_fd != -1) {
+
+    close(shm->g_shm_fd);
+    shm->g_shm_fd = -1;
+
+  }
+
+  if (shm->g_shm_file_path[0]) {
+
+    shm_unlink(shm->g_shm_file_path);
+    shm->g_shm_file_path[0] = 0;
+
+  }
+
+  if (shm->cmplog_mode) {
+
+    unsetenv(CMPLOG_SHM_ENV_VAR);
+
+    if (shm->cmp_map != NULL) {
+
+      munmap(shm->cmp_map, shm->map_size);
+      shm->cmp_map = NULL;
+
+    }
+
+    if (shm->cmplog_g_shm_fd != -1) {
+
+      close(shm->cmplog_g_shm_fd);
+      shm->cmplog_g_shm_fd = -1;
+
+    }
+
+    if (shm->cmplog_g_shm_file_path[0]) {
+
+      shm_unlink(shm->cmplog_g_shm_file_path);
+      shm->cmplog_g_shm_file_path[0] = 0;
+
+    }
+
+  }
+
+#else
+  shmctl(shm->shm_id, IPC_RMID, NULL);
+  if (shm->cmplog_mode) { shmctl(shm->cmplog_shm_id, IPC_RMID, NULL); }
+#endif
+
+  shm->map = NULL;
+
+}
+
 void afl_shm_deinit(sharedmem_t *shm) {
 
   if (shm == NULL) { return; }
