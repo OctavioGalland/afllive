@@ -756,6 +756,7 @@ void get_seeds_from_runtime(afl_state_t *afl) {
         strcat(blacklist, entry);
         strcat(blacklist, ":");
         setenv("AH_BLACKLIST", blacklist, 1);
+        afl->amountOfTargets--;
         failedFunctionFound = true;
         break;
       }
@@ -764,7 +765,7 @@ void get_seeds_from_runtime(afl_state_t *afl) {
     if (!failedFunctionFound) {
       break;
     }
-    memset(afl->arg_map, 0, MAX_TARGETS * (MAX_TARGETNAME_LENGTH + 4 + MAX_FILE));
+    memset(afl->arg_map, 0, afl->amountOfTargets * (MAX_TARGETNAME_LENGTH + 4 + MAX_FILE));
     // restart the forkserver so that it can access the new environment
     afl_fsrv_kill(&afl->fsrv);
     afl_fsrv_start(&afl->fsrv, afl->argv, &afl->stop_soon,
@@ -794,7 +795,7 @@ void get_seeds_from_runtime(afl_state_t *afl) {
     u8 *targetData = NULL;
 
     u8 *entry = afl->arg_map;
-    for (u32 j = 0; j < MAX_TARGETS ;j++) {
+    for (u32 j = 0; j < afl->amountOfTargets ;j++) {
       u32 entryLen = *(u32*)(entry + MAX_TARGETNAME_LENGTH);
 
       if (strncmp(entry, afl->targetNames[i], MAX_TARGETNAME_LENGTH) == 0) {
