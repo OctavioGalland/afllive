@@ -2192,9 +2192,6 @@ int main(int argc, char **argv_orig, char **envp) {
 
     }
 
-    afl_shm_deinit(afl->arg_shm_fuzz);
-    ck_free(afl->arg_shm_fuzz);
-
   }
 
   perform_dry_run(afl);
