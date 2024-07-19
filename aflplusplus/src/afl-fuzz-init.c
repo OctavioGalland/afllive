@@ -2831,7 +2831,7 @@ static void handle_skipreq(int sig) {
 
 void init_arg_feedback_channel(afl_state_t *afl) {
   afl->arg_shm_fuzz = ck_alloc(sizeof(sharedmem_t));
-  u64 mapLen = (MAX_TARGETNAME_LENGTH + sizeof(u32) + MAX_FILE) * MAX_TARGETS;
+  u64 mapLen = (MAX_TARGETNAME_LENGTH + sizeof(u32) + MAX_FILE) * afl->amountOfTargets;
   u8 *map = afl_arg_shm_init(afl->arg_shm_fuzz, mapLen);
   memset(map, 0, mapLen);
   if (!map) { FATAL("BUG: Zero return from afl_arg_shm_init."); }
