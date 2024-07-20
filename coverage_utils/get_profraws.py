@@ -54,13 +54,13 @@ def process_batch(batch_no):
     for file in batch:
         get_profraw(file, f'{output_folder}/config_{batch_no}.json')
 
+if mode == 'afl':
+    muted_system(f'AFL_DISABLE_LLVM_INSTRUMENTATION=1 LLVM_PROFILE_FILE="{output_folder}/baseline.profraw" timeout -k 1 180 {cmdline}')
 threads = []
 
 for i in range(nproc):
     t = Thread(target=process_batch, args=(i,))
     threads.append(t)
-if mode == 'afl':
-    muted_system(f'AFL_DISABLE_LLVM_INSTRUMENTATION=1 LLVM_PROFILE_FILE="{output_folder}/baseline.profraw" timeout -k 1 180 {cmdline}')
 [t.start() for t in threads]
 [t.join() for t in threads]
 
