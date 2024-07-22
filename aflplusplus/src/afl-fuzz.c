@@ -2692,12 +2692,12 @@ stop_fuzzing:
 
   }
 
-  if (afl->arg_shm_fuzz) {
+  // if (afl->arg_shm_fuzz) {
 
-    afl_shm_deinit(afl->arg_shm_fuzz);
-    ck_free(afl->arg_shm_fuzz);
+  //   afl_shm_deinit(afl->arg_shm_fuzz);
+  //   ck_free(afl->arg_shm_fuzz);
 
-  }
+  // }
 
   afl_fsrv_deinit(&afl->fsrv);
 
