@@ -43,7 +43,8 @@ skipPred = {
     'libvpx': lambda l, i: '/harness.cpp' in l,
     'boringssl': lambda l, i: ('build' in l) or ('third_party' in l) or ('fuzz' in l) or ('test' in l),
     'bzip2': lambda l, i: 'bzip2_decompress_target' in l,
-    'libass': lambda l, i: ('libass' not in l) or ('fuzz' in l)
+    'libass': lambda l, i: ('libass' not in l) or ('fuzz' in l),
+    'leptonica': lambda l, i: 'leptonica-1.83.0' not in l,
 }
 
 def covreport2linecount(report):
