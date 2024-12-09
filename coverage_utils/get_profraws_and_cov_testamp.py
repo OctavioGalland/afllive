@@ -55,9 +55,9 @@ for fuzzing_campaign_root in fuzzing_campaigns:
     for (_, filename) in list_files_and_creation_date_ordered(corpus_folder):
         os.symlink(f'{corpus_folder}/{filename}', f'{unified_corpus_folder}/{filename}-{name}')
         os.symlink(f'{corpus_folder}/{filename}', f'{fake_corpus_folder}/{filename}-{name}')
-    cmdline = ' '.join(['python3', '/opt/autoharness/utils/coverage/get_profraws.py', 'afl']  + [f"'{i}'" for i in [binary, cmdline, fake_corpus_folder, config_path, nproc, profraws_folder]])
+    cmdline = ' '.join(['python3', '/opt/afllive/coverage_utils/get_profraws.py', 'afl']  + [f"'{i}'" for i in [binary, cmdline, fake_corpus_folder, config_path, nproc, profraws_folder]])
     os.system(cmdline + ' > /dev/null')
     os.system(f'rm -rf {fake_corpus_folder}')
 
-os.system(' '.join(['python3', '/opt/autoharness/utils/coverage/get_cov_from_profraws.py', 'afl'] + [f"'{i}'" for i in [project, iteration, binary, unified_corpus_folder, profraws_folder, nproc]]))
+os.system(' '.join(['python3', '/opt/afllive/coverage_utils/get_cov_from_profraws.py', 'afl'] + [f"'{i}'" for i in [project, iteration, binary, unified_corpus_folder, profraws_folder, nproc]]))
 
