@@ -24,7 +24,7 @@ def list_files_and_creation_date_ordered(path):
     return list(reversed(files))
 
 def list_fuzzing_campaigns(root):
-    return [f'{root}/{i[1]}' for i in list_files_and_creation_date_ordered(root)]
+    return [f'{root}/{i[1]}' for i in list_files_and_creation_date_ordered(root) if 'pwds.json' not in i[1]]
 
 def get_cmdline(campaign_root):
     cmdline = ''
