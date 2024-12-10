@@ -61,6 +61,9 @@ for fuzzing_campaign_root in fuzzing_campaigns:
         os.symlink(f'{corpus_folder}/{filename}', f'{unified_corpus_folder}/{filename}-{name}')
         os.symlink(f'{corpus_folder}/{filename}', f'{fake_corpus_folder}/{filename}-{name}')
     cmdline = ' '.join(['python3', '/opt/afllive/coverage_utils/get_profraws.py', 'afl']  + [f"'{i}'" for i in [binary, cmdline, fake_corpus_folder, config_path, nproc, profraws_folder]])
+    # workaround for specific openssl coverage issue
+    if project == 'openssl' and 'test-runs/test_store/store_' in campaign_pwd:
+        campaign_pwd = campaign_pwd[:campaign_pwd.rfind('_')+1] + '*'
     os.system(f'cd {campaign_pwd} && ' + cmdline + ' > /dev/null')
     os.system(f'rm -rf {fake_corpus_folder}')
 
