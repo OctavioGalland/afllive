@@ -100,7 +100,10 @@ while len(fuzzed_targets) < len(executed_targets):
         cmd = best_fuzz_cmd[1]
         fuzzing_quota = math.ceil(24 * 60 * 60 * len(best_fuzz_cmd_targets) / len(executed_targets))
         cmd = cmd.replace(' afl-fuzz ', 'AH_BLACKLIST=\':' + ':'.join(fuzzed_targets) + ':\' afl-fuzz ')
-        cmd = cmd.replace('afl-fuzz ', f'afl-fuzz -V {fuzzing_quota} ')
+        # set a timeout on top of afl's timeout, as a contingency in case afl itself gets stuck make sure
+        # to give it enough time to initialize, the target can take a while to reach the instrumented
+        # part of the code
+        cmd = cmd.replace('afl-fuzz ', f'timeout -k 1 {fuzzing_quota * 2 + 180} afl-fuzz -V {fuzzing_quota} ')
         if 'ASAN_OPTIONS=' in cmd:
             cmd = cmd.replace('ASAN_OPTIONS=\'', 'ASAN_OPTIONS=\'symbolize=0:abort_on_error=1:')
         targets = best_fuzz_cmd[0].difference(fuzzed_targets)
