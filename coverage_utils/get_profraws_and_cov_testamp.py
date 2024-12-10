@@ -39,11 +39,18 @@ def get_campaign_name(campaign_root):
 
 fuzzing_campaigns = list_fuzzing_campaigns(fuzzing_folders_root)
 
-
 # We assume that campaigns took place sequentially, instead we should collect all corpuses and go through them in order
 # problem: get_cov_from_profraws reads timestamps for each input from the corpus in a single folder, but we have several corpuses
 for fuzzing_campaign_root in fuzzing_campaigns:
     cmdline = get_cmdline(fuzzing_campaign_root)
+
+    executable = cmdline.split()[0].strip('\'"')
+    campaign_pwd = '/opt/'
+    if executable[0] != '/':
+        executable = executable.removeprefix('./')
+        campaign_pwd = subprocess.run(['find', '.', '-wholename', './*' + executable], stdout=subprocess.PIPE).stdout.decode()
+        campaign_pwd = campaign_pwd[:campaign_pwd.find(executable)]
+
     corpus_folder = get_corpus_folder(fuzzing_campaign_root)
     name = get_campaign_name(fuzzing_campaign_root)
     fake_corpus_folder = tempfile.mkdtemp()
@@ -56,7 +63,7 @@ for fuzzing_campaign_root in fuzzing_campaigns:
         os.symlink(f'{corpus_folder}/{filename}', f'{unified_corpus_folder}/{filename}-{name}')
         os.symlink(f'{corpus_folder}/{filename}', f'{fake_corpus_folder}/{filename}-{name}')
     cmdline = ' '.join(['python3', '/opt/afllive/coverage_utils/get_profraws.py', 'afl']  + [f"'{i}'" for i in [binary, cmdline, fake_corpus_folder, config_path, nproc, profraws_folder]])
-    os.system(cmdline + ' > /dev/null')
+    os.system(f'cd {campaign_pwd} && ' + cmdline + ' > /dev/null')
     os.system(f'rm -rf {fake_corpus_folder}')
 
 os.system(' '.join(['python3', '/opt/afllive/coverage_utils/get_cov_from_profraws.py', 'afl'] + [f"'{i}'" for i in [project, iteration, binary, unified_corpus_folder, profraws_folder, nproc]]))
