@@ -39,20 +39,17 @@ def get_campaign_name(campaign_root):
 
 fuzzing_campaigns = list_fuzzing_campaigns(fuzzing_folders_root)
 
+fuzzing_pwds = {}
+with open(f'{fuzzing_folders_root}/pwds.json', 'r') as f:
+    fuzzing_pwds = json.load(f)
+
 # We assume that campaigns took place sequentially, instead we should collect all corpuses and go through them in order
 # problem: get_cov_from_profraws reads timestamps for each input from the corpus in a single folder, but we have several corpuses
 for fuzzing_campaign_root in fuzzing_campaigns:
     cmdline = get_cmdline(fuzzing_campaign_root)
-
-    executable = cmdline.split()[0].strip('\'"')
-    campaign_pwd = '/opt/'
-    if executable[0] != '/':
-        executable = executable.removeprefix('./')
-        campaign_pwd = subprocess.run(['find', '.', '-wholename', './*' + executable], stdout=subprocess.PIPE).stdout.decode()
-        campaign_pwd = campaign_pwd[:campaign_pwd.find(executable)]
-
     corpus_folder = get_corpus_folder(fuzzing_campaign_root)
     name = get_campaign_name(fuzzing_campaign_root)
+    campaign_pwd = fuzzing_pwds[name]
     fake_corpus_folder = tempfile.mkdtemp()
     # get_profraws expects a directory with nothing but the input corpus, and it will create similarly
     # named .profraw files in the output folder. In order to avoid collissions between corpus entries

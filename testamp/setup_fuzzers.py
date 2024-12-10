@@ -27,6 +27,8 @@ def isTargetInSignature(target, signature):
         return True
     return False
 
+fuzzing_pwds = {}
+
 def get_fuzzing_commands():
     fuzzingCommands = []
     state = ''
@@ -67,6 +69,7 @@ def get_fuzzing_commands():
                     fuzzingCommand = fuzzingCommand + f' afl-fuzz -o /opt/fuzzing/fuzzer_{i} -t 10000 -- ' + line + f'  '
                 elif state == CWD_STATE:
                     fuzzingCommand = 'cd ' + line + ' && ' + fuzzingCommand
+                    fuzzing_pwds[f'fuzzer_{i}'] = line
         fuzzingCommands.append((targetsToFuzz, fuzzingCommand))
     return fuzzingCommands
 
@@ -74,6 +77,9 @@ os.system('rm -rf /opt/fuzzing/*')
 os.system('mkdir /opt/fuzzing')
 print('Collecting fuzzing info')
 fuzzing_commands = get_fuzzing_commands()
+
+with open(f'/opt/fuzzing/pwds.json', 'w') as f:
+    f.write(json.dumps(fuzzing_pwds, indent=4))
 
 print('Starting fuzzers')
 fuzzed_targets = set()
