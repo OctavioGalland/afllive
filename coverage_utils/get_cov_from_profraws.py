@@ -35,9 +35,9 @@ def list_files(directory):
 
 skipPred = {
     'freetype2': lambda l, i: False,
-    'libxml2': lambda l, i: i == 30,
-    'openssl': lambda l, i: 'apps/' in l,
-    'opus': lambda l, i: 'opus_demo.c' in l,
+    'libxml2': lambda l, i: 'doc' in l or 'fuzz' in l or 'testapi.c' in l,
+    'openssl': lambda l, i: 'apps/' in l or 'test/' in l or 'fuzz/' in l,
+    'opus': lambda l, i: 'opus_demo.c' in l or 'test_opus_api.c' in l,
     'zlib': lambda l, i: 'test/example.c' in l,
     'libaom': lambda l, i: any([keyword in l for keyword in ['third_party', 'y4menc.c', 'webmdec.cc', 'video_reader.c', 'tools_common.c', 'rawenc.c', 'obudec.c', 'md5_utils.c', 'ivfdec.c', 'av1_config.c', 'args.c']]),
     'libvpx': lambda l, i: any([keyword in l for keyword in ['third_party', 'vpxdec.c', 'webmdec.cc', 'y4menc.c', 'y4minput.c', 'args.c', 'ivfdec.c', 'md5_utils.c', 'tools_common.c']]),
