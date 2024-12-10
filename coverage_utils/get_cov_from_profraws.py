@@ -66,7 +66,12 @@ def covreport2linecount(report):
 def get_coverage(files):
     combined_profile_filename = f'/tmp/coverage_{project}_{iteration}_combined.profdata'
     proffileslist = ' '.join([f'{profraw_folder}/{file}' for file in files])
-    subprocess.run((f'llvm-profdata-14 merge --num-threads={nproc} -sparse ' + (f'{profraw_folder}/baseline.profraw' if mode == 'afl' else '') + f' {proffileslist} -o {combined_profile_filename}').split(' '))
+    extras = ''
+    if mode == 'afl':
+        extras += f' {profraw_folder}/baseline.profraw '
+        if os.path.isfile('/opt/baseline.profdata'):
+            extras += '/opt/baseline.profdata '
+    subprocess.run((f'llvm-profdata-14 merge --num-threads={nproc} -sparse' + extras + f'{proffileslist} -o {combined_profile_filename}').split(' '))
     report_cmd = f'llvm-cov-14 report {binary} -instr-profile={combined_profile_filename}'
     output = subprocess.run(report_cmd.split(' '), stdout=subprocess.PIPE, stderr=subprocess.PIPE).stdout.decode('utf-8')
     return covreport2linecount(output)

@@ -37,7 +37,7 @@ def get_profraw(file, tmp_configpath):
         with open(tmp_configpath, 'w') as f:
             json.dump(config, f, indent=4)
         muted_system(f'AFL_DISABLE_LLVM_INSTRUMENTATION=1 AH_CONFIG="{tmp_configpath}" LLVM_PROFILE_FILE="{proffile}" timeout -k 1 100 {cmdline} < {corpus_folder}/{file}')
-        if not os.path.isfile(proffile):
+        if not os.path.isfile(proffile) or os.path.getsize(proffile) == 0:
             print(f'{proffile} not created, stubbing!')
             os.system(f'cp {output_folder}/baseline.profraw {proffile}')
     elif mode == 'libfuzzer':
