@@ -3,6 +3,7 @@ import sys
 import subprocess
 import tempfile
 import datetime
+import json
 
 _, project, binary, config_path, iteration, fuzzing_folders_root, profraws_folder, nproc = sys.argv
 
