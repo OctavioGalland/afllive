@@ -68,10 +68,10 @@ def get_coverage(files):
     proffileslist = ' '.join([f'{profraw_folder}/{file}' for file in files])
     extras = ''
     if mode == 'afl':
-        extras += f' {profraw_folder}/baseline.profraw '
+        extras += f' {profraw_folder}/baseline.profraw'
         if os.path.isfile('/opt/baseline.profdata'):
-            extras += '/opt/baseline.profdata '
-    subprocess.run((f'llvm-profdata-14 merge --num-threads={nproc} -sparse' + extras + f'{proffileslist} -o {combined_profile_filename}').split(' '))
+            extras += ' /opt/baseline.profdata'
+    subprocess.run((f'llvm-profdata-14 merge --num-threads={nproc} -sparse' + extras + f' {proffileslist} -o {combined_profile_filename}').split(' '))
     report_cmd = f'llvm-cov-14 report {binary} -instr-profile={combined_profile_filename}'
     output = subprocess.run(report_cmd.split(' '), stdout=subprocess.PIPE, stderr=subprocess.PIPE).stdout.decode('utf-8')
     return covreport2linecount(output)
