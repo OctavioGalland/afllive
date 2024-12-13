@@ -1,0 +1,9 @@
+{
+    "root": "/opt/afllive",
+    "typeinfo_file": "/opt/typeinfo.json",
+    "fork_on_init": true,
+    "max_millis": 10,
+    "targets": [],
+    "constraints": {},
+    "skip": {}
+}

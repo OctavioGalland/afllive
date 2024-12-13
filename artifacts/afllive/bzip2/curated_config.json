@@ -1,0 +1,60 @@
+{
+    "root": "/opt/afllive",
+	"typeinfo_file": "/opt/typeinfo.json",
+    "targets": [
+        "BZ2_bzBuffToBuffDecompress",
+        "BZ2_bzBuffToBuffCompress",
+		"uncompress"
+    ],
+    "constraints": {
+        "BZ2_bzBuffToBuffCompress": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "BZ2_bzBuffToBuffDecompress": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+		"uncompress": [
+			{
+				"lhs": 0,
+				"is_file": 1
+			}
+		]
+    },
+    "skip": {
+        "BZ2_bzBuffToBuffCompress": [
+            0,
+            1,
+            4,
+            5,
+            6
+        ],
+        "BZ2_bzBuffToBuffDecompress": [
+            0,
+            1,
+            4,
+            5
+        ]
+    }
+}

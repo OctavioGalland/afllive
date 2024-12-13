@@ -1,0 +1,735 @@
+{
+	"root": "/opt/afllive",
+	"typeinfo_file": "/opt/typeinfo.json",
+    "fork_on_init": false,
+	"max_millis": 15,
+    "targets": [
+        "BIO_rw_filename",
+        "BIO_append_filename",
+        "BIO_write_filename",
+        "BIO_new_file",
+        "do_buf",
+        "file_gets",
+        "file_write",
+        "decode_dec",
+        "decode_hex",
+        "EVP_tls_cbc_digest_record",
+        "EVP_EncryptUpdate",
+        "EVP_DecryptUpdate",
+        "EVP_CipherUpdate",
+        "tls_cbc_digest_record_sha1",
+        "tls_cbc_digest_record_sha256",
+        "CONF_modules_load_file",
+        "CRYPTO_free",
+        "CRYPTO_realloc",
+        "CRYPTO_malloc",
+        "PKCS12_verify_mac",
+        "PKCS8_decrypt",
+        "PKCS8_marshal_encrypted_private_key",
+        "PKCS8_encrypt",
+        "RSA_verify_pss_mgf1",
+        "RSA_verify_PKCS1_PSS",
+        "RSA_verify_PKCS1_PSS_mgf1",
+        "X509_load_cert_crl_file",
+        "X509_load_crl_file",
+        "X509_load_cert_file",
+        "SSL_add_file_cert_subjects_to_stack",
+        "SSL_set_srtp_profiles",
+        "SSL_CTX_set_srtp_profiles",
+        "SSL_load_client_CA_file",
+        "SSL_CTX_load_verify_locations",
+        "SSL_CTX_use_certificate_chain_file",
+        "SSL_use_PrivateKey_file",
+        "SSL_CTX_use_PrivateKey_file",
+        "SSL_use_certificate_file",
+        "SSL_CTX_use_certificate_file",
+        "SSL_use_RSAPrivateKey_file",
+        "SSL_CTX_use_RSAPrivateKey_file",
+        "ssl_ctx_make_profiles",
+        "find_profile_by_name"
+    ],
+    "constraints": {
+        "BIO_rw_filename": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "BIO_append_filename": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "BIO_write_filename": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "BIO_new_file": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "do_buf": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "file_gets": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "file_write": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "decode_dec": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "decode_hex": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "EVP_tls_cbc_digest_record": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "eq",
+                "lhs": 2,
+                "rhs": 3
+            },
+            {
+                "rel": "le",
+                "lhs": 3,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "EVP_EncryptUpdate": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "EVP_DecryptUpdate": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "EVP_CipherUpdate": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "tls_cbc_digest_record_sha1": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "eq",
+                "lhs": 2,
+                "rhs": 3
+            },
+            {
+                "rel": "le",
+                "lhs": 3,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "tls_cbc_digest_record_sha256": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "eq",
+                "lhs": 2,
+                "rhs": 3
+            },
+            {
+                "rel": "le",
+                "lhs": 3,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "CONF_modules_load_file": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            },
+            {
+                "rel": "eq",
+                "lhs": 1,
+                "is_file": true
+            }
+        ],
+        "CRYPTO_free": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "CRYPTO_realloc": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "CRYPTO_malloc": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "PKCS12_verify_mac": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "PKCS8_decrypt": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "PKCS8_marshal_encrypted_private_key": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "eq",
+                "lhs": 2,
+                "rhs": 3
+            },
+            {
+                "rel": "le",
+                "lhs": 3,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "PKCS8_encrypt": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "eq",
+                "lhs": 2,
+                "rhs": 3
+            },
+            {
+                "rel": "le",
+                "lhs": 3,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "RSA_verify_pss_mgf1": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "eq",
+                "lhs": 2,
+                "rhs": 3
+            },
+            {
+                "rel": "le",
+                "lhs": 3,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "RSA_verify_PKCS1_PSS": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "RSA_verify_PKCS1_PSS_mgf1": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "X509_load_cert_crl_file": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "X509_load_crl_file": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "X509_load_cert_file": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "SSL_add_file_cert_subjects_to_stack": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "SSL_set_srtp_profiles": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "SSL_CTX_set_srtp_profiles": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "SSL_load_client_CA_file": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "SSL_CTX_load_verify_locations": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "SSL_CTX_use_certificate_chain_file": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "SSL_use_PrivateKey_file": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "SSL_CTX_use_PrivateKey_file": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "SSL_use_certificate_file": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "SSL_CTX_use_certificate_file": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "SSL_use_RSAPrivateKey_file": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "SSL_CTX_use_RSAPrivateKey_file": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "ssl_ctx_make_profiles": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "find_profile_by_name": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ]
+    },
+    "skip": {
+        "BIO_rw_filename": [
+            0
+        ],
+        "BIO_append_filename": [
+            0
+        ],
+        "BIO_write_filename": [
+            0
+        ],
+        "BIO_new_file": [
+            1
+        ],
+        "do_buf": [
+            2,
+            3,
+            4,
+            5
+        ],
+        "file_gets": [
+            0
+        ],
+        "file_write": [
+            0
+        ],
+        "decode_dec": [
+            0
+        ],
+        "decode_hex": [
+            0
+        ],
+        "EVP_tls_cbc_digest_record": [
+            0,
+            1,
+            2,
+            3,
+            6
+        ],
+        "EVP_EncryptUpdate": [
+            0,
+            1,
+            2
+        ],
+        "EVP_DecryptUpdate": [
+            0,
+            1,
+            2
+        ],
+        "EVP_CipherUpdate": [
+            0,
+            1,
+            2
+        ],
+        "tls_cbc_digest_record_sha1": [
+            0,
+            1,
+            2,
+            5
+        ],
+        "tls_cbc_digest_record_sha256": [
+            0,
+            1,
+            2,
+            5
+        ],
+        "CONF_modules_load_file": [
+            2
+        ],
+        "CRYPTO_free": [
+            0,
+            2
+        ],
+        "CRYPTO_realloc": [
+            0,
+            1,
+            3
+        ],
+        "CRYPTO_malloc": [
+            0,
+            2
+        ],
+        "PKCS12_verify_mac": [
+            0
+        ],
+        "PKCS8_decrypt": [
+            0
+        ],
+        "PKCS8_marshal_encrypted_private_key": [
+            0,
+            1,
+            2,
+            7,
+            8
+        ],
+        "PKCS8_encrypt": [
+            0,
+            1,
+            6,
+            7
+        ],
+        "RSA_verify_pss_mgf1": [
+            0,
+            3,
+            4,
+            5
+        ],
+        "RSA_verify_PKCS1_PSS": [
+            0,
+            1,
+            2
+        ],
+        "RSA_verify_PKCS1_PSS_mgf1": [
+            0,
+            1,
+            2,
+            3
+        ],
+        "X509_load_cert_crl_file": [
+            0,
+            2
+        ],
+        "X509_load_crl_file": [
+            0,
+            2
+        ],
+        "X509_load_cert_file": [
+            0,
+            2
+        ],
+        "SSL_add_file_cert_subjects_to_stack": [
+            0
+        ],
+        "SSL_set_srtp_profiles": [
+            0
+        ],
+        "SSL_CTX_set_srtp_profiles": [
+            0
+        ],
+        "SSL_load_client_CA_file": [],
+        "SSL_CTX_load_verify_locations": [
+            0,
+            2
+        ],
+        "SSL_CTX_use_certificate_chain_file": [
+            0
+        ],
+        "SSL_use_PrivateKey_file": [
+            0,
+            2
+        ],
+        "SSL_CTX_use_PrivateKey_file": [
+            0,
+            2
+        ],
+        "SSL_use_certificate_file": [
+            0,
+            2
+        ],
+        "SSL_CTX_use_certificate_file": [
+            0,
+            2
+        ],
+        "SSL_use_RSAPrivateKey_file": [
+            0,
+            2
+        ],
+        "SSL_CTX_use_RSAPrivateKey_file": [
+            0,
+            2
+        ],
+        "ssl_ctx_make_profiles": [
+            1
+        ],
+        "find_profile_by_name": [
+            1,
+            2
+        ]
+    }
+}

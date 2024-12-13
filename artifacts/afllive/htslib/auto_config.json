@@ -1,0 +1,2085 @@
+{
+    "root": "/opt/afllive",
+    "fork_on_init": true,
+    "typeinfo_file": "/opt/typeinfo.json",
+    "targets": [
+        "cram_external_encode_int",
+        "cram_external_encode_long",
+        "cram_external_encode_char",
+        "cram_varint_encode_int",
+        "cram_varint_encode_sint",
+        "cram_varint_encode_long",
+        "cram_varint_encode_slong",
+        "cram_huffman_encode_char0",
+        "cram_huffman_encode_char",
+        "cram_huffman_encode_int0",
+        "cram_huffman_encode_int",
+        "cram_huffman_encode_long0",
+        "cram_huffman_encode_long",
+        "cram_beta_encode_int",
+        "cram_beta_encode_long",
+        "cram_beta_encode_char",
+        "cram_xpack_encode_long",
+        "cram_xpack_encode_int",
+        "cram_xpack_encode_char",
+        "cram_byte_array_len_encode",
+        "cram_byte_array_stop_encode",
+        "cram_decoder_init",
+        "cram_byte_array_stop_decode_init",
+        "cram_byte_array_len_decode_init",
+        "cram_huffman_decode_init",
+        "cram_gamma_decode_init",
+        "cram_subexp_decode_init",
+        "cram_xrle_encode_long",
+        "cram_xrle_encode_int",
+        "cram_xrle_encode_char",
+        "cram_xrle_decode_init",
+        "hts_rle_decode",
+        "cram_xdelta_encode_long",
+        "cram_xdelta_encode_int",
+        "cram_xdelta_encode_char",
+        "cram_xdelta_decode_init",
+        "cram_xpack_decode_init",
+        "cram_beta_decode_init",
+        "cram_const_encode",
+        "cram_const_decode_init",
+        "cram_varint_decode_init",
+        "cram_external_encode_slong",
+        "cram_external_encode_sint",
+        "cram_external_decode_init",
+        "bam_aux_update_str",
+        "cram_dopen",
+        "cram_open",
+        "open_path_mfile",
+        "fqz_compress",
+        "rans_compress",
+        "rans_compress_4x16",
+        "arith_compress_to",
+        "tok3_encode_names",
+        "rans_uncompress",
+        "fqz_decompress",
+        "rans_uncompress_4x16",
+        "arith_uncompress_to",
+        "find_file_url",
+        "find_file_dir",
+        "hopen_fd",
+        "hopen_preload",
+        "hopen_fd_fileuri",
+        "hopen_mem",
+        "crypt4gh_needed",
+        "hopenv_mem",
+        "parse_tabbed_text",
+        "arith_uncompress",
+        "arith_compress",
+        "arith_uncompress_O1_RLE",
+        "arith_uncompress_O0_RLE",
+        "arith_uncompress_O1",
+        "arith_uncompress_O0",
+        "arith_compress_O0_RLE",
+        "arith_compress_O1_RLE",
+        "arith_compress_O1",
+        "arith_compress_O0",
+        "uncompress_block_fqz2f",
+        "compress_block_fqz2f",
+        "rans_uncompress_O1",
+        "rans_uncompress_O0",
+        "rans_compress_O1",
+        "rans_compress_O0",
+        "rans_compress_O0_4x16",
+        "rans_uncompress_O0_4x16",
+        "rans_uncompress_O1_32x16",
+        "rans_compress_O1_32x16",
+        "rans_uncompress_O0_32x16",
+        "rans_compress_O0_32x16",
+        "rans_uncompress_O1_32x16_avx2",
+        "rans_compress_O1_32x16_avx2",
+        "rans_uncompress_O0_32x16_avx2",
+        "rans_compress_O0_32x16_avx2",
+        "rans_uncompress_O1_32x16_avx512",
+        "rans_compress_O1_32x16_avx512",
+        "rans_uncompress_O0_32x16_avx512",
+        "rans_compress_O0_32x16_avx512",
+        "rans_uncompress_O1_32x16_sse4",
+        "rans_uncompress_O0_32x16_sse4",
+        "rans_compress_O0_32x16_sse4",
+        "rans_uncompress_to_4x16",
+        "rans_compress_to_4x16",
+        "rans_uncompress_O1_4x16",
+        "rans_compress_O1_4x16",
+        "rle_decode",
+        "decode_name",
+        "encode_names",
+        "encode_name",
+        "decode_token_alpha",
+        "encode_token_alpha",
+        "tbx_parse1"
+    ],
+    "constraints": {
+        "cram_external_encode_int": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_external_encode_long": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_external_encode_char": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_varint_encode_int": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_varint_encode_sint": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_varint_encode_long": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_varint_encode_slong": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_huffman_encode_char0": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_huffman_encode_char": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_huffman_encode_int0": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_huffman_encode_int": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_huffman_encode_long0": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_huffman_encode_long": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_beta_encode_int": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_beta_encode_long": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_beta_encode_char": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_xpack_encode_long": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_xpack_encode_int": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_xpack_encode_char": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_byte_array_len_encode": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_byte_array_stop_encode": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_decoder_init": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_byte_array_stop_decode_init": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_byte_array_len_decode_init": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_huffman_decode_init": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_gamma_decode_init": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_subexp_decode_init": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_xrle_encode_long": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_xrle_encode_int": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_xrle_encode_char": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_xrle_decode_init": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "hts_rle_decode": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "eq",
+                "lhs": 2,
+                "rhs": 3
+            },
+            {
+                "rel": "le",
+                "lhs": 3,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_xdelta_encode_long": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_xdelta_encode_int": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_xdelta_encode_char": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_xdelta_decode_init": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_xpack_decode_init": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_beta_decode_init": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_const_encode": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_const_decode_init": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_varint_decode_init": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_external_encode_slong": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_external_encode_sint": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_external_decode_init": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "bam_aux_update_str": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_dopen": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "cram_open": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "open_path_mfile": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "fqz_compress": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "rans_compress": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "rans_compress_4x16": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "arith_compress_to": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "tok3_encode_names": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "rans_uncompress": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "fqz_decompress": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "rans_uncompress_4x16": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "arith_uncompress_to": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "find_file_url": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            },
+            {
+                "rel": "eq",
+                "lhs": 1,
+                "is_file": true
+            }
+        ],
+        "find_file_dir": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            },
+            {
+                "rel": "eq",
+                "lhs": 1,
+                "is_file": true
+            }
+        ],
+        "hopen_fd": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "hopen_preload": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "hopen_fd_fileuri": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "hopen_mem": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "crypt4gh_needed": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "hopenv_mem": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "parse_tabbed_text": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "arith_uncompress": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "arith_compress": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "arith_uncompress_O1_RLE": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "arith_uncompress_O0_RLE": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "arith_uncompress_O1": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "arith_uncompress_O0": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "arith_compress_O0_RLE": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "arith_compress_O1_RLE": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "arith_compress_O1": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "arith_compress_O0": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "uncompress_block_fqz2f": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "compress_block_fqz2f": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "rans_uncompress_O1": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "rans_uncompress_O0": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "rans_compress_O1": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "rans_compress_O0": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "rans_compress_O0_4x16": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "rans_uncompress_O0_4x16": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "rans_uncompress_O1_32x16": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "rans_compress_O1_32x16": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "rans_uncompress_O0_32x16": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "rans_compress_O0_32x16": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "rans_uncompress_O1_32x16_avx2": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "rans_compress_O1_32x16_avx2": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "rans_uncompress_O0_32x16_avx2": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "rans_compress_O0_32x16_avx2": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "rans_uncompress_O1_32x16_avx512": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "rans_compress_O1_32x16_avx512": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "rans_uncompress_O0_32x16_avx512": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "rans_compress_O0_32x16_avx512": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "rans_uncompress_O1_32x16_sse4": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "rans_uncompress_O0_32x16_sse4": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "rans_compress_O0_32x16_sse4": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "rans_uncompress_to_4x16": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "rans_compress_to_4x16": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "rans_uncompress_O1_4x16": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "rans_compress_O1_4x16": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "rle_decode": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "eq",
+                "lhs": 2,
+                "rhs": 3
+            },
+            {
+                "rel": "le",
+                "lhs": 3,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "decode_name": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "encode_names": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "encode_name": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "decode_token_alpha": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "encode_token_alpha": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "tbx_parse1": [
+            {
+                "rel": "eq",
+                "lhs": 1,
+                "rhs": 0
+            },
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ]
+    },
+    "skip": {
+        "cram_external_encode_int": [
+            0,
+            1
+        ],
+        "cram_external_encode_long": [
+            0,
+            1
+        ],
+        "cram_external_encode_char": [
+            0,
+            1
+        ],
+        "cram_varint_encode_int": [
+            0,
+            1
+        ],
+        "cram_varint_encode_sint": [
+            0,
+            1
+        ],
+        "cram_varint_encode_long": [
+            0,
+            1
+        ],
+        "cram_varint_encode_slong": [
+            0,
+            1
+        ],
+        "cram_huffman_encode_char0": [
+            0,
+            1
+        ],
+        "cram_huffman_encode_char": [
+            0,
+            1
+        ],
+        "cram_huffman_encode_int0": [
+            0,
+            1
+        ],
+        "cram_huffman_encode_int": [
+            0,
+            1
+        ],
+        "cram_huffman_encode_long0": [
+            0,
+            1
+        ],
+        "cram_huffman_encode_long": [
+            0,
+            1
+        ],
+        "cram_beta_encode_int": [
+            0,
+            1
+        ],
+        "cram_beta_encode_long": [
+            0,
+            1
+        ],
+        "cram_beta_encode_char": [
+            0,
+            1
+        ],
+        "cram_xpack_encode_long": [
+            0,
+            1
+        ],
+        "cram_xpack_encode_int": [
+            0,
+            1
+        ],
+        "cram_xpack_encode_char": [
+            0,
+            1
+        ],
+        "cram_byte_array_len_encode": [
+            0,
+            1
+        ],
+        "cram_byte_array_stop_encode": [
+            0,
+            1
+        ],
+        "cram_decoder_init": [
+            0,
+            1,
+            4,
+            5,
+            6
+        ],
+        "cram_byte_array_stop_decode_init": [
+            0,
+            3,
+            4,
+            5,
+            6
+        ],
+        "cram_byte_array_len_decode_init": [
+            0,
+            3,
+            4,
+            5,
+            6
+        ],
+        "cram_huffman_decode_init": [
+            0,
+            3,
+            4,
+            5,
+            6
+        ],
+        "cram_gamma_decode_init": [
+            0,
+            3,
+            4,
+            5,
+            6
+        ],
+        "cram_subexp_decode_init": [
+            0,
+            3,
+            4,
+            5,
+            6
+        ],
+        "cram_xrle_encode_long": [
+            0,
+            1
+        ],
+        "cram_xrle_encode_int": [
+            0,
+            1
+        ],
+        "cram_xrle_encode_char": [
+            0,
+            1
+        ],
+        "cram_xrle_decode_init": [
+            0,
+            3,
+            4,
+            5,
+            6
+        ],
+        "hts_rle_decode": [
+            4,
+            5,
+            6,
+            7
+        ],
+        "cram_xdelta_encode_long": [
+            0,
+            1
+        ],
+        "cram_xdelta_encode_int": [
+            0,
+            1
+        ],
+        "cram_xdelta_encode_char": [
+            0,
+            1
+        ],
+        "cram_xdelta_decode_init": [
+            0,
+            3,
+            4,
+            5,
+            6
+        ],
+        "cram_xpack_decode_init": [
+            0,
+            3,
+            4,
+            5,
+            6
+        ],
+        "cram_beta_decode_init": [
+            0,
+            3,
+            4,
+            5,
+            6
+        ],
+        "cram_const_encode": [
+            0,
+            1
+        ],
+        "cram_const_decode_init": [
+            0,
+            3,
+            4,
+            5,
+            6
+        ],
+        "cram_varint_decode_init": [
+            0,
+            3,
+            4,
+            5,
+            6
+        ],
+        "cram_external_encode_slong": [
+            0,
+            1
+        ],
+        "cram_external_encode_sint": [
+            0,
+            1
+        ],
+        "cram_external_decode_init": [
+            0,
+            3,
+            4,
+            5,
+            6
+        ],
+        "bam_aux_update_str": [
+            0,
+            3
+        ],
+        "cram_dopen": [
+            0,
+            2
+        ],
+        "cram_open": [
+            1
+        ],
+        "open_path_mfile": [
+            1,
+            2
+        ],
+        "fqz_compress": [
+            0,
+            1,
+            4,
+            5,
+            6
+        ],
+        "rans_compress": [
+            2,
+            3
+        ],
+        "rans_compress_4x16": [
+            2,
+            3
+        ],
+        "arith_compress_to": [
+            2,
+            3,
+            4
+        ],
+        "tok3_encode_names": [
+            2,
+            3,
+            4,
+            5
+        ],
+        "rans_uncompress": [
+            2
+        ],
+        "fqz_decompress": [
+            2,
+            3,
+            4
+        ],
+        "rans_uncompress_4x16": [
+            2
+        ],
+        "arith_uncompress_to": [
+            2,
+            3
+        ],
+        "find_file_url": [],
+        "find_file_dir": [],
+        "hopen_fd": [
+            1
+        ],
+        "hopen_preload": [
+            1
+        ],
+        "hopen_fd_fileuri": [
+            1
+        ],
+        "hopen_mem": [
+            1
+        ],
+        "crypt4gh_needed": [
+            1
+        ],
+        "hopenv_mem": [
+            1,
+            2
+        ],
+        "parse_tabbed_text": [
+            2,
+            3,
+            4
+        ],
+        "arith_uncompress": [
+            2
+        ],
+        "arith_compress": [
+            2,
+            3
+        ],
+        "arith_uncompress_O1_RLE": [
+            2,
+            3
+        ],
+        "arith_uncompress_O0_RLE": [
+            2,
+            3
+        ],
+        "arith_uncompress_O1": [
+            2,
+            3
+        ],
+        "arith_uncompress_O0": [
+            2,
+            3
+        ],
+        "arith_compress_O0_RLE": [
+            2,
+            3
+        ],
+        "arith_compress_O1_RLE": [
+            2,
+            3
+        ],
+        "arith_compress_O1": [
+            2,
+            3
+        ],
+        "arith_compress_O0": [
+            2,
+            3
+        ],
+        "uncompress_block_fqz2f": [
+            0,
+            3,
+            4,
+            5
+        ],
+        "compress_block_fqz2f": [
+            0,
+            1,
+            2,
+            5,
+            6
+        ],
+        "rans_uncompress_O1": [
+            2
+        ],
+        "rans_uncompress_O0": [
+            2
+        ],
+        "rans_compress_O1": [
+            2
+        ],
+        "rans_compress_O0": [
+            2
+        ],
+        "rans_compress_O0_4x16": [
+            2,
+            3
+        ],
+        "rans_uncompress_O0_4x16": [
+            2,
+            3
+        ],
+        "rans_uncompress_O1_32x16": [
+            2,
+            3
+        ],
+        "rans_compress_O1_32x16": [
+            2,
+            3
+        ],
+        "rans_uncompress_O0_32x16": [
+            2,
+            3
+        ],
+        "rans_compress_O0_32x16": [
+            2,
+            3
+        ],
+        "rans_uncompress_O1_32x16_avx2": [
+            2,
+            3
+        ],
+        "rans_compress_O1_32x16_avx2": [
+            2,
+            3
+        ],
+        "rans_uncompress_O0_32x16_avx2": [
+            2,
+            3
+        ],
+        "rans_compress_O0_32x16_avx2": [
+            2,
+            3
+        ],
+        "rans_uncompress_O1_32x16_avx512": [
+            2,
+            3
+        ],
+        "rans_compress_O1_32x16_avx512": [
+            2,
+            3
+        ],
+        "rans_uncompress_O0_32x16_avx512": [
+            2,
+            3
+        ],
+        "rans_compress_O0_32x16_avx512": [
+            2,
+            3
+        ],
+        "rans_uncompress_O1_32x16_sse4": [
+            2,
+            3
+        ],
+        "rans_uncompress_O0_32x16_sse4": [
+            2,
+            3
+        ],
+        "rans_compress_O0_32x16_sse4": [
+            2,
+            3
+        ],
+        "rans_uncompress_to_4x16": [
+            2,
+            3
+        ],
+        "rans_compress_to_4x16": [
+            2,
+            3,
+            4
+        ],
+        "rans_uncompress_O1_4x16": [
+            2,
+            3
+        ],
+        "rans_compress_O1_4x16": [
+            2,
+            3
+        ],
+        "rle_decode": [
+            4,
+            5,
+            6,
+            7
+        ],
+        "decode_name": [
+            0,
+            2
+        ],
+        "encode_names": [
+            2,
+            3,
+            4,
+            5
+        ],
+        "encode_name": [
+            0,
+            2,
+            3
+        ],
+        "decode_token_alpha": [
+            0,
+            1
+        ],
+        "encode_token_alpha": [
+            0,
+            1
+        ],
+        "tbx_parse1": [
+            0,
+            3
+        ]
+    }
+}

@@ -1,0 +1,77 @@
+{
+    "root": "/opt/afllive",
+    "typeinfo_file": "/opt/typeinfo.json",
+    "targets": [
+        "ass_open_file",
+        "ass_process_chunk",
+        "ass_process_codec_private",
+        "ass_process_data"
+    ],
+    "constraints": {
+        "ass_open_file": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "ass_process_chunk": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "ass_process_codec_private": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "ass_process_data": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ]
+    },
+    "skip": {
+        "ass_open_file": [
+            1
+        ],
+        "ass_process_chunk": [
+            0,
+            3,
+            4
+        ],
+        "ass_process_codec_private": [
+            0
+        ],
+        "ass_process_data": [
+            0
+        ]
+    }
+}

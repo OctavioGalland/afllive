@@ -1,0 +1,266 @@
+{
+    "root": "/opt/afllive",
+    "typeinfo_file": "/opt/typeinfo.json",
+    "fork_on_init": true,
+    "no_max_millis": 10,
+    "targets": [
+        "MD5Update",
+        "vp8dx_start_decode",
+        "vp9_parse_superframe_index",
+        "vpx_codec_decode",
+        "vp8_loop_filter_update_sharpness",
+        "vp8_decode",
+        "update_sharpness",
+        "vp9_update_reference",
+        "vp9_prob_diff_update_savings_search_model",
+        "vp9_encode_tile",
+        "vp9_pick_filter_level",
+        "update_buffer_level",
+        "decoder_decode",
+        "decoder_peek_si"
+    ],
+    "constraints": {
+        "MD5Update": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "vp8dx_start_decode": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "vp9_parse_superframe_index": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "ge",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 1
+                }
+            }
+        ],
+        "vpx_codec_decode": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "vp8_loop_filter_update_sharpness": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "vp8_decode": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "update_sharpness": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "vp9_update_reference": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "vp9_prob_diff_update_savings_search_model": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "vp9_encode_tile": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "vp9_pick_filter_level": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "update_buffer_level": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "decoder_decode": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "ge",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 1
+                }
+            }
+        ],
+        "decoder_peek_si": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ]
+    },
+    "skip": {
+        "MD5Update": [
+            0
+        ],
+        "vp8dx_start_decode": [
+            0,
+            3,
+            4
+        ],
+        "vp9_parse_superframe_index": [
+            2,
+            3,
+            4,
+            5
+        ],
+        "vpx_codec_decode": [
+            0,
+            3,
+            4
+        ],
+        "vp8_loop_filter_update_sharpness": [
+            0
+        ],
+        "vp8_decode": [
+            0,
+            3,
+            4
+        ],
+        "update_sharpness": [
+            0
+        ],
+        "vp9_update_reference": [
+            0
+        ],
+        "vp9_prob_diff_update_savings_search_model": [
+            0,
+            1,
+            2,
+            3
+        ],
+        "vp9_encode_tile": [
+            0,
+            1
+        ],
+        "vp9_pick_filter_level": [
+            0,
+            1
+        ],
+        "update_buffer_level": [
+            0
+        ],
+        "decoder_decode": [
+            0,
+            3,
+            4
+        ],
+        "decoder_peek_si": [
+            2
+        ]
+    }
+}

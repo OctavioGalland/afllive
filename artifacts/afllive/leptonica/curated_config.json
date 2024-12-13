@@ -1,0 +1,479 @@
+{
+    "root": "/opt/afllive",
+    "typeinfo_file": "/opt/typeinfo.json",
+    "fork_on_init": false,
+    "max_millis": 10,
+    "targets": [
+        "pixSetXRes",
+        "pixSetYRes",
+        "pixSetAllArbitrary",
+        "__ignored__pixRasterop",
+        "__ignored__pixWriteMem",
+        "__ignored__pixConnComp",
+        "__ignored__boxCreate",
+        "bmfCreate",
+        "pixaCreate",
+        "pixReduceRankBinaryCascade",
+        "pixBlockconv",
+        "pixCloseBrick",
+        "pixErodeBrick",
+        "pixOpenBrick",
+        "__ignored__pixCreate",
+        "pixaGetPix",
+        "pixConvertTo8",
+        "pixRemoveColormap",
+        "__ignored__pixReadMem",
+        "pixScale",
+        "pixRead",
+        "pixDistanceFunction",
+        "pixSeedfillBinary",
+        "findFileFormat"
+    ],
+    "constraints": {
+        "pixSetXRes": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "pixSetYRes": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "pixSetAllArbitrary": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "pixRasterop": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "le",
+                "lhs": 2,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "le",
+                "lhs": 3,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "le",
+                "lhs": 4,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "le",
+                "lhs": 5,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "pixWriteMem": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 19
+                }
+            }
+        ],
+        "pixConnComp": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "boxCreate": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "ge",
+                "lhs": 2,
+                "rhs": {
+                    "constant": 1024
+                }
+            },
+            {
+                "rel": "ge",
+                "lhs": 3,
+                "rhs": {
+                    "constant": 1024
+                }
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "le",
+                "lhs": 2,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "le",
+                "lhs": 3,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "bmfCreate": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "pixaCreate": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "pixReduceRankBinaryCascade": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "le",
+                "lhs": 2,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "le",
+                "lhs": 3,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "pixBlockconv": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "pixCloseBrick": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "pixErodeBrick": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "pixOpenBrick": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "pixCreate": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "le",
+                "lhs": 2,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "pixaGetPix": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "pixConvertTo8": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "pixRemoveColormap": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "pixReadMem": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "pixScale": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "pixDistanceFunction": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "le",
+                "lhs": 2,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "pixSeedfillBinary": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "pixRead": [
+            {
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "findFileFormat": [
+            {
+                "lhs": 0,
+                "is_file": true
+            }
+        ]
+
+    },
+    "skip": {
+        "pixSetXRes": [
+            0
+        ],
+        "pixSetYRes": [
+            0
+        ],
+        "pixSetAllArbitrary": [
+            0
+        ],
+        "pixRasterop": [
+            0,
+            5,
+            6
+        ],
+        "pixWriteMem": [
+            0,
+            1,
+            2
+        ],
+        "pixConnComp": [
+            0,
+            1
+        ],
+        "boxCreate": [],
+        "bmfCreate": [
+            0
+        ],
+        "pixaCreate": [],
+        "pixReduceRankBinaryCascade": [
+            0
+        ],
+        "pixBlockconv": [
+            0
+        ],
+        "pixCloseBrick": [
+            0,
+            1
+        ],
+        "pixErodeBrick": [
+            0,
+            1
+        ],
+        "pixOpenBrick": [
+            0,
+            1
+        ],
+        "pixCreate": [],
+        "pixaGetPix": [
+            0,
+            1
+        ],
+        "pixConvertTo8": [
+            0
+        ],
+        "pixRemoveColormap": [
+            0
+        ],
+        "pixReadMem": [],
+        "pixScale": [
+            0
+        ],
+        "pixDistanceFunction": [
+            0
+        ],
+        "pixSeedfillBinary": [
+            0,
+            1,
+            2
+        ],
+        "findFileFormat": [
+            1
+        ]
+    },
+    "no_fuzz_target": "pixCloseBrick"
+}

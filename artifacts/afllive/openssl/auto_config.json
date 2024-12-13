@@ -1,0 +1,2683 @@
+{
+    "root": "/opt/afllive",
+    "max_millis": 5,
+    "typeinfo_file": "/opt/typeinfo.json",
+    "targets": [
+        "CRYPTO_free",
+        "CRYPTO_strdup",
+        "NETSCAPE_SPKI_b64_decode",
+        "BIO_new_file",
+        "OPENSSL_die",
+        "OSSL_HTTP_parse_url",
+        "CRYPTO_zalloc",
+        "OSSL_CMP_print_to_bio",
+        "CMS_EncryptedData_encrypt_ex",
+        "CMS_EncryptedData_decrypt",
+        "CRYPTO_clear_free",
+        "CRYPTO_realloc",
+        "UI_add_verify_string",
+        "CRYPTO_malloc",
+        "OPENSSL_INIT_set_config_filename",
+        "CRYPTO_secure_clear_free",
+        "CRYPTO_secure_free",
+        "CRYPTO_secure_zalloc",
+        "CRYPTO_secure_malloc",
+        "CRYPTO_clear_realloc",
+        "CRYPTO_strndup",
+        "CRYPTO_memdup",
+        "RSA_verify_PKCS1_PSS_mgf1",
+        "RSA_verify_PKCS1_PSS",
+        "RSA_verify_ASN1_OCTET_STRING",
+        "RSA_verify",
+        "RSA_private_decrypt",
+        "RSA_public_decrypt",
+        "RSA_private_encrypt",
+        "RSA_public_encrypt",
+        "DSA_verify",
+        "DSA_do_verify",
+        "ECDSA_verify",
+        "ECDSA_do_verify",
+        "PKCS5_v2_scrypt_keyivgen_ex",
+        "PKCS5_v2_scrypt_keyivgen",
+        "EVP_PKEY_encrypt_old",
+        "EVP_PKEY_decrypt_old",
+        "EVP_DecodeUpdate",
+        "EVP_EncodeBlock",
+        "EVP_EncodeUpdate",
+        "EVP_OpenInit",
+        "EVP_VerifyFinal_ex",
+        "EVP_VerifyFinal",
+        "EVP_CipherUpdate",
+        "EVP_DecryptUpdate",
+        "EVP_EncryptUpdate",
+        "RAND_write_file",
+        "RAND_load_file",
+        "X509_STORE_load_file_ex",
+        "X509_STORE_load_file",
+        "X509_load_cert_crl_file_ex",
+        "X509_load_cert_crl_file",
+        "X509_load_crl_file",
+        "X509_load_cert_file_ex",
+        "X509_load_cert_file",
+        "PKCS7_add1_attrib_digest",
+        "CONF_modules_load_file",
+        "CONF_modules_load_file_ex",
+        "OSSL_parse_url",
+        "PKCS5_pbe2_set_scrypt",
+        "UI_dup_verify_string",
+        "SSL_CTX_use_certificate_file",
+        "SSL_CTX_use_PrivateKey_file",
+        "ossl_ipaddr_to_asc",
+        "openssl_fopen",
+        "COMP_compress_block",
+        "CTLOG_STORE_load_file",
+        "SSL_CTX_load_verify_locations",
+        "SSL_CTX_load_verify_file",
+        "SSL_add_file_cert_subjects_to_stack",
+        "SSL_load_client_CA_file_ex",
+        "SSL_load_client_CA_file",
+        "SSL_use_certificate_chain_file",
+        "SSL_CTX_use_certificate_chain_file",
+        "SSL_CTX_use_RSAPrivateKey_file",
+        "SSL_use_certificate_file",
+        "SSL_use_PrivateKey_file",
+        "SSL_use_RSAPrivateKey_file",
+        "SSL_CTX_use_serverinfo_file",
+        "OPENSSL_uni2asc",
+        "PKCS12_decrypt_skey",
+        "PKCS12_unpack_p7encdata",
+        "PKCS12_verify_mac",
+        "OPENSSL_asc2uni",
+        "OPENSSL_uni2utf8",
+        "PKCS8_decrypt",
+        "do_buf",
+        "ossl_rsa_verify",
+        "parse_tagging",
+        "OPENSSL_utf82uni",
+        "PKCS12_item_i2d_encrypt_ex",
+        "PKCS12_item_i2d_encrypt",
+        "PKCS12_item_decrypt_d2i_ex",
+        "PKCS12_item_decrypt_d2i",
+        "PKCS12_pbe_crypt_ex",
+        "PKCS12_pbe_crypt",
+        "PKCS12_pack_p7encdata_ex",
+        "PKCS12_pack_p7encdata",
+        "PKCS8_encrypt_ex",
+        "PKCS8_encrypt",
+        "PKCS12_decrypt_skey_ex",
+        "PKCS8_decrypt_ex",
+        "PKCS12_SAFEBAG_create_pkcs8_encrypt_ex",
+        "PKCS12_SAFEBAG_create_pkcs8_encrypt",
+        "ossl_core_bio_new_file",
+        "buffer_write",
+        "buffer_gets",
+        "linebuffer_write",
+        "linebuffer_gets",
+        "file_write",
+        "file_gets",
+        "xopenlog",
+        "ossl_cmp_asn1_octet_string_set1_bytes",
+        "ossl_cmp_log_parse_metadata",
+        "DSO_convert_filename",
+        "DSO_set_filename",
+        "dh_param_decode",
+        "EVP_PKEY_CTX_set1_scrypt_salt",
+        "old_dsa_priv_decode",
+        "dsa_param_decode",
+        "dsa_do_verify",
+        "ossl_ecdsa_simple_verify_sig",
+        "ossl_ecdsa_verify_sig",
+        "ossl_ecdsa_verify",
+        "old_ec_priv_decode",
+        "eckey_param_decode",
+        "ossl_parse_query",
+        "evp_encodeblock_int",
+        "evp_EncryptDecryptUpdate",
+        "parse_bag",
+        "parse_bags",
+        "parse_pk12",
+        "bmp_to_utf8",
+        "pkcs7_encode_rinfo",
+        "old_rsa_priv_decode",
+        "rsa_ossl_public_decrypt",
+        "rsa_ossl_private_decrypt",
+        "rsa_ossl_private_encrypt",
+        "rsa_ossl_public_encrypt",
+        "ossl_sm2_internal_verify",
+        "extract_min_max",
+        "ossl_prov_bio_new_membuf",
+        "ossl_prov_bio_new_file",
+        "ssl_ctx_make_profiles",
+        "find_profile_by_name",
+        "use_certificate_chain_file"
+    ],
+    "constraints": {
+        "CRYPTO_free": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "CRYPTO_strdup": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "NETSCAPE_SPKI_b64_decode": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "BIO_new_file": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "OPENSSL_die": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "OSSL_HTTP_parse_url": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "CRYPTO_zalloc": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "OSSL_CMP_print_to_bio": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "CMS_EncryptedData_encrypt_ex": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "CMS_EncryptedData_decrypt": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "CRYPTO_clear_free": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "CRYPTO_realloc": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "UI_add_verify_string": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "eq",
+                "lhs": 3,
+                "rhs": 2
+            },
+            {
+                "rel": "le",
+                "lhs": 2,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "CRYPTO_malloc": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "OPENSSL_INIT_set_config_filename": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "CRYPTO_secure_clear_free": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "CRYPTO_secure_free": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "CRYPTO_secure_zalloc": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "CRYPTO_secure_malloc": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "CRYPTO_clear_realloc": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "CRYPTO_strndup": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "CRYPTO_memdup": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "RSA_verify_PKCS1_PSS_mgf1": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "RSA_verify_PKCS1_PSS": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "RSA_verify_ASN1_OCTET_STRING": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "eq",
+                "lhs": 2,
+                "rhs": 3
+            },
+            {
+                "rel": "le",
+                "lhs": 3,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "RSA_verify": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "eq",
+                "lhs": 2,
+                "rhs": 3
+            },
+            {
+                "rel": "le",
+                "lhs": 3,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "RSA_private_decrypt": [
+            {
+                "rel": "eq",
+                "lhs": 1,
+                "rhs": 0
+            },
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "RSA_public_decrypt": [
+            {
+                "rel": "eq",
+                "lhs": 1,
+                "rhs": 0
+            },
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "RSA_private_encrypt": [
+            {
+                "rel": "eq",
+                "lhs": 1,
+                "rhs": 0
+            },
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "RSA_public_encrypt": [
+            {
+                "rel": "eq",
+                "lhs": 1,
+                "rhs": 0
+            },
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "DSA_verify": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "eq",
+                "lhs": 2,
+                "rhs": 3
+            },
+            {
+                "rel": "le",
+                "lhs": 3,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "DSA_do_verify": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "ECDSA_verify": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "eq",
+                "lhs": 2,
+                "rhs": 3
+            },
+            {
+                "rel": "le",
+                "lhs": 3,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "ECDSA_do_verify": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "PKCS5_v2_scrypt_keyivgen_ex": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "PKCS5_v2_scrypt_keyivgen": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "EVP_PKEY_encrypt_old": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "EVP_PKEY_decrypt_old": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "EVP_DecodeUpdate": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "EVP_EncodeBlock": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "EVP_EncodeUpdate": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "EVP_OpenInit": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "EVP_VerifyFinal_ex": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "EVP_VerifyFinal": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "EVP_CipherUpdate": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "EVP_DecryptUpdate": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "EVP_EncryptUpdate": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "RAND_write_file": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "RAND_load_file": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "X509_STORE_load_file_ex": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "X509_STORE_load_file": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "X509_load_cert_crl_file_ex": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "X509_load_cert_crl_file": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "X509_load_crl_file": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "X509_load_cert_file_ex": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "X509_load_cert_file": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "PKCS7_add1_attrib_digest": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "CONF_modules_load_file": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            },
+            {
+                "rel": "eq",
+                "lhs": 1,
+                "is_file": true
+            }
+        ],
+        "CONF_modules_load_file_ex": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            },
+            {
+                "rel": "eq",
+                "lhs": 1,
+                "is_file": true
+            }
+        ],
+        "OSSL_parse_url": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "PKCS5_pbe2_set_scrypt": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "UI_dup_verify_string": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "eq",
+                "lhs": 3,
+                "rhs": 2
+            },
+            {
+                "rel": "le",
+                "lhs": 2,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "SSL_CTX_use_certificate_file": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "SSL_CTX_use_PrivateKey_file": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "ossl_ipaddr_to_asc": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "openssl_fopen": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "COMP_compress_block": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "CTLOG_STORE_load_file": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "SSL_CTX_load_verify_locations": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "SSL_CTX_load_verify_file": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "SSL_add_file_cert_subjects_to_stack": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "SSL_load_client_CA_file_ex": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "SSL_load_client_CA_file": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "SSL_use_certificate_chain_file": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "SSL_CTX_use_certificate_chain_file": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "SSL_CTX_use_RSAPrivateKey_file": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "SSL_use_certificate_file": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "SSL_use_PrivateKey_file": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "SSL_use_RSAPrivateKey_file": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "SSL_CTX_use_serverinfo_file": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "OPENSSL_uni2asc": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "PKCS12_decrypt_skey": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "PKCS12_unpack_p7encdata": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "PKCS12_verify_mac": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "OPENSSL_asc2uni": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "OPENSSL_uni2utf8": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "PKCS8_decrypt": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "do_buf": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "ossl_rsa_verify": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "eq",
+                "lhs": 2,
+                "rhs": 3
+            },
+            {
+                "rel": "le",
+                "lhs": 3,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "parse_tagging": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "OPENSSL_utf82uni": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "PKCS12_item_i2d_encrypt_ex": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "PKCS12_item_i2d_encrypt": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "PKCS12_item_decrypt_d2i_ex": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "PKCS12_item_decrypt_d2i": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "PKCS12_pbe_crypt_ex": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "eq",
+                "lhs": 2,
+                "rhs": 3
+            },
+            {
+                "rel": "le",
+                "lhs": 3,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "PKCS12_pbe_crypt": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "eq",
+                "lhs": 2,
+                "rhs": 3
+            },
+            {
+                "rel": "le",
+                "lhs": 3,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "PKCS12_pack_p7encdata_ex": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "eq",
+                "lhs": 2,
+                "rhs": 3
+            },
+            {
+                "rel": "le",
+                "lhs": 3,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "PKCS12_pack_p7encdata": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "eq",
+                "lhs": 2,
+                "rhs": 3
+            },
+            {
+                "rel": "le",
+                "lhs": 3,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "PKCS8_encrypt_ex": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "eq",
+                "lhs": 2,
+                "rhs": 3
+            },
+            {
+                "rel": "le",
+                "lhs": 3,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "PKCS8_encrypt": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "eq",
+                "lhs": 2,
+                "rhs": 3
+            },
+            {
+                "rel": "le",
+                "lhs": 3,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "PKCS12_decrypt_skey_ex": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "PKCS8_decrypt_ex": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "PKCS12_SAFEBAG_create_pkcs8_encrypt_ex": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "eq",
+                "lhs": 2,
+                "rhs": 3
+            },
+            {
+                "rel": "le",
+                "lhs": 3,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "PKCS12_SAFEBAG_create_pkcs8_encrypt": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "eq",
+                "lhs": 2,
+                "rhs": 3
+            },
+            {
+                "rel": "le",
+                "lhs": 3,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "ossl_core_bio_new_file": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "buffer_write": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "buffer_gets": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "linebuffer_write": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "linebuffer_gets": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "file_write": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "file_gets": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "xopenlog": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "ossl_cmp_asn1_octet_string_set1_bytes": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "ossl_cmp_log_parse_metadata": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "DSO_convert_filename": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "DSO_set_filename": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "dh_param_decode": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "EVP_PKEY_CTX_set1_scrypt_salt": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "old_dsa_priv_decode": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "dsa_param_decode": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "dsa_do_verify": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "ossl_ecdsa_simple_verify_sig": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "ossl_ecdsa_verify_sig": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "ossl_ecdsa_verify": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "eq",
+                "lhs": 2,
+                "rhs": 3
+            },
+            {
+                "rel": "le",
+                "lhs": 3,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "old_ec_priv_decode": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "eckey_param_decode": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "ossl_parse_query": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "evp_encodeblock_int": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "evp_EncryptDecryptUpdate": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "parse_bag": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "parse_bags": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "parse_pk12": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "bmp_to_utf8": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "pkcs7_encode_rinfo": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "old_rsa_priv_decode": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "rsa_ossl_public_decrypt": [
+            {
+                "rel": "eq",
+                "lhs": 1,
+                "rhs": 0
+            },
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "rsa_ossl_private_decrypt": [
+            {
+                "rel": "eq",
+                "lhs": 1,
+                "rhs": 0
+            },
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "rsa_ossl_private_encrypt": [
+            {
+                "rel": "eq",
+                "lhs": 1,
+                "rhs": 0
+            },
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "rsa_ossl_public_encrypt": [
+            {
+                "rel": "eq",
+                "lhs": 1,
+                "rhs": 0
+            },
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "ossl_sm2_internal_verify": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "eq",
+                "lhs": 2,
+                "rhs": 3
+            },
+            {
+                "rel": "le",
+                "lhs": 3,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "extract_min_max": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "ossl_prov_bio_new_membuf": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "ossl_prov_bio_new_file": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "ssl_ctx_make_profiles": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "find_profile_by_name": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "use_certificate_chain_file": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ]
+    },
+    "skip": {
+        "CRYPTO_free": [
+            0,
+            2
+        ],
+        "CRYPTO_strdup": [
+            0,
+            2
+        ],
+        "NETSCAPE_SPKI_b64_decode": [],
+        "BIO_new_file": [
+            1
+        ],
+        "OPENSSL_die": [
+            0,
+            2
+        ],
+        "OSSL_HTTP_parse_url": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "CRYPTO_zalloc": [
+            0,
+            2
+        ],
+        "OSSL_CMP_print_to_bio": [
+            0,
+            1,
+            3,
+            4,
+            5
+        ],
+        "CMS_EncryptedData_encrypt_ex": [
+            0,
+            1,
+            4,
+            5,
+            6
+        ],
+        "CMS_EncryptedData_decrypt": [
+            0,
+            3,
+            4,
+            5
+        ],
+        "CRYPTO_clear_free": [
+            0,
+            1,
+            3
+        ],
+        "CRYPTO_realloc": [
+            0,
+            1,
+            3
+        ],
+        "UI_add_verify_string": [
+            0,
+            1,
+            2
+        ],
+        "CRYPTO_malloc": [
+            0,
+            2
+        ],
+        "OPENSSL_INIT_set_config_filename": [
+            0
+        ],
+        "CRYPTO_secure_clear_free": [
+            0,
+            1,
+            3
+        ],
+        "CRYPTO_secure_free": [
+            0,
+            2
+        ],
+        "CRYPTO_secure_zalloc": [
+            0,
+            2
+        ],
+        "CRYPTO_secure_malloc": [
+            0,
+            2
+        ],
+        "CRYPTO_clear_realloc": [
+            0,
+            1,
+            2,
+            4
+        ],
+        "CRYPTO_strndup": [
+            0,
+            1,
+            3
+        ],
+        "CRYPTO_memdup": [
+            0,
+            1,
+            3
+        ],
+        "RSA_verify_PKCS1_PSS_mgf1": [
+            0,
+            1,
+            2,
+            3
+        ],
+        "RSA_verify_PKCS1_PSS": [
+            0,
+            1,
+            2
+        ],
+        "RSA_verify_ASN1_OCTET_STRING": [
+            0,
+            5
+        ],
+        "RSA_verify": [
+            0,
+            5
+        ],
+        "RSA_private_decrypt": [
+            2,
+            3,
+            4
+        ],
+        "RSA_public_decrypt": [
+            2,
+            3,
+            4
+        ],
+        "RSA_private_encrypt": [
+            2,
+            3,
+            4
+        ],
+        "RSA_public_encrypt": [
+            2,
+            3,
+            4
+        ],
+        "DSA_verify": [
+            0,
+            5
+        ],
+        "DSA_do_verify": [
+            2,
+            3
+        ],
+        "ECDSA_verify": [
+            0,
+            5
+        ],
+        "ECDSA_do_verify": [
+            2,
+            3
+        ],
+        "PKCS5_v2_scrypt_keyivgen_ex": [
+            0,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "PKCS5_v2_scrypt_keyivgen": [
+            0,
+            3,
+            4,
+            5,
+            6
+        ],
+        "EVP_PKEY_encrypt_old": [
+            0,
+            3
+        ],
+        "EVP_PKEY_decrypt_old": [
+            0,
+            3
+        ],
+        "EVP_DecodeUpdate": [
+            0,
+            1,
+            2
+        ],
+        "EVP_EncodeBlock": [
+            0
+        ],
+        "EVP_EncodeUpdate": [
+            0,
+            1,
+            2
+        ],
+        "EVP_OpenInit": [
+            0,
+            1,
+            4,
+            5
+        ],
+        "EVP_VerifyFinal_ex": [
+            0,
+            3,
+            4,
+            5
+        ],
+        "EVP_VerifyFinal": [
+            0,
+            3
+        ],
+        "EVP_CipherUpdate": [
+            0,
+            1,
+            2
+        ],
+        "EVP_DecryptUpdate": [
+            0,
+            1,
+            2
+        ],
+        "EVP_EncryptUpdate": [
+            0,
+            1,
+            2
+        ],
+        "RAND_write_file": [],
+        "RAND_load_file": [
+            1
+        ],
+        "X509_STORE_load_file_ex": [
+            0,
+            2,
+            3
+        ],
+        "X509_STORE_load_file": [
+            0
+        ],
+        "X509_load_cert_crl_file_ex": [
+            0,
+            2,
+            3,
+            4
+        ],
+        "X509_load_cert_crl_file": [
+            0,
+            2
+        ],
+        "X509_load_crl_file": [
+            0,
+            2
+        ],
+        "X509_load_cert_file_ex": [
+            0,
+            2,
+            3,
+            4
+        ],
+        "X509_load_cert_file": [
+            0,
+            2
+        ],
+        "PKCS7_add1_attrib_digest": [
+            0
+        ],
+        "CONF_modules_load_file": [
+            2
+        ],
+        "CONF_modules_load_file_ex": [
+            0,
+            3
+        ],
+        "OSSL_parse_url": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "PKCS5_pbe2_set_scrypt": [
+            0,
+            3,
+            4,
+            5,
+            6
+        ],
+        "UI_dup_verify_string": [
+            0,
+            1,
+            2
+        ],
+        "SSL_CTX_use_certificate_file": [
+            0,
+            2
+        ],
+        "SSL_CTX_use_PrivateKey_file": [
+            0,
+            2
+        ],
+        "ossl_ipaddr_to_asc": [],
+        "openssl_fopen": [
+            1
+        ],
+        "COMP_compress_block": [
+            0,
+            1,
+            2
+        ],
+        "CTLOG_STORE_load_file": [
+            0
+        ],
+        "SSL_CTX_load_verify_locations": [
+            0,
+            2
+        ],
+        "SSL_CTX_load_verify_file": [
+            0
+        ],
+        "SSL_add_file_cert_subjects_to_stack": [
+            0
+        ],
+        "SSL_load_client_CA_file_ex": [
+            1,
+            2
+        ],
+        "SSL_load_client_CA_file": [],
+        "SSL_use_certificate_chain_file": [
+            0
+        ],
+        "SSL_CTX_use_certificate_chain_file": [
+            0
+        ],
+        "SSL_CTX_use_RSAPrivateKey_file": [
+            0,
+            2
+        ],
+        "SSL_use_certificate_file": [
+            0,
+            2
+        ],
+        "SSL_use_PrivateKey_file": [
+            0,
+            2
+        ],
+        "SSL_use_RSAPrivateKey_file": [
+            0,
+            2
+        ],
+        "SSL_CTX_use_serverinfo_file": [
+            0
+        ],
+        "OPENSSL_uni2asc": [],
+        "PKCS12_decrypt_skey": [
+            0
+        ],
+        "PKCS12_unpack_p7encdata": [
+            0
+        ],
+        "PKCS12_verify_mac": [
+            0
+        ],
+        "OPENSSL_asc2uni": [
+            2,
+            3
+        ],
+        "OPENSSL_uni2utf8": [],
+        "PKCS8_decrypt": [
+            0
+        ],
+        "do_buf": [
+            2,
+            3,
+            4,
+            5,
+            6
+        ],
+        "ossl_rsa_verify": [
+            0,
+            3,
+            4,
+            7
+        ],
+        "parse_tagging": [
+            2,
+            3
+        ],
+        "OPENSSL_utf82uni": [
+            2,
+            3
+        ],
+        "PKCS12_item_i2d_encrypt_ex": [
+            0,
+            1,
+            4,
+            5,
+            6,
+            7
+        ],
+        "PKCS12_item_i2d_encrypt": [
+            0,
+            1,
+            4,
+            5
+        ],
+        "PKCS12_item_decrypt_d2i_ex": [
+            0,
+            1,
+            4,
+            5,
+            6,
+            7
+        ],
+        "PKCS12_item_decrypt_d2i": [
+            0,
+            1,
+            4,
+            5
+        ],
+        "PKCS12_pbe_crypt_ex": [
+            0,
+            5,
+            6,
+            7,
+            8,
+            9
+        ],
+        "PKCS12_pbe_crypt": [
+            0,
+            5,
+            6,
+            7
+        ],
+        "PKCS12_pack_p7encdata_ex": [
+            0,
+            5,
+            6,
+            7,
+            8
+        ],
+        "PKCS12_pack_p7encdata": [
+            0,
+            5,
+            6
+        ],
+        "PKCS8_encrypt_ex": [
+            0,
+            1,
+            6,
+            7,
+            8,
+            9
+        ],
+        "PKCS8_encrypt": [
+            0,
+            1,
+            6,
+            7
+        ],
+        "PKCS12_decrypt_skey_ex": [
+            0,
+            3,
+            4
+        ],
+        "PKCS8_decrypt_ex": [
+            0,
+            3,
+            4
+        ],
+        "PKCS12_SAFEBAG_create_pkcs8_encrypt_ex": [
+            0,
+            5,
+            6,
+            7,
+            8
+        ],
+        "PKCS12_SAFEBAG_create_pkcs8_encrypt": [
+            0,
+            5,
+            6
+        ],
+        "ossl_core_bio_new_file": [
+            1
+        ],
+        "buffer_write": [
+            0
+        ],
+        "buffer_gets": [
+            0
+        ],
+        "linebuffer_write": [
+            0
+        ],
+        "linebuffer_gets": [
+            0
+        ],
+        "file_write": [
+            0
+        ],
+        "file_gets": [
+            0
+        ],
+        "xopenlog": [
+            0,
+            2
+        ],
+        "ossl_cmp_asn1_octet_string_set1_bytes": [
+            0
+        ],
+        "ossl_cmp_log_parse_metadata": [
+            0,
+            1,
+            2,
+            4
+        ],
+        "DSO_convert_filename": [
+            0
+        ],
+        "DSO_set_filename": [
+            0
+        ],
+        "dh_param_decode": [
+            0
+        ],
+        "EVP_PKEY_CTX_set1_scrypt_salt": [
+            0
+        ],
+        "old_dsa_priv_decode": [
+            0
+        ],
+        "dsa_param_decode": [
+            0
+        ],
+        "dsa_do_verify": [
+            2,
+            3
+        ],
+        "ossl_ecdsa_simple_verify_sig": [
+            2,
+            3
+        ],
+        "ossl_ecdsa_verify_sig": [
+            2,
+            3
+        ],
+        "ossl_ecdsa_verify": [
+            0,
+            5
+        ],
+        "old_ec_priv_decode": [
+            0
+        ],
+        "eckey_param_decode": [
+            0
+        ],
+        "ossl_parse_query": [
+            0
+        ],
+        "evp_encodeblock_int": [
+            0,
+            1
+        ],
+        "evp_EncryptDecryptUpdate": [
+            0,
+            1,
+            2
+        ],
+        "parse_bag": [
+            0,
+            3,
+            4
+        ],
+        "parse_bags": [
+            0,
+            3,
+            4
+        ],
+        "parse_pk12": [
+            0,
+            3,
+            4
+        ],
+        "bmp_to_utf8": [
+            0
+        ],
+        "pkcs7_encode_rinfo": [
+            0
+        ],
+        "old_rsa_priv_decode": [
+            0
+        ],
+        "rsa_ossl_public_decrypt": [
+            2,
+            3,
+            4
+        ],
+        "rsa_ossl_private_decrypt": [
+            2,
+            3,
+            4
+        ],
+        "rsa_ossl_private_encrypt": [
+            2,
+            3,
+            4
+        ],
+        "rsa_ossl_public_encrypt": [
+            2,
+            3,
+            4
+        ],
+        "ossl_sm2_internal_verify": [
+            4
+        ],
+        "extract_min_max": [
+            0,
+            1
+        ],
+        "ossl_prov_bio_new_membuf": [
+            1
+        ],
+        "ossl_prov_bio_new_file": [
+            1
+        ],
+        "ssl_ctx_make_profiles": [
+            1
+        ],
+        "find_profile_by_name": [
+            1,
+            2
+        ],
+        "use_certificate_chain_file": [
+            0,
+            1
+        ]
+    }
+}

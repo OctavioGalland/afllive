@@ -1,0 +1,43 @@
+{
+    "root": "/opt/afllive",
+    "typeinfo_file": "/opt/typeinfo.json",
+    "fork_on_init": false,
+    "targets": [
+        "exif_convert_utf16_to_utf8",
+        "exif_data_new_from_file",
+        "exif_loader_write_file"
+    ],
+    "constraints": {
+        "exif_convert_utf16_to_utf8": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "exif_data_new_from_file": [
+            {
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "exif_loader_write_file": [
+            {
+                "lhs": 0,
+                "is_file": true
+            }
+        ]
+    },
+    "skip": {
+        "exif_convert_utf16_to_utf8": [
+            0,
+            2
+        ],
+        "exif_data_new_from_file": [],
+        "exif_loader_write_file": [
+            0
+        ]
+    }
+}

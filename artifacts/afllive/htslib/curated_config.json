@@ -1,0 +1,1513 @@
+{
+    "root": "/opt/afllive",
+    "typeinfo_file": "/opt/htslib/typeinfo.json",
+    "fork_on_init": true,
+    "targets": [
+        "hopen",
+        "fai_parse_region",
+        "sam_hdr_update_line",
+        "regidx_parse_reg",
+        "regidx_parse_vcf",
+        "regidx_parse_bed",
+        "hts_decode_base64",
+        "hts_decode_percent",
+        "hts_parse_region",
+        "hts_parse_reg",
+        "hts_parse_reg64",
+        "hts_parse_opt_list",
+        "hts_parse_format",
+        "bam_aux2Z",
+        "bam_aux2A",
+        "bam_aux_update_str",
+        "__ignore__bam_parse_cigar",
+        "sam_parse_cigar",
+        "bcf_update_id",
+        "bcf_update_alleles_str",
+        "bcf_update_format",
+        "bcf_update_format_string",
+        "bcf_hdr_parse",
+        "bcf_hdr_parse_line",
+        "bcf_sr_set_regions",
+        "bcf_sr_set_targets",
+        "bcf_sr_seek",
+        "fai_fetchqual",
+        "fai_fetch",
+        "sam_hdr_change_HD",
+        "sam_parse_region",
+        "sam_itr_querys",
+        "bgzf_uncompress",
+        "crypt4gh_needed",
+        "fqz_decompress",
+        "rans_uncompress",
+        "arith_uncompress",
+        "arith_compress",
+        "sam_hdr_parse_",
+        "decode_names",
+        "cram_varint_encode_int",
+        "cram_varint_encode_sint",
+        "cram_varint_encode_long",
+        "cram_varint_encode_slong",
+        "cram_huffman_encode_char0",
+        "cram_huffman_encode_char",
+        "cram_huffman_encode_int0",
+        "cram_huffman_encode_int",
+        "cram_huffman_encode_long0",
+        "cram_huffman_encode_long",
+        "cram_beta_encode_int",
+        "cram_beta_encode_long",
+        "cram_beta_encode_char",
+        "cram_xpack_encode_long",
+        "cram_xpack_encode_int",
+        "cram_xpack_encode_char",
+        "cram_byte_array_len_encode",
+        "cram_byte_array_stop_encode",
+        "cram_byte_array_stop_decode_init",
+        "hash_string",
+        "urldecode_kput",
+        "cram_huffman_decode_init",
+        "cram_gamma_decode_init",
+        "cram_subexp_decode_init",
+        "tbx_parse1",
+        "cram_xrle_encode_long",
+        "cram_xrle_encode_int",
+        "cram_xrle_encode_char",
+        "cram_xrle_decode_init",
+        "cram_xdelta_encode_long",
+        "cram_xdelta_encode_int",
+        "cram_xdelta_encode_char",
+        "cram_xdelta_encode_store",
+        "cram_xdelta_decode_init",
+        "bcf_hdr_append",
+        "bcf_update_info_int64",
+        "cram_xpack_decode_init",
+        "cram_beta_decode_init",
+        "cram_const_encode",
+        "cram_const_decode_init",
+        "cram_varint_decode_init",
+        "cram_external_encode_slong",
+        "cram_external_encode_sint",
+        "cram_external_decode_init",
+        "encode_utf8"
+    ],
+    "constraints": {
+        "hopen": [
+            {
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "fai_parse_region": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "sam_hdr_update_line": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "le",
+                "lhs": 2,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "regidx_parse_reg": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "regidx_parse_vcf": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "regidx_parse_bed": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "hts_decode_base64": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "hts_decode_percent": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "hts_parse_region": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "hts_parse_reg": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "hts_parse_reg64": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "hts_parse_opt_list": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "hts_parse_format": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "bam_aux2Z": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "bam_aux2A": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "bam_aux_update_str": [
+            {
+                "rel": "eq",
+                "lhs": 1,
+                "rhs": 0
+            },
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "bam_parse_cigar": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "sam_parse_cigar": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "bcf_update_id": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "bcf_update_alleles_str": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "bcf_update_format": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "bcf_update_format_string": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "bcf_hdr_parse": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "bcf_hdr_parse_line": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "bcf_sr_set_regions": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "bcf_sr_set_targets": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "bcf_sr_seek": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "fai_fetchqual": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "fai_fetch": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "sam_hdr_change_HD": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "sam_parse_region": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "sam_itr_querys": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "bgzf_uncompress": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "crypt4gh_needed": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "fqz_decompress": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "rans_uncompress": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "arith_uncompress": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "arith_compress": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "sam_hdr_parse_": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "decode_names": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_varint_encode_int": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_varint_encode_sint": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_varint_encode_long": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_varint_encode_slong": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_huffman_encode_char0": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_huffman_encode_char": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_huffman_encode_int0": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_huffman_encode_int": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_huffman_encode_long0": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_huffman_encode_long": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_beta_encode_int": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_beta_encode_long": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_beta_encode_char": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_xpack_encode_long": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_xpack_encode_int": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_xpack_encode_char": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_byte_array_len_encode": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_byte_array_stop_encode": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_byte_array_stop_decode_init": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "hash_string": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "urldecode_kput": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_huffman_decode_init": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_gamma_decode_init": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_subexp_decode_init": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "tbx_parse1": [
+            {
+                "rel": "eq",
+                "lhs": 1,
+                "rhs": 0
+            },
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_xrle_encode_long": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_xrle_encode_int": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_xrle_encode_char": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_xrle_decode_init": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_xdelta_encode_long": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_xdelta_encode_int": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_xdelta_encode_char": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_xdelta_encode_store": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_xdelta_decode_init": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "bcf_hdr_append": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "bcf_update_info_int64": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_xpack_decode_init": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_beta_decode_init": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_const_encode": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_const_decode_init": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_varint_decode_init": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_external_encode_slong": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_external_encode_sint": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cram_external_decode_init": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "encode_utf8": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ]
+    },
+    "skip": {
+        "fai_parse_region": [
+            0,
+            2,
+            3,
+            4,
+            5
+        ],
+        "sam_hdr_update_line": [
+            0
+        ],
+        "regidx_parse_reg": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+        ],
+        "regidx_parse_vcf": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+        ],
+        "regidx_parse_bed": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+        ],
+        "hts_decode_base64": [
+            0,
+            1
+        ],
+        "hts_decode_percent": [
+            0,
+            1
+        ],
+        "hts_parse_region": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+        ],
+        "hts_parse_reg": [
+            1,
+            2
+        ],
+        "hts_parse_reg64": [
+            1,
+            2
+        ],
+        "hts_parse_opt_list": [
+            0
+        ],
+        "hts_parse_format": [
+            0
+        ],
+        "bam_aux2Z": [],
+        "bam_aux2A": [],
+        "bam_aux_update_str": [
+            0,
+            1
+        ],
+        "bam_parse_cigar": [
+            1,
+            2
+        ],
+        "sam_parse_cigar": [
+            1,
+            2,
+            3
+        ],
+        "bcf_update_id": [
+            0,
+            1
+        ],
+        "bcf_update_alleles_str": [
+            0,
+            1
+        ],
+        "bcf_update_format": [
+            0,
+            1,
+            3,
+            4,
+            5
+        ],
+        "bcf_update_format_string": [
+            0,
+            1,
+            3,
+            4
+        ],
+        "bcf_hdr_parse": [
+            0
+        ],
+        "bcf_hdr_parse_line": [
+            0,
+            2
+        ],
+        "bcf_sr_set_regions": [
+            0,
+            2
+        ],
+        "bcf_sr_set_targets": [
+            0,
+            2,
+            3
+        ],
+        "bcf_sr_seek": [
+            0,
+            2
+        ],
+        "fai_fetchqual": [
+            0,
+            2
+        ],
+        "fai_fetch": [
+            0,
+            2
+        ],
+        "sam_hdr_change_HD": [
+            0
+        ],
+        "sam_parse_region": [
+            0,
+            2,
+            3,
+            4,
+            5
+        ],
+        "sam_itr_querys": [
+            0,
+            1
+        ],
+        "bgzf_uncompress": [
+            0,
+            1,
+            4
+        ],
+        "crypt4gh_needed": [],
+        "fqz_decompress": [
+            2,
+            3,
+            4
+        ],
+        "rans_uncompress": [
+            2
+        ],
+        "arith_uncompress": [
+            2
+        ],
+        "arith_compress": [
+            2,
+            3
+        ],
+        "sam_hdr_parse_": [],
+        "decode_names": [
+            2
+        ],
+        "cram_varint_encode_int": [
+            0,
+            1
+        ],
+        "cram_varint_encode_sint": [
+            0,
+            1
+        ],
+        "cram_varint_encode_long": [
+            0,
+            1
+        ],
+        "cram_varint_encode_slong": [
+            0,
+            1
+        ],
+        "cram_huffman_encode_char0": [
+            0,
+            1
+        ],
+        "cram_huffman_encode_char": [
+            0,
+            1
+        ],
+        "cram_huffman_encode_int0": [
+            0,
+            1
+        ],
+        "cram_huffman_encode_int": [
+            0,
+            1
+        ],
+        "cram_huffman_encode_long0": [
+            0,
+            1
+        ],
+        "cram_huffman_encode_long": [
+            0,
+            1
+        ],
+        "cram_beta_encode_int": [
+            0,
+            1
+        ],
+        "cram_beta_encode_long": [
+            0,
+            1
+        ],
+        "cram_beta_encode_char": [
+            0,
+            1
+        ],
+        "cram_xpack_encode_long": [
+            0,
+            1
+        ],
+        "cram_xpack_encode_int": [
+            0,
+            1
+        ],
+        "cram_xpack_encode_char": [
+            0,
+            1
+        ],
+        "cram_byte_array_len_encode": [
+            0,
+            1
+        ],
+        "cram_byte_array_stop_encode": [
+            0,
+            1
+        ],
+        "cram_byte_array_stop_decode_init": [
+            0,
+            3,
+            4,
+            5,
+            6
+        ],
+        "hash_string": [
+            2
+        ],
+        "urldecode_kput": [
+            2
+        ],
+        "cram_huffman_decode_init": [
+            0,
+            3,
+            4,
+            5,
+            6
+        ],
+        "cram_gamma_decode_init": [
+            0,
+            3,
+            4,
+            5,
+            6
+        ],
+        "cram_subexp_decode_init": [
+            0,
+            3,
+            4,
+            5,
+            6
+        ],
+        "tbx_parse1": [
+            0,
+            3
+        ],
+        "cram_xrle_encode_long": [
+            0,
+            1
+        ],
+        "cram_xrle_encode_int": [
+            0,
+            1
+        ],
+        "cram_xrle_encode_char": [
+            0,
+            1
+        ],
+        "cram_xrle_decode_init": [
+            0,
+            3,
+            4,
+            5,
+            6
+        ],
+        "cram_xdelta_encode_long": [
+            0,
+            1
+        ],
+        "cram_xdelta_encode_int": [
+            0,
+            1
+        ],
+        "cram_xdelta_encode_char": [
+            0,
+            1
+        ],
+        "cram_xdelta_encode_store": [
+            0,
+            1,
+            3
+        ],
+        "cram_xdelta_decode_init": [
+            0,
+            3,
+            4,
+            5,
+            6
+        ],
+        "bcf_hdr_append": [
+            0
+        ],
+        "bcf_update_info_int64": [
+            0,
+            1,
+            3,
+            4
+        ],
+        "cram_xpack_decode_init": [
+            0,
+            3,
+            4,
+            5,
+            6
+        ],
+        "cram_beta_decode_init": [
+            0,
+            3,
+            4,
+            5,
+            6
+        ],
+        "cram_const_encode": [
+            0,
+            1
+        ],
+        "cram_const_decode_init": [
+            0,
+            3,
+            4,
+            5,
+            6
+        ],
+        "cram_varint_decode_init": [
+            0,
+            3,
+            4,
+            5,
+            6
+        ],
+        "cram_external_encode_slong": [
+            0,
+            1
+        ],
+        "cram_external_encode_sint": [
+            0,
+            1
+        ],
+        "cram_external_decode_init": [
+            0,
+            3,
+            4,
+            5,
+            6
+        ],
+        "encode_utf8": [
+            1
+        ],
+        "hopen": [
+            1
+        ]
+    }
+}

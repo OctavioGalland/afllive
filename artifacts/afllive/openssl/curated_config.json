@@ -1,0 +1,2336 @@
+{
+    "root": "/opt/afllive",
+    "max_millis": 5,
+    "typeinfo_file": "/opt/typeinfo.json",
+    "targets": [
+        "old_ec_priv_decode",
+        "SSL_CTX_use_serverinfo",
+        "PEM_write_bio_PKCS8PrivateKey_nid",
+        "EVP_DecodeUpdate",
+        "cmd_VerifyMode",
+        "PEM_write_bio_PrivateKey",
+        "cms_kek_cipher",
+        "blake2_mac_update",
+        "rsa_digest_signverify_update",
+        "readbuffer_write",
+        "HMAC",
+        "dh_param_decode",
+        "SSL_use_PrivateKey_ASN1",
+        "OSSL_CRMF_pbm_new",
+        "kdf_pbkdf2_derive",
+        "siphash_update",
+        "hmac_update",
+        "PKCS12_parse",
+        "EVP_PKEY_new_mac_key",
+        "ossl_cipher_cbc_cts_block_update",
+        "EVP_PKEY_CTX_set1_hkdf_key",
+        "print_labeled_buf",
+        "drbg_hmac_reseed",
+        "kek_unwrap_key",
+        "OSSL_DECODER_CTX_set_passphrase",
+        "OSSL_parse_url",
+        "old_rsa_priv_decode",
+        "poly1305_update",
+        "ossl_core_bio_new_mem_buf",
+        "EVP_PKEY_CTX_add1_tls1_prf_seed",
+        "PEM_write_PKCS8PrivateKey_nid",
+        "kdf_tls1_3_derive",
+        "ssl_cipher_process_rulestr",
+        "ossl_punycode_decode",
+        "EVP_EncodeUpdate",
+        "ASN1_buf_print",
+        "aes_ocb_block_update",
+        "OSSL_DECODER_CTX_new_for_pkey",
+        "OSSL_HTTP_parse_url",
+        "ct_base64_decode",
+        "dsa_param_decode",
+        "custom_ext_parse",
+        "i2d_PKCS8PrivateKey_fp",
+        "EVP_PKEY_CTX_ctrl_str",
+        "PKCS8_set0_pbe",
+        "EVP_PKEY_CTX_set1_pbe_pass",
+        "tdes_wrap_update",
+        "ssl_hmac_old_update",
+        "X509V3_parse_list",
+        "eckey_param_decode",
+        "kmac_update",
+        "ossl_gcm_stream_update",
+        "aes_siv_cipher",
+        "EVP_PKEY_CTX_set1_tls1_prf_secret",
+        "kbkdf_derive",
+        "ossl_cipher_generic_block_update",
+        "chacha20_poly1305_aead_cipher",
+        "ecdsa_digest_signverify_update",
+        "i2d_PKCS8PrivateKey_nid_fp",
+        "OSSL_DECODER_CTX_set_input_type",
+        "EVP_PKEY_CTX_set1_scrypt_salt",
+        "gmac_update",
+        "old_dsa_priv_decode",
+        "d2i_AutoPrivateKey",
+        "sm2sig_digest_signverify_update",
+        "SSL_CTX_use_PrivateKey_ASN1",
+        "PKCS12_SAFEBAG_create_pkcs8_encrypt",
+        "PKCS12_create",
+        "sskdf_derive",
+        "ossl_hexstr2buf_sep",
+        "ossl_buf2hexstr_sep",
+        "drbg_hmac_generate",
+        "BIO_parse_hostserv",
+        "OPENSSL_buf2hexstr_ex",
+        "NETSCAPE_SPKI_b64_decode",
+        "EVP_PKEY_CTX_set1_hkdf_salt",
+        "MDC2_Update",
+        "PKCS12_item_decrypt_d2i",
+        "buffer_puts",
+        "PKCS12_item_i2d_encrypt",
+        "ossl_gcm_cipher_update",
+        "PEM_write_PKCS8PrivateKey",
+        "ssl_hmac_update",
+        "ossl_cipher_generic_stream_update",
+        "keccak_update",
+        "mac_digest_sign_update",
+        "OSSL_DECODER_CTX_set_input_structure",
+        "BIO_new_mem_buf",
+        "parse_http_line1",
+        "kdf_tls1_prf_derive",
+        "SSL_bytes_to_cipher_list",
+        "i2d_PKCS8PrivateKey_bio",
+        "readbuffer_puts",
+        "ossl_parse_property",
+        "i2c_ibuf",
+        "drbg_hmac_instantiate",
+        "PEM_SignUpdate",
+        "aes_xts_stream_update",
+        "PEM_write_PrivateKey",
+        "i2d_PKCS8PrivateKey_nid_bio",
+        "EVP_PKEY_CTX_add1_hkdf_info",
+        "parse_tagging",
+        "cmac_update",
+        "dsa_digest_signverify_update",
+        "kek_wrap_key",
+        "SSL3_BUFFER_set_data",
+        "OSSL_PARAM_allocate_from_text",
+        "ssl3_record_sequence_update",
+        "OPENSSL_buf2hexstr",
+        "ASN1_parse",
+        "OSSL_DECODER_fetch",
+        "kdf_hkdf_derive",
+        "d2i_PrivateKey",
+        "linebuffer_puts",
+        "cmd_Protocol",
+        "cmd_Options",
+        "SSL_trace",
+        "OSSL_DECODER_is_a",
+        "OPENSSL_hexstr2buf_ex",
+        "ASN1_str2mask",
+        "ossl_gcm_aad_update"
+    ],
+    "constraints": {
+        "old_ec_priv_decode": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "SSL_CTX_use_serverinfo": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "PEM_write_bio_PKCS8PrivateKey_nid": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "EVP_DecodeUpdate": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cmd_VerifyMode": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "PEM_write_bio_PrivateKey": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cms_kek_cipher": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "blake2_mac_update": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "rsa_digest_signverify_update": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "readbuffer_write": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "HMAC": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "eq",
+                "lhs": 2,
+                "rhs": 3
+            },
+            {
+                "rel": "le",
+                "lhs": 3,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "dh_param_decode": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "SSL_use_PrivateKey_ASN1": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "OSSL_CRMF_pbm_new": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "eq",
+                "lhs": 2,
+                "rhs": 3
+            },
+            {
+                "rel": "le",
+                "lhs": 3,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "kdf_pbkdf2_derive": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "siphash_update": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "hmac_update": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "PKCS12_parse": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "EVP_PKEY_new_mac_key": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "ossl_cipher_cbc_cts_block_update": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "EVP_PKEY_CTX_set1_hkdf_key": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "print_labeled_buf": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "drbg_hmac_reseed": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "eq",
+                "lhs": 2,
+                "rhs": 3
+            },
+            {
+                "rel": "le",
+                "lhs": 3,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "kek_unwrap_key": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "OSSL_DECODER_CTX_set_passphrase": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "OSSL_parse_url": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "old_rsa_priv_decode": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "poly1305_update": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "ossl_core_bio_new_mem_buf": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "EVP_PKEY_CTX_add1_tls1_prf_seed": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "PEM_write_PKCS8PrivateKey_nid": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "kdf_tls1_3_derive": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "ssl_cipher_process_rulestr": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "ossl_punycode_decode": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "EVP_EncodeUpdate": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "ASN1_buf_print": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "aes_ocb_block_update": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "OSSL_DECODER_CTX_new_for_pkey": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "le",
+                "lhs": 2,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "OSSL_HTTP_parse_url": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "ct_base64_decode": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "dsa_param_decode": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "custom_ext_parse": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "i2d_PKCS8PrivateKey_fp": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "EVP_PKEY_CTX_ctrl_str": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "PKCS8_set0_pbe": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "EVP_PKEY_CTX_set1_pbe_pass": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "tdes_wrap_update": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "ssl_hmac_old_update": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "X509V3_parse_list": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "eckey_param_decode": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "kmac_update": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "ossl_gcm_stream_update": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "aes_siv_cipher": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": "rec"
+            }
+        ],
+        "EVP_PKEY_CTX_set1_tls1_prf_secret": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "kbkdf_derive": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "ossl_cipher_generic_block_update": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "chacha20_poly1305_aead_cipher": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": "rec"
+            }
+        ],
+        "ecdsa_digest_signverify_update": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "i2d_PKCS8PrivateKey_nid_fp": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "OSSL_DECODER_CTX_set_input_type": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "EVP_PKEY_CTX_set1_scrypt_salt": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "gmac_update": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "old_dsa_priv_decode": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_AutoPrivateKey": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "sm2sig_digest_signverify_update": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "SSL_CTX_use_PrivateKey_ASN1": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "PKCS12_SAFEBAG_create_pkcs8_encrypt": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "eq",
+                "lhs": 2,
+                "rhs": 3
+            },
+            {
+                "rel": "le",
+                "lhs": 3,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "PKCS12_create": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "sskdf_derive": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "ossl_hexstr2buf_sep": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "ge",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 250
+                }
+            },
+            {
+                "rel": "ge",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 1
+                },
+                "deref": true
+            }
+        ],
+        "ossl_buf2hexstr_sep": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "drbg_hmac_generate": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "BIO_parse_hostserv": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "OPENSSL_buf2hexstr_ex": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "NETSCAPE_SPKI_b64_decode": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "EVP_PKEY_CTX_set1_hkdf_salt": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "MDC2_Update": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "PKCS12_item_decrypt_d2i": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "buffer_puts": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "PKCS12_item_i2d_encrypt": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "ossl_gcm_cipher_update": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": "rec"
+            }
+        ],
+        "PEM_write_PKCS8PrivateKey": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "ssl_hmac_update": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "ossl_cipher_generic_stream_update": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "keccak_update": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "mac_digest_sign_update": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "OSSL_DECODER_CTX_set_input_structure": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "BIO_new_mem_buf": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "parse_http_line1": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "kdf_tls1_prf_derive": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "SSL_bytes_to_cipher_list": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "i2d_PKCS8PrivateKey_bio": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "readbuffer_puts": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "ossl_parse_property": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "i2c_ibuf": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "drbg_hmac_instantiate": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "eq",
+                "lhs": 2,
+                "rhs": 3
+            },
+            {
+                "rel": "le",
+                "lhs": 3,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "eq",
+                "lhs": 4,
+                "rhs": 5
+            },
+            {
+                "rel": "le",
+                "lhs": 5,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "PEM_SignUpdate": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "aes_xts_stream_update": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "PEM_write_PrivateKey": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "i2d_PKCS8PrivateKey_nid_bio": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "EVP_PKEY_CTX_add1_hkdf_info": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "parse_tagging": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cmac_update": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "dsa_digest_signverify_update": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "kek_wrap_key": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "SSL3_BUFFER_set_data": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "OSSL_PARAM_allocate_from_text": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "eq",
+                "lhs": 1,
+                "rhs": 2
+            },
+            {
+                "rel": "le",
+                "lhs": 2,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "ssl3_record_sequence_update": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 8
+                }
+            }
+        ],
+        "OPENSSL_buf2hexstr": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "ASN1_parse": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "OSSL_DECODER_fetch": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "kdf_hkdf_derive": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_PrivateKey": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "linebuffer_puts": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cmd_Protocol": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "cmd_Options": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "SSL_trace": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "OSSL_DECODER_is_a": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "OPENSSL_hexstr2buf_ex": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "ASN1_str2mask": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "ossl_gcm_aad_update": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ]
+    },
+    "skip": {
+        "old_ec_priv_decode": [
+            0
+        ],
+        "SSL_CTX_use_serverinfo": [
+            0
+        ],
+        "PEM_write_bio_PKCS8PrivateKey_nid": [
+            0,
+            1,
+            2,
+            5,
+            6
+        ],
+        "EVP_DecodeUpdate": [
+            0,
+            1,
+            2
+        ],
+        "cmd_VerifyMode": [
+            0
+        ],
+        "PEM_write_bio_PrivateKey": [
+            0,
+            1,
+            2,
+            5,
+            6
+        ],
+        "cms_kek_cipher": [
+            0,
+            1,
+            4,
+            5
+        ],
+        "blake2_mac_update": [
+            0
+        ],
+        "rsa_digest_signverify_update": [
+            0
+        ],
+        "readbuffer_write": [
+            0
+        ],
+        "HMAC": [
+            0,
+            5,
+            6
+        ],
+        "dh_param_decode": [
+            0
+        ],
+        "SSL_use_PrivateKey_ASN1": [
+            0,
+            1
+        ],
+        "OSSL_CRMF_pbm_new": [
+            0,
+            1,
+            2,
+            7,
+            8
+        ],
+        "kdf_pbkdf2_derive": [
+            0,
+            3
+        ],
+        "siphash_update": [
+            0
+        ],
+        "hmac_update": [
+            0
+        ],
+        "PKCS12_parse": [
+            0,
+            2,
+            3,
+            4
+        ],
+        "EVP_PKEY_new_mac_key": [
+            0,
+            1
+        ],
+        "ossl_cipher_cbc_cts_block_update": [
+            0,
+            1,
+            2,
+            3
+        ],
+        "EVP_PKEY_CTX_set1_hkdf_key": [
+            0
+        ],
+        "print_labeled_buf": [
+            0,
+            1
+        ],
+        "drbg_hmac_reseed": [
+            0
+        ],
+        "kek_unwrap_key": [
+            0,
+            1,
+            4
+        ],
+        "OSSL_DECODER_CTX_set_passphrase": [
+            0
+        ],
+        "OSSL_parse_url": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "old_rsa_priv_decode": [
+            0
+        ],
+        "poly1305_update": [
+            0
+        ],
+        "ossl_core_bio_new_mem_buf": [],
+        "EVP_PKEY_CTX_add1_tls1_prf_seed": [
+            0
+        ],
+        "PEM_write_PKCS8PrivateKey_nid": [
+            0,
+            1,
+            2,
+            5,
+            6
+        ],
+        "kdf_tls1_3_derive": [
+            0,
+            3
+        ],
+        "ssl_cipher_process_rulestr": [
+            1,
+            2,
+            3,
+            4
+        ],
+        "ossl_punycode_decode": [
+            2,
+            3
+        ],
+        "EVP_EncodeUpdate": [
+            0,
+            1,
+            2
+        ],
+        "ASN1_buf_print": [
+            0,
+            3
+        ],
+        "aes_ocb_block_update": [
+            0,
+            1,
+            2,
+            3
+        ],
+        "OSSL_DECODER_CTX_new_for_pkey": [
+            0,
+            4,
+            5,
+            6
+        ],
+        "OSSL_HTTP_parse_url": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "ct_base64_decode": [
+            1
+        ],
+        "dsa_param_decode": [
+            0
+        ],
+        "custom_ext_parse": [
+            0,
+            1,
+            2,
+            5,
+            6
+        ],
+        "i2d_PKCS8PrivateKey_fp": [
+            0,
+            1,
+            2,
+            5,
+            6
+        ],
+        "EVP_PKEY_CTX_ctrl_str": [
+            0
+        ],
+        "PKCS8_set0_pbe": [
+            2,
+            3
+        ],
+        "EVP_PKEY_CTX_set1_pbe_pass": [
+            0
+        ],
+        "tdes_wrap_update": [
+            0,
+            1,
+            2,
+            3
+        ],
+        "ssl_hmac_old_update": [
+            0
+        ],
+        "X509V3_parse_list": [],
+        "eckey_param_decode": [
+            0
+        ],
+        "kmac_update": [
+            0
+        ],
+        "ossl_gcm_stream_update": [
+            0,
+            1,
+            2,
+            3
+        ],
+        "aes_siv_cipher": [
+            0,
+            1
+        ],
+        "EVP_PKEY_CTX_set1_tls1_prf_secret": [
+            0
+        ],
+        "kbkdf_derive": [
+            0,
+            3
+        ],
+        "ossl_cipher_generic_block_update": [
+            0,
+            1,
+            2,
+            3
+        ],
+        "chacha20_poly1305_aead_cipher": [
+            0,
+            1,
+            2
+        ],
+        "ecdsa_digest_signverify_update": [
+            0
+        ],
+        "i2d_PKCS8PrivateKey_nid_fp": [
+            0,
+            1,
+            2,
+            5,
+            6
+        ],
+        "OSSL_DECODER_CTX_set_input_type": [
+            0
+        ],
+        "EVP_PKEY_CTX_set1_scrypt_salt": [
+            0
+        ],
+        "gmac_update": [
+            0
+        ],
+        "old_dsa_priv_decode": [
+            0
+        ],
+        "d2i_AutoPrivateKey": [
+            0
+        ],
+        "sm2sig_digest_signverify_update": [
+            0
+        ],
+        "SSL_CTX_use_PrivateKey_ASN1": [
+            0,
+            1
+        ],
+        "PKCS12_SAFEBAG_create_pkcs8_encrypt": [
+            0,
+            5,
+            6
+        ],
+        "PKCS12_create": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+        ],
+        "sskdf_derive": [
+            0,
+            3
+        ],
+        "ossl_hexstr2buf_sep": [
+            1,
+            2
+        ],
+        "ossl_buf2hexstr_sep": [
+            2
+        ],
+        "drbg_hmac_generate": [
+            0,
+            1,
+            2
+        ],
+        "BIO_parse_hostserv": [
+            1,
+            2,
+            3
+        ],
+        "OPENSSL_buf2hexstr_ex": [
+            0,
+            1,
+            2,
+            5
+        ],
+        "NETSCAPE_SPKI_b64_decode": [],
+        "EVP_PKEY_CTX_set1_hkdf_salt": [
+            0
+        ],
+        "MDC2_Update": [
+            0
+        ],
+        "PKCS12_item_decrypt_d2i": [
+            0,
+            1,
+            4,
+            5
+        ],
+        "buffer_puts": [
+            0
+        ],
+        "PKCS12_item_i2d_encrypt": [
+            0,
+            1,
+            4,
+            5
+        ],
+        "ossl_gcm_cipher_update": [
+            0,
+            3
+        ],
+        "PEM_write_PKCS8PrivateKey": [
+            0,
+            1,
+            2,
+            5,
+            6
+        ],
+        "ssl_hmac_update": [
+            0
+        ],
+        "ossl_cipher_generic_stream_update": [
+            0,
+            1,
+            2,
+            3
+        ],
+        "keccak_update": [
+            0
+        ],
+        "mac_digest_sign_update": [
+            0
+        ],
+        "OSSL_DECODER_CTX_set_input_structure": [
+            0
+        ],
+        "BIO_new_mem_buf": [],
+        "parse_http_line1": [
+            1
+        ],
+        "kdf_tls1_prf_derive": [
+            0,
+            3
+        ],
+        "SSL_bytes_to_cipher_list": [
+            0,
+            3,
+            4,
+            5
+        ],
+        "i2d_PKCS8PrivateKey_bio": [
+            0,
+            1,
+            2,
+            5,
+            6
+        ],
+        "readbuffer_puts": [
+            0
+        ],
+        "ossl_parse_property": [
+            0
+        ],
+        "i2c_ibuf": [
+            2,
+            3
+        ],
+        "drbg_hmac_instantiate": [
+            0
+        ],
+        "PEM_SignUpdate": [
+            0
+        ],
+        "aes_xts_stream_update": [
+            0,
+            1,
+            2,
+            3
+        ],
+        "PEM_write_PrivateKey": [
+            0,
+            1,
+            2,
+            5,
+            6
+        ],
+        "i2d_PKCS8PrivateKey_nid_bio": [
+            0,
+            1,
+            2,
+            5,
+            6
+        ],
+        "EVP_PKEY_CTX_add1_hkdf_info": [
+            0
+        ],
+        "parse_tagging": [
+            2,
+            3
+        ],
+        "cmac_update": [
+            0
+        ],
+        "dsa_digest_signverify_update": [
+            0
+        ],
+        "kek_wrap_key": [
+            0,
+            1,
+            4,
+            5
+        ],
+        "SSL3_BUFFER_set_data": [
+            0
+        ],
+        "OSSL_PARAM_allocate_from_text": [
+            0,
+            1,
+            5
+        ],
+        "ssl3_record_sequence_update": [],
+        "OPENSSL_buf2hexstr": [],
+        "ASN1_parse": [
+            0,
+            3
+        ],
+        "OSSL_DECODER_fetch": [
+            0
+        ],
+        "kdf_hkdf_derive": [
+            0,
+            3
+        ],
+        "d2i_PrivateKey": [
+            0,
+            1
+        ],
+        "linebuffer_puts": [
+            0
+        ],
+        "cmd_Protocol": [
+            0
+        ],
+        "cmd_Options": [
+            0
+        ],
+        "SSL_trace": [
+            0,
+            1,
+            2,
+            5,
+            6
+        ],
+        "OSSL_DECODER_is_a": [
+            0
+        ],
+        "OPENSSL_hexstr2buf_ex": [
+            0,
+            1,
+            2,
+            4
+        ],
+        "ASN1_str2mask": [
+            1
+        ],
+        "ossl_gcm_aad_update": [
+            0
+        ]
+    }
+}

@@ -1,0 +1,2730 @@
+{
+	"root": "/opt/afllive",
+	"typeinfo_file": "/opt/typeinfo.json",
+    "fork_on_init": false,
+	"max_millis": 15,
+    "targets": [
+        "add_encrypted_data",
+        "aead_aes_ccm_bluetooth_8_init",
+        "aead_aes_ccm_bluetooth_init",
+        "aead_aes_ccm_init",
+        "aead_aes_ccm_matter_init",
+        "aead_aes_gcm_init",
+        "aead_aes_gcm_init_impl",
+        "aead_aes_gcm_init_randnonce",
+        "aead_aes_gcm_siv_init",
+        "aead_aes_gcm_tls12_init",
+        "aead_aes_gcm_tls13_init",
+        "aead_tls_open",
+        "aead_tls_seal_scatter",
+        "d2i_ACCESS_DESCRIPTION",
+        "d2i_ASN1_BIT_STRING",
+        "d2i_ASN1_ENUMERATED",
+        "d2i_ASN1_GENERALIZEDTIME",
+        "d2i_ASN1_GENERALSTRING",
+        "d2i_ASN1_IA5STRING",
+        "d2i_ASN1_LINKED_LIST",
+        "d2i_ASN1_PRINTABLESTRING",
+        "d2i_ASN1_TIME",
+        "d2i_ASN1_UTCTIME",
+        "d2i_ASN1_VISIBLESTRING",
+        "d2i_AUTHORITY_INFO_ACCESS",
+        "d2i_AUTHORITY_KEYID",
+        "d2i_AutoPrivateKey",
+        "d2i_BASIC_CONSTRAINTS",
+        "d2i_BOOLEANS",
+        "d2i_CERTIFICATEPOLICIES",
+        "d2i_CHOICE_TYPE",
+        "d2i_CRL_DIST_POINTS",
+        "d2i_DHparams",
+        "d2i_DIRECTORYSTRING",
+        "d2i_DISPLAYTEXT",
+        "d2i_DIST_POINT",
+        "d2i_DIST_POINT_NAME",
+        "d2i_DOUBLY_TAGGED",
+        "d2i_DSAparams",
+        "d2i_DSAPrivateKey",
+        "d2i_DSA_PUBKEY",
+        "d2i_DSAPublicKey",
+        "d2i_DSA_SIG",
+        "d2i_ECDSA_SIG",
+        "d2i_ECParameters",
+        "d2i_ECPrivateKey",
+        "d2i_EC_PUBKEY",
+        "d2i_EDIPARTYNAME",
+        "d2i_EMBED_X509",
+        "d2i_EXTENDED_KEY_USAGE",
+        "d2i_GENERAL_NAME",
+        "d2i_GENERAL_NAMES",
+        "d2i_IMPLICIT_CHOICE",
+        "d2i_ISSUING_DIST_POINT",
+        "d2i_NETSCAPE_SPKAC",
+        "d2i_NETSCAPE_SPKI",
+        "d2i_NOTICEREF",
+        "d2i_OPTIONAL_CHOICE",
+        "d2i_OTHERNAME",
+        "d2i_PKCS8_PRIV_KEY_INFO",
+        "d2i_POLICYINFO",
+        "d2i_POLICYQUALINFO",
+        "d2i_PrivateKey",
+        "d2i_PUBKEY",
+        "d2i_PublicKey",
+        "d2i_REQUIRED_FIELD",
+        "d2i_RSAPrivateKey",
+        "d2i_RSA_PSS_PARAMS",
+        "d2i_RSA_PUBKEY",
+        "d2i_RSAPublicKey",
+        "d2i_SSL_SESSION",
+        "d2i_USERNOTICE",
+        "d2i_X509",
+        "d2i_X509_ATTRIBUTE",
+        "d2i_X509_AUX",
+        "d2i_X509_CERT_AUX",
+        "d2i_X509_CINF",
+        "d2i_X509_CRL_INFO",
+        "d2i_X509_EXTENSION",
+        "d2i_X509_EXTENSIONS",
+        "d2i_X509_NAME",
+        "d2i_X509_NAME_ENTRY",
+        "d2i_X509_PUBKEY",
+        "d2i_X509_REQ",
+        "d2i_X509_REQ_INFO",
+        "d2i_X509_REVOKED",
+        "d2i_X509_SIG",
+        "d2i_X509_VAL",
+        "EVP_CipherUpdate",
+        "EVP_DecryptUpdate",
+        "EVP_EncryptUpdate",
+        "HMAC_Init",
+        "i2d_PKCS8PrivateKey_bio",
+        "i2d_PKCS8PrivateKey_fp",
+        "i2d_PKCS8PrivateKey_nid_bio",
+        "i2d_PKCS8PrivateKey_nid_fp",
+        "parse_key",
+        "PEM_do_header",
+        "PEM_write_bio_PKCS8PrivateKey",
+        "PEM_write_bio_PKCS8PrivateKey_nid",
+        "PEM_write_bio_PrivateKey",
+        "PEM_write_PKCS8PrivateKey",
+        "PEM_write_PKCS8PrivateKey_nid",
+        "PEM_write_PrivateKey",
+        "PKCS12_create",
+        "PKCS12_verify_mac",
+        "PKCS8_decrypt",
+        "PKCS8_encrypt",
+        "PKCS8_marshal_encrypted_private_key",
+        "PKCS8_parse_encrypted_private_key",
+        "pkcs8_pbe_decrypt",
+        "pkey_rsa_verify",
+        "RSA_verify_pss_mgf1",
+        "SSL_CTX_use_PrivateKey_ASN1",
+        "ssl_encrypt_ticket_with_cipher_ctx",
+        "SSL_use_PrivateKey_ASN1",
+        "tls_cbc_digest_record_sha256",
+        "vpaes_set_decrypt_key",
+        "vpaes_set_encrypt_key"
+    ],
+    "constraints": {
+        "add_encrypted_data": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "eq",
+                "lhs": 2,
+                "rhs": 3
+            },
+            {
+                "rel": "le",
+                "lhs": 3,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "aead_aes_ccm_bluetooth_8_init": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "aead_aes_ccm_bluetooth_init": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "aead_aes_ccm_init": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "aead_aes_ccm_matter_init": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "aead_aes_gcm_init": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "aead_aes_gcm_init_impl": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "aead_aes_gcm_init_randnonce": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "aead_aes_gcm_siv_init": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "aead_aes_gcm_tls12_init": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "aead_aes_gcm_tls13_init": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "aead_tls_open": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "eq",
+                "lhs": 2,
+                "rhs": 3
+            },
+            {
+                "rel": "le",
+                "lhs": 3,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "eq",
+                "lhs": 4,
+                "rhs": 5
+            },
+            {
+                "rel": "le",
+                "lhs": 5,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "aead_tls_seal_scatter": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "eq",
+                "lhs": 2,
+                "rhs": 3
+            },
+            {
+                "rel": "le",
+                "lhs": 3,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "eq",
+                "lhs": 4,
+                "rhs": 5
+            },
+            {
+                "rel": "le",
+                "lhs": 5,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_ACCESS_DESCRIPTION": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_ASN1_BIT_STRING": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_ASN1_BMPSTRING": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_ASN1_BOOLEAN": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_ASN1_ENUMERATED": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_ASN1_GENERALIZEDTIME": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_ASN1_GENERALSTRING": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_ASN1_IA5STRING": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_ASN1_INTEGER": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_ASN1_LINKED_LIST": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_ASN1_NULL": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_ASN1_OBJECT": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_ASN1_OCTET_STRING": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_ASN1_PRINTABLE": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_ASN1_PRINTABLESTRING": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_ASN1_SEQUENCE_ANY": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_ASN1_SET_ANY": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_ASN1_T61STRING": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_ASN1_TIME": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_ASN1_TYPE": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_ASN1_UNIVERSALSTRING": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_ASN1_UTCTIME": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_ASN1_UTF8STRING": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_ASN1_VISIBLESTRING": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_AUTHORITY_INFO_ACCESS": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_AUTHORITY_KEYID": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_AutoPrivateKey": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_BASIC_CONSTRAINTS": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_BOOLEANS": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_CERTIFICATEPOLICIES": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_CHOICE_TYPE": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_CRL_DIST_POINTS": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_DHparams": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_DIRECTORYSTRING": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_DISPLAYTEXT": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_DIST_POINT": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_DIST_POINT_NAME": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_DOUBLY_TAGGED": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_DSAparams": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_DSAPrivateKey": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_DSA_PUBKEY": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_DSAPublicKey": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_DSA_SIG": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_ECDSA_SIG": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_ECParameters": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_ECPrivateKey": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_EC_PUBKEY": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_EDIPARTYNAME": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_EMBED_X509": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_EXTENDED_KEY_USAGE": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_GENERAL_NAME": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_GENERAL_NAMES": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_IMPLICIT_CHOICE": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_ISSUING_DIST_POINT": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_NETSCAPE_SPKAC": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_NETSCAPE_SPKI": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_NOTICEREF": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_OPTIONAL_CHOICE": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_OTHERNAME": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_PKCS8_PRIV_KEY_INFO": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_POLICYINFO": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_POLICYQUALINFO": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_PrivateKey": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_PUBKEY": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_PublicKey": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_REQUIRED_FIELD": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_RSAPrivateKey": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_RSA_PSS_PARAMS": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_RSA_PUBKEY": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_RSAPublicKey": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_SSL_SESSION": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_USERNOTICE": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_X509": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_X509_ALGOR": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_X509_ATTRIBUTE": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_X509_AUX": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_X509_CERT_AUX": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_X509_CINF": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_X509_CRL": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_X509_CRL_INFO": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_X509_EXTENSION": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_X509_EXTENSIONS": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_X509_NAME": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_X509_NAME_ENTRY": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_X509_PUBKEY": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_X509_REQ": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_X509_REQ_INFO": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_X509_REVOKED": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_X509_SIG": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "d2i_X509_VAL": [
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "do_buf": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "EVP_CipherUpdate": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": "rec"
+            }
+        ],
+        "EVP_DecryptUpdate": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": "rec"
+            }
+        ],
+        "EVP_EncryptUpdate": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": "rec"
+            }
+        ],
+       "HMAC_Init": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "i2d_PKCS8PrivateKey_bio": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "i2d_PKCS8PrivateKey_fp": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "i2d_PKCS8PrivateKey_nid_bio": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "i2d_PKCS8PrivateKey_nid_fp": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "parse_key": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "PEM_do_header": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "PEM_write_bio_PKCS8PrivateKey": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "PEM_write_bio_PKCS8PrivateKey_nid": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "PEM_write_bio_PrivateKey": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "PEM_write_PKCS8PrivateKey": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "PEM_write_PKCS8PrivateKey_nid": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "PEM_write_PrivateKey": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "PKCS12_create": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "PKCS12_verify_mac": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "PKCS8_decrypt": [
+            {
+                "rel": "eq",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4294967295
+				}
+            },
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "PKCS8_encrypt": [
+            {
+                "rel": "eq",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4294967295
+				}
+            },
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "eq",
+                "lhs": 2,
+                "rhs": 3
+            },
+            {
+                "rel": "le",
+                "lhs": 3,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "PKCS8_marshal_encrypted_private_key": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "eq",
+                "lhs": 2,
+                "rhs": 3
+            },
+            {
+                "rel": "le",
+                "lhs": 3,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "PKCS8_parse_encrypted_private_key": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "pkcs8_pbe_decrypt": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "eq",
+                "lhs": 2,
+                "rhs": 3
+            },
+            {
+                "rel": "le",
+                "lhs": 3,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "pkey_rsa_verify": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "eq",
+                "lhs": 2,
+                "rhs": 3
+            },
+            {
+                "rel": "le",
+                "lhs": 3,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+       "RSA_verify_pss_mgf1": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "eq",
+                "lhs": 2,
+                "rhs": 3
+            },
+            {
+                "rel": "le",
+                "lhs": 3,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "SSL_CTX_use_PrivateKey_ASN1": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "ssl_encrypt_ticket_with_cipher_ctx": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "SSL_use_PrivateKey_ASN1": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+       "tls_cbc_digest_record_sha256": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "vpaes_set_decrypt_key": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "vpaes_set_encrypt_key": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ]
+    },
+    "skip": {
+        "add_encrypted_data": [
+            0,
+            1,
+            4
+        ],
+        "aead_aes_ccm_bluetooth_8_init": [
+            0,
+            3
+        ],
+        "aead_aes_ccm_bluetooth_init": [
+            0,
+            3
+        ],
+        "aead_aes_ccm_init": [
+            0,
+            3,
+            4,
+            5
+        ],
+        "aead_aes_ccm_matter_init": [
+            0,
+            3
+        ],
+        "aead_aes_gcm_init": [
+            0,
+            3
+        ],
+        "aead_aes_gcm_init_impl": [
+            0,
+            1,
+            4
+        ],
+        "aead_aes_gcm_init_randnonce": [
+            0,
+            3
+        ],
+        "aead_aes_gcm_siv_init": [
+            0,
+            3
+        ],
+        "aead_aes_gcm_tls12_init": [
+            0,
+            3
+        ],
+        "aead_aes_gcm_tls13_init": [
+            0,
+            3
+        ],
+        "aead_tls_open": [
+            0,
+            1,
+            2,
+            3
+        ],
+        "aead_tls_seal_scatter": [
+            0,
+            1,
+            2,
+            3,
+            4,
+			9,
+			10
+        ],
+        "d2i_ACCESS_DESCRIPTION": [
+            0
+        ],
+        "d2i_ASN1_BIT_STRING": [
+            0
+        ],
+        "d2i_ASN1_BMPSTRING": [
+            0
+        ],
+        "d2i_ASN1_BOOLEAN": [
+            0
+        ],
+        "d2i_ASN1_ENUMERATED": [
+            0
+        ],
+        "d2i_ASN1_GENERALIZEDTIME": [
+            0
+        ],
+        "d2i_ASN1_GENERALSTRING": [
+            0
+        ],
+        "d2i_ASN1_IA5STRING": [
+            0
+        ],
+        "d2i_ASN1_INTEGER": [
+            0
+        ],
+        "d2i_ASN1_LINKED_LIST": [
+            0
+        ],
+        "d2i_ASN1_NULL": [
+            0
+        ],
+        "d2i_ASN1_OBJECT": [
+            0
+        ],
+        "d2i_ASN1_OCTET_STRING": [
+            0
+        ],
+        "d2i_ASN1_PRINTABLE": [
+            0
+        ],
+        "d2i_ASN1_PRINTABLESTRING": [
+            0
+        ],
+        "d2i_ASN1_SEQUENCE_ANY": [
+            0
+        ],
+        "d2i_ASN1_SET_ANY": [
+            0
+        ],
+        "d2i_ASN1_T61STRING": [
+            0
+        ],
+        "d2i_ASN1_TIME": [
+            0
+        ],
+        "d2i_ASN1_TYPE": [
+            0
+        ],
+        "d2i_ASN1_UNIVERSALSTRING": [
+            0
+        ],
+        "d2i_ASN1_UTCTIME": [
+            0
+        ],
+        "d2i_ASN1_UTF8STRING": [
+            0
+        ],
+        "d2i_ASN1_VISIBLESTRING": [
+            0
+        ],
+        "d2i_AUTHORITY_INFO_ACCESS": [
+            0
+        ],
+        "d2i_AUTHORITY_KEYID": [
+            0
+        ],
+        "d2i_AutoPrivateKey": [
+            0
+        ],
+        "d2i_BASIC_CONSTRAINTS": [
+            0
+        ],
+        "d2i_BOOLEANS": [
+            0
+        ],
+        "d2i_CERTIFICATEPOLICIES": [
+            0
+        ],
+        "d2i_CHOICE_TYPE": [
+            0
+        ],
+        "d2i_CRL_DIST_POINTS": [
+            0
+        ],
+        "d2i_DHparams": [
+            0
+        ],
+        "d2i_DIRECTORYSTRING": [
+            0
+        ],
+        "d2i_DISPLAYTEXT": [
+            0
+        ],
+        "d2i_DIST_POINT": [
+            0
+        ],
+        "d2i_DIST_POINT_NAME": [
+            0
+        ],
+        "d2i_DOUBLY_TAGGED": [
+            0
+        ],
+        "d2i_DSAparams": [
+            0
+        ],
+        "d2i_DSAPrivateKey": [
+            0
+        ],
+        "d2i_DSA_PUBKEY": [
+            0
+        ],
+        "d2i_DSAPublicKey": [
+            0
+        ],
+        "d2i_DSA_SIG": [
+            0
+        ],
+        "d2i_ECDSA_SIG": [
+            0
+        ],
+        "d2i_ECParameters": [
+            0
+        ],
+        "d2i_ECPrivateKey": [
+            0
+        ],
+        "d2i_EC_PUBKEY": [
+            0
+        ],
+        "d2i_EDIPARTYNAME": [
+            0
+        ],
+        "d2i_EMBED_X509": [
+            0
+        ],
+        "d2i_EXTENDED_KEY_USAGE": [
+            0
+        ],
+        "d2i_GENERAL_NAME": [
+            0
+        ],
+        "d2i_GENERAL_NAMES": [
+            0
+        ],
+        "d2i_IMPLICIT_CHOICE": [
+            0
+        ],
+        "d2i_ISSUING_DIST_POINT": [
+            0
+        ],
+        "d2i_NETSCAPE_SPKAC": [
+            0
+        ],
+        "d2i_NETSCAPE_SPKI": [
+            0
+        ],
+        "d2i_NOTICEREF": [
+            0
+        ],
+        "d2i_OPTIONAL_CHOICE": [
+            0
+        ],
+        "d2i_OTHERNAME": [
+            0
+        ],
+        "d2i_PKCS8_PRIV_KEY_INFO": [
+            0
+        ],
+        "d2i_POLICYINFO": [
+            0
+        ],
+        "d2i_POLICYQUALINFO": [
+            0
+        ],
+        "d2i_PrivateKey": [
+            0,
+            1
+        ],
+        "d2i_PUBKEY": [
+            0
+        ],
+        "d2i_PublicKey": [
+            0,
+            1
+        ],
+        "d2i_REQUIRED_FIELD": [
+            0
+        ],
+        "d2i_RSAPrivateKey": [
+            0
+        ],
+        "d2i_RSA_PSS_PARAMS": [
+            0
+        ],
+        "d2i_RSA_PUBKEY": [
+            0
+        ],
+        "d2i_RSAPublicKey": [
+            0
+        ],
+        "d2i_SSL_SESSION": [
+            0
+        ],
+        "d2i_USERNOTICE": [
+            0
+        ],
+        "d2i_X509": [
+            0
+        ],
+        "d2i_X509_ALGOR": [
+            0
+        ],
+        "d2i_X509_ATTRIBUTE": [
+            0
+        ],
+        "d2i_X509_AUX": [
+            0
+        ],
+        "d2i_X509_CERT_AUX": [
+            0
+        ],
+        "d2i_X509_CINF": [
+            0
+        ],
+        "d2i_X509_CRL": [
+            0
+        ],
+        "d2i_X509_CRL_INFO": [
+            0
+        ],
+        "d2i_X509_EXTENSION": [
+            0
+        ],
+        "d2i_X509_EXTENSIONS": [
+            0
+        ],
+        "d2i_X509_NAME": [
+            0
+        ],
+        "d2i_X509_NAME_ENTRY": [
+            0
+        ],
+        "d2i_X509_PUBKEY": [
+            0
+        ],
+        "d2i_X509_REQ": [
+            0
+        ],
+        "d2i_X509_REQ_INFO": [
+            0
+        ],
+        "d2i_X509_REVOKED": [
+            0
+        ],
+        "d2i_X509_SIG": [
+            0
+        ],
+        "d2i_X509_VAL": [
+            0
+        ],
+        "do_buf": [
+            2,
+            3,
+            4,
+            5
+        ],
+        "EVP_CipherUpdate": [
+            0,
+            1,
+            2
+        ],
+        "EVP_DecryptUpdate": [
+            0,
+            1,
+            2
+        ],
+        "EVP_EncryptUpdate": [
+            0,
+            1,
+            2
+        ],
+       "HMAC_Init": [
+            0,
+            3
+        ],
+        "i2d_PKCS8PrivateKey_bio": [
+            0,
+            1,
+            2,
+            5,
+            6
+        ],
+        "i2d_PKCS8PrivateKey_fp": [
+            0,
+            1,
+            2,
+            5,
+            6
+        ],
+        "i2d_PKCS8PrivateKey_nid_bio": [
+            0,
+            1,
+            2,
+            5,
+            6
+        ],
+        "i2d_PKCS8PrivateKey_nid_fp": [
+            0,
+            1,
+            2,
+            5,
+            6
+        ],
+        "parse_key": [
+            0,
+            3
+        ],
+        "PEM_do_header": [
+            0,
+            2,
+            3,
+            4
+        ],
+        "PEM_write_bio_PKCS8PrivateKey": [
+            0,
+            1,
+            2,
+            5,
+            6
+        ],
+        "PEM_write_bio_PKCS8PrivateKey_nid": [
+            0,
+            1,
+            2,
+            5,
+            6
+        ],
+        "PEM_write_bio_PrivateKey": [
+            0,
+            1,
+            2,
+            5,
+            6
+        ],
+        "PEM_write_PKCS8PrivateKey": [
+            0,
+            1,
+            2,
+            5,
+            6
+        ],
+        "PEM_write_PKCS8PrivateKey_nid": [
+            0,
+            1,
+            2,
+            5,
+            6
+        ],
+        "PEM_write_PrivateKey": [
+            0,
+            1,
+            2,
+            5,
+            6
+        ],
+        "PKCS12_create": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+        ],
+        "PKCS12_verify_mac": [
+            0
+        ],
+        "PKCS8_decrypt": [
+            0
+        ],
+        "PKCS8_encrypt": [
+            0,
+            1,
+            6,
+            7
+        ],
+        "PKCS8_marshal_encrypted_private_key": [
+            0,
+            1,
+            2,
+            7,
+            8
+        ],
+        "PKCS8_parse_encrypted_private_key": [
+            0
+        ],
+        "pkcs8_pbe_decrypt": [
+            0,
+            1,
+            2
+        ],
+        "pkey_rsa_verify": [
+            0
+        ],
+       "RSA_verify_pss_mgf1": [
+            0,
+            3,
+            4,
+            5
+        ],
+        "SSL_CTX_use_PrivateKey_ASN1": [
+            0,
+            1
+        ],
+        "ssl_encrypt_ticket_with_cipher_ctx": [
+            0,
+            1
+        ],
+        "SSL_use_PrivateKey_ASN1": [
+            0,
+            1
+        ],
+       "tls_cbc_digest_record_sha256": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "vpaes_set_decrypt_key": [
+            1,
+            2
+        ],
+        "vpaes_set_encrypt_key": [
+            1,
+            2
+        ]
+    }
+}

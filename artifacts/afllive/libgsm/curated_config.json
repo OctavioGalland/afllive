@@ -1,0 +1,88 @@
+{
+    "root": "/opt/afllive",
+    "typeinfo_file": "/opt/typeinfo.json",
+    "targets": [
+        "gsm_encode",
+        "gsm_implode",
+        "gsm_option"
+    ],
+    "fork_on_init": true,
+    "max_millis": 10,
+    "constraints": {
+        "gsm_decode": [
+            {
+                "lhs": 0,
+                "rhs": {
+                    "constant": 33
+                },
+                "rel": "eq"
+            }
+        ],
+        "gsm_implode": [
+            {
+                "lhs": 0,
+                "rhs": {
+                    "constant": 76
+                },
+                "rel": "eq"
+            }
+        ],
+        "gsm_explode": [
+            {
+                "lhs": 0,
+                "rhs": {
+                    "constant": 33
+                },
+                "rel": "eq"
+            }
+        ],
+        "gsm_encode": [
+            {
+                "lhs": 0,
+                "rhs": {
+                    "constant": 160
+                },
+                "rel": "eq"
+            }
+        ],
+        "gsm_option": [
+            {
+                "lhs": 0,
+                "rhs": {
+                    "constant": 1
+                },
+                "rel": "eq"
+            },
+            {
+                "lhs": 0,
+                "rhs": {
+                    "constant": 1
+                },
+                "rel": "le",
+                "deref": true
+            }
+        ]
+    },
+    "skip": {
+        "gsm_decode": [
+            0,
+            2
+        ],
+        "gsm_encode": [
+            0,
+            2
+        ],
+        "gsm_implode": [
+            0,
+            2
+        ],
+        "gsm_explode": [
+            0,
+            2
+        ],
+        "gsm_option": [
+            0,
+            1
+        ]
+    }
+}

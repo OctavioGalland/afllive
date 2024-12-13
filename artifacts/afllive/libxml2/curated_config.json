@@ -1,0 +1,587 @@
+{
+    "root": "/opt/afllive",
+    "typeinfo_file": "/opt/typeinfo.json",
+    "max_millis": 5,
+    "targets": [
+        "htmlCtxtReadMemory",
+        "htmlCreateMemoryParserCtxt",
+        "xmlBufAdd",
+        "xmlCreateMemoryParserCtxt",
+        "xmlSAXUserParseMemory",
+        "xmlSAXParseMemory",
+        "xmlParseMemory",
+        "xmlSAXParseMemoryWithData",
+        "xmlParseInNodeContext",
+        "xmlStringLenDecodeEntities",
+        "xmlRelaxNGNewMemParserCtxt",
+        "xmlSchematronNewMemParserCtxt",
+        "xmlBufferAdd",
+        "xmlBufferAddHead",
+        "xmlOutputBufferWrite",
+        "xmlParserInputBufferPush",
+        "xmlParserInputBufferCreateMem",
+        "xmlReaderNewMemory",
+        "xmlSchemaNewMemParserCtxt",
+        "htmlCtxtReadDoc",
+        "htmlReadMemory",
+        "xmlReadMemory",
+        "xmlCtxtResetPush",
+        "xmlCreatePushParserCtxt",
+        "xmlRecoverMemory",
+        "xmlDumpEntityContent",
+        "parseAndPrintFile",
+        "xmlReaderNewDoc",
+        "xmlTextReaderValidateCData",
+        "xmlSchemaAssembleByLocation",
+        "xmlOutputBufferWriteBase64"
+    ],
+    "constraints": {
+        "htmlCtxtReadMemory": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 512
+                }
+            },
+            {
+                "rel": "le",
+                "lhs": 2,
+                "rhs": {
+                    "constant": 512
+                }
+            },
+            {
+                "rel": "le",
+                "lhs": 3,
+                "rhs": {
+                    "constant": 512
+                }
+            }
+        ],
+        "htmlCreateMemoryParserCtxt": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 512
+                }
+            }
+        ],
+        "xmlBufAdd": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 512
+                }
+            }
+        ],
+        "xmlCreateMemoryParserCtxt": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 512
+                }
+            }
+        ],
+        "xmlSAXUserParseMemory": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 512
+                }
+            }
+        ],
+        "xmlSAXParseMemory": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 512
+                }
+            }
+        ],
+        "xmlParseMemory": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 512
+                }
+            }
+        ],
+        "xmlSAXParseMemoryWithData": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 512
+                }
+            }
+        ],
+        "xmlParseInNodeContext": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 512
+                }
+            }
+        ],
+        "xmlStringLenDecodeEntities": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 512
+                }
+            }
+        ],
+        "xmlRelaxNGNewMemParserCtxt": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 512
+                }
+            }
+        ],
+        "xmlSchematronNewMemParserCtxt": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 512
+                }
+            }
+        ],
+        "xmlBufferAdd": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 512
+                }
+            },
+            {
+                "rel": "eq",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4294967295
+                }
+            }
+        ],
+        "xmlBufferAddHead": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 512
+                }
+            }
+        ],
+        "xmlOutputBufferWrite": [
+            {
+                "rel": "eq",
+                "lhs": 1,
+                "rhs": 0
+            },
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 512
+                }
+            }
+        ],
+        "xmlParserInputBufferPush": [
+            {
+                "rel": "eq",
+                "lhs": 1,
+                "rhs": 0
+            },
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 512
+                }
+            }
+        ],
+        "xmlParserInputBufferCreateMem": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 512
+                }
+            }
+        ],
+        "xmlReaderNewMemory": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 512
+                }
+            }
+        ],
+        "xmlSchemaNewMemParserCtxt": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 512
+                }
+            }
+        ],
+        "htmlCtxtReadDoc": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 512
+                }
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 512
+                }
+            }
+        ],
+        "htmlReadMemory": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 512
+                }
+            }
+        ],
+        "xmlReadMemory": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 512
+                }
+            }
+        ],
+        "xmlCtxtResetPush": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 512
+                }
+            }
+        ],
+        "xmlCreatePushParserCtxt": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 512
+                }
+            }
+        ],
+        "xmlRecoverMemory": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 512
+                }
+            }
+        ],
+        "xmlDumpEntityContent": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 512
+                }
+            }
+        ],
+        "parseAndPrintFile": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": "file"
+            }
+        ],
+        "xmlReaderNewDoc": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 512
+                }
+            }
+        ],
+        "xmlTextReaderValidateCData": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 512
+                }
+            }
+        ],
+        "xmlSchemaAssembleByLocation": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 512
+                }
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 512
+                }
+            }
+        ],
+        "xmlOutputBufferWriteBase64": [
+            {
+                "rel": "eq",
+                "lhs": 1,
+                "rhs": 0
+            },
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 512
+                }
+            }
+        ]
+    },
+    "skip": {
+        "htmlCtxtReadMemory": [
+            0,
+            5
+        ],
+        "htmlCreateMemoryParserCtxt": [],
+        "xmlBufAdd": [
+            0
+        ],
+        "xmlCreateMemoryParserCtxt": [],
+        "xmlSAXUserParseMemory": [
+            0,
+            1
+        ],
+        "xmlSAXParseMemory": [
+            0,
+            3
+        ],
+        "xmlParseMemory": [],
+        "xmlSAXParseMemoryWithData": [
+            0,
+            3,
+            4
+        ],
+        "xmlParseInNodeContext": [
+            0,
+            3,
+            4
+        ],
+        "xmlStringLenDecodeEntities": [
+            0,
+            3,
+            4,
+            5,
+            6
+        ],
+        "xmlRelaxNGNewMemParserCtxt": [],
+        "xmlSchematronNewMemParserCtxt": [],
+        "xmlBufferAdd": [
+            0
+        ],
+        "xmlBufferAddHead": [
+            0
+        ],
+        "xmlOutputBufferWrite": [
+            0
+        ],
+        "xmlParserInputBufferPush": [
+            0
+        ],
+        "xmlParserInputBufferCreateMem": [
+            2
+        ],
+        "xmlReaderNewMemory": [
+            0,
+            3,
+            4,
+            5
+        ],
+        "xmlSchemaNewMemParserCtxt": [],
+        "htmlCtxtReadDoc": [
+            0,
+            2,
+            4
+        ],
+        "htmlReadMemory": [
+            2,
+            3,
+            4
+        ],
+        "xmlReadMemory": [
+            2,
+            3,
+            4
+        ],
+        "xmlCtxtResetPush": [
+            0,
+            3,
+            4
+        ],
+        "xmlCreatePushParserCtxt": [
+            0,
+            1,
+            4
+        ],
+        "xmlRecoverMemory": [],
+        "xmlDumpEntityContent": [
+            0
+        ],
+        "parseAndPrintFile": [
+            1
+        ],
+        "xmlReaderNewDoc": [
+            0,
+            2,
+            3,
+            4
+        ],
+        "xmlTextReaderValidateCData": [
+            0
+        ],
+        "xmlSchemaAssembleByLocation": [
+            0,
+            1,
+            2
+        ],
+        "xmlOutputBufferWriteBase64": [
+            0
+        ]
+    }
+}

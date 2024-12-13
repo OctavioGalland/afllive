@@ -1,0 +1,29 @@
+{
+    "root": "/opt/afllive",
+    "typeinfo_file": "/opt/typeinfo.json",
+    "fork_on_init": false,
+    "targets": [
+        "exif_convert_utf16_to_utf8"
+    ],
+    "constraints": {
+        "exif_convert_utf16_to_utf8": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ]
+    },
+    "skip": {
+        "exif_convert_utf16_to_utf8": [
+            0
+        ]
+    }
+}

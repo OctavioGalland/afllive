@@ -1,0 +1,932 @@
+{
+    "root": "/opt/afllive",
+    "typeinfo_file": "/opt/typeinfo.json",
+    "fork_on_init": false,
+    "max_millis": 10,
+    "targets": [
+        "getImpliedFileFormat",
+        "lept_rmfile",
+        "lept_fopen",
+        "fileSplitLinesUniform",
+        "fileAppendString",
+        "fileConcatenate",
+        "fileCopy",
+        "nbytesInFile",
+        "fileReplaceBytes",
+        "fileCorruptByMutation",
+        "fileCorruptByDeletion",
+        "extractG4DataFromFile",
+        "l_getStructStrFromFile",
+        "strcodeCreateFromFile",
+        "selaCreateFromFile",
+        "writeImageFileInfo",
+        "findFileFormat",
+        "convertFlateToPS",
+        "convertFlateToPSEmbed",
+        "convertTiffMultipageToPS",
+        "convertG4ToPS",
+        "convertG4ToPSEmbed",
+        "convertJpegToPS",
+        "convertJpegToPSEmbed",
+        "pixWriteCompressedToPS",
+        "pixaWriteCompressedToPS",
+        "convertToPSEmbed",
+        "convertSegmentedPagesToPS",
+        "writeImageCompressedToPSFile",
+        "sarrayConvertFilesFittedToPS",
+        "convertFilesFittedToPS",
+        "sarrayConvertFilesToPS",
+        "convertFilesToPS",
+        "pixacompConvertToPdf",
+        "pixcompCreateFromFile",
+        "convertTiffMultipageToPdf",
+        "convertToPdfDataSegmented",
+        "pixConvertToPdfSegmented",
+        "convertToPdfSegmented",
+        "convertSegmentedFilesToPdf",
+        "pixConvertToPdf",
+        "convertToPdfData",
+        "convertImageDataToPdf",
+        "convertToPdf",
+        "pixaConvertToPdf",
+        "saConvertUnscaledFilesToPdf",
+        "convertUnscaledFilesToPdf",
+        "saConvertFilesToPdf",
+        "convertFilesToPdf",
+        "partifyFiles",
+        "parseForProtos",
+        "kernelCreateFromFile",
+        "pixGetEdgeProfile",
+        "convertFlateToPSString",
+        "convertG4ToPSString",
+        "convertJpegToPSString",
+        "l_getIndexFromFile",
+        "fopenTiffMemstream",
+        "openTiff"
+    ],
+    "constraints": {
+        "getImpliedFileFormat": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "lept_rmfile": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "lept_fopen": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "fileSplitLinesUniform": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "fileAppendString": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "fileConcatenate": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            },
+            {
+                "rel": "eq",
+                "lhs": 1,
+                "is_file": true
+            }
+        ],
+        "fileCopy": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            },
+            {
+                "rel": "eq",
+                "lhs": 1,
+                "is_file": true
+            }
+        ],
+        "nbytesInFile": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "fileReplaceBytes": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            },
+            {
+                "rel": "eq",
+                "lhs": 1,
+                "rhs": 2
+            },
+            {
+                "rel": "le",
+                "lhs": 2,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "eq",
+                "lhs": 3,
+                "is_file": true
+            }
+        ],
+        "fileCorruptByMutation": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            },
+            {
+                "rel": "eq",
+                "lhs": 1,
+                "is_file": true
+            }
+        ],
+        "fileCorruptByDeletion": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            },
+            {
+                "rel": "eq",
+                "lhs": 1,
+                "is_file": true
+            }
+        ],
+        "extractG4DataFromFile": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "l_getStructStrFromFile": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "strcodeCreateFromFile": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "selaCreateFromFile": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "writeImageFileInfo": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "findFileFormat": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "convertFlateToPS": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            },
+            {
+                "rel": "eq",
+                "lhs": 1,
+                "is_file": true
+            }
+        ],
+        "convertFlateToPSEmbed": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            },
+            {
+                "rel": "eq",
+                "lhs": 1,
+                "is_file": true
+            }
+        ],
+        "convertTiffMultipageToPS": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            },
+            {
+                "rel": "eq",
+                "lhs": 1,
+                "is_file": true
+            }
+        ],
+        "convertG4ToPS": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            },
+            {
+                "rel": "eq",
+                "lhs": 1,
+                "is_file": true
+            }
+        ],
+        "convertG4ToPSEmbed": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            },
+            {
+                "rel": "eq",
+                "lhs": 1,
+                "is_file": true
+            }
+        ],
+        "convertJpegToPS": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            },
+            {
+                "rel": "eq",
+                "lhs": 1,
+                "is_file": true
+            }
+        ],
+        "convertJpegToPSEmbed": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            },
+            {
+                "rel": "eq",
+                "lhs": 1,
+                "is_file": true
+            }
+        ],
+        "pixWriteCompressedToPS": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "pixaWriteCompressedToPS": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "convertToPSEmbed": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            },
+            {
+                "rel": "eq",
+                "lhs": 1,
+                "is_file": true
+            }
+        ],
+        "convertSegmentedPagesToPS": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "writeImageCompressedToPSFile": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            },
+            {
+                "rel": "eq",
+                "lhs": 1,
+                "is_file": true
+            }
+        ],
+        "sarrayConvertFilesFittedToPS": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "convertFilesFittedToPS": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "sarrayConvertFilesToPS": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "convertFilesToPS": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "pixacompConvertToPdf": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "pixcompCreateFromFile": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "convertTiffMultipageToPdf": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            },
+            {
+                "rel": "eq",
+                "lhs": 1,
+                "is_file": true
+            }
+        ],
+        "convertToPdfDataSegmented": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "pixConvertToPdfSegmented": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "convertToPdfSegmented": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            },
+            {
+                "rel": "eq",
+                "lhs": 1,
+                "is_file": true
+            }
+        ],
+        "convertSegmentedFilesToPdf": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            },
+            {
+                "rel": "eq",
+                "lhs": 1,
+                "is_file": true
+            }
+        ],
+        "pixConvertToPdf": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "convertToPdfData": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "convertImageDataToPdf": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "eq",
+                "lhs": 2,
+                "is_file": true
+            }
+        ],
+        "convertToPdf": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            },
+            {
+                "rel": "eq",
+                "lhs": 1,
+                "is_file": true
+            }
+        ],
+        "pixaConvertToPdf": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "saConvertUnscaledFilesToPdf": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "convertUnscaledFilesToPdf": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            },
+            {
+                "rel": "eq",
+                "lhs": 1,
+                "is_file": true
+            }
+        ],
+        "saConvertFilesToPdf": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "convertFilesToPdf": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            },
+            {
+                "rel": "eq",
+                "lhs": 1,
+                "is_file": true
+            }
+        ],
+        "partifyFiles": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            },
+            {
+                "rel": "eq",
+                "lhs": 1,
+                "is_file": true
+            }
+        ],
+        "parseForProtos": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "kernelCreateFromFile": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "pixGetEdgeProfile": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "convertFlateToPSString": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "convertG4ToPSString": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "convertJpegToPSString": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "l_getIndexFromFile": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "fopenTiffMemstream": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "openTiff": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ]
+    },
+    "skip": {
+        "getImpliedFileFormat": [],
+        "lept_rmfile": [],
+        "lept_fopen": [
+            1
+        ],
+        "fileSplitLinesUniform": [
+            1,
+            2,
+            3,
+            4
+        ],
+        "fileAppendString": [
+            1
+        ],
+        "fileConcatenate": [],
+        "fileCopy": [],
+        "nbytesInFile": [],
+        "fileReplaceBytes": [
+            1,
+            2
+        ],
+        "fileCorruptByMutation": [
+            1,
+            2
+        ],
+        "fileCorruptByDeletion": [
+            1,
+            2
+        ],
+        "extractG4DataFromFile": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "l_getStructStrFromFile": [
+            1,
+            2
+        ],
+        "strcodeCreateFromFile": [
+            1,
+            2
+        ],
+        "selaCreateFromFile": [],
+        "writeImageFileInfo": [
+            1,
+            2
+        ],
+        "findFileFormat": [
+            1
+        ],
+        "convertFlateToPS": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "convertFlateToPSEmbed": [],
+        "convertTiffMultipageToPS": [
+            2
+        ],
+        "convertG4ToPS": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+        ],
+        "convertG4ToPSEmbed": [],
+        "convertJpegToPS": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "convertJpegToPSEmbed": [],
+        "pixWriteCompressedToPS": [
+            0,
+            2,
+            3,
+            4
+        ],
+        "pixaWriteCompressedToPS": [
+            0,
+            2,
+            3
+        ],
+        "convertToPSEmbed": [
+            2
+        ],
+        "convertSegmentedPagesToPS": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+        ],
+        "writeImageCompressedToPSFile": [
+            2,
+            3
+        ],
+        "sarrayConvertFilesFittedToPS": [
+            0,
+            1,
+            2
+        ],
+        "convertFilesFittedToPS": [
+            0,
+            1,
+            2,
+            3
+        ],
+        "sarrayConvertFilesToPS": [
+            0,
+            1
+        ],
+        "convertFilesToPS": [
+            0,
+            1,
+            2
+        ],
+        "pixacompConvertToPdf": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "pixcompCreateFromFile": [
+            1
+        ],
+        "convertTiffMultipageToPdf": [],
+        "convertToPdfDataSegmented": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+        ],
+        "pixConvertToPdfSegmented": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+        ],
+        "convertToPdfSegmented": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+        ],
+        "convertSegmentedFilesToPdf": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "pixConvertToPdf": [
+            0,
+            1,
+            2,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+        ],
+        "convertToPdfData": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+        ],
+        "convertImageDataToPdf": [
+            2,
+            3,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+        ],
+        "convertToPdf": [
+            1,
+            2,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+        ],
+        "pixaConvertToPdf": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "saConvertUnscaledFilesToPdf": [
+            0,
+            1
+        ],
+        "convertUnscaledFilesToPdf": [
+            1,
+            2
+        ],
+        "saConvertFilesToPdf": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "convertFilesToPdf": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+        ],
+        "partifyFiles": [
+            1,
+            2,
+            3
+        ],
+        "parseForProtos": [
+            1
+        ],
+        "kernelCreateFromFile": [],
+        "pixGetEdgeProfile": [
+            0,
+            1
+        ],
+        "convertFlateToPSString": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "convertG4ToPSString": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+        ],
+        "convertJpegToPSString": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "l_getIndexFromFile": [
+            1
+        ],
+        "fopenTiffMemstream": [
+            1,
+            2,
+            3
+        ],
+        "openTiff": [
+            1
+        ]
+    }
+}

@@ -1,0 +1,1184 @@
+{
+    "root": "/opt/afllive",
+    "max_millis": 5,
+    "typeinfo_file": "/opt/typeinfo.json",
+    "targets": [
+        "xmlStringLenDecodeEntities",
+        "xmlNewInputFromFile",
+        "xmlCreateEntityParserCtxt",
+        "xmlCreateMemoryParserCtxt",
+        "xmlCreateURLParserCtxt",
+        "xmlCreateFileParserCtxt",
+        "htmlCreateFileParserCtxt",
+        "xmlParserInputBufferCreateMem",
+        "htmlParseFile",
+        "htmlSAXParseFile",
+        "htmlCreatePushParserCtxt",
+        "xmlParserGetDirectory",
+        "xmlParserInputBufferPush",
+        "htmlParseChunk",
+        "htmlCreateMemoryParserCtxt",
+        "xmlSaveFileEnc",
+        "xmlSaveFormatFileEnc",
+        "xmlSaveFormatFile",
+        "xmlSaveFile",
+        "xmlBufferAddHead",
+        "xmlBufferAdd",
+        "htmlSaveFileFormat",
+        "htmlSaveFileEnc",
+        "htmlSaveFile",
+        "xmlBufAdd",
+        "xmlParseCatalogFile",
+        "xmlLoadFileContent",
+        "xmlParseSGMLCatalog",
+        "xmlParseXMLCatalogFile",
+        "xmlRelaxNGNewMemParserCtxt",
+        "xmlRelaxNGNewParserCtxt",
+        "xmlParseInNodeContext",
+        "xmlIOHTTPOpen",
+        "xmlFileOpen",
+        "xmlFileMatch",
+        "xmlOutputBufferWrite",
+        "xmlParseChunk",
+        "xmlCreatePushParserCtxt",
+        "xmlSetupParserForBuffer",
+        "xmlParseCtxtExternalEntity",
+        "xmlParseExternalEntity",
+        "xmlParseEntity",
+        "xmlSAXParseEntity",
+        "xmlSAXParseFileWithData",
+        "xmlSAXParseFile",
+        "xmlSAXParseMemoryWithData",
+        "xmlSAXParseMemory",
+        "xmlSAXUserParseMemory",
+        "xmlSAXUserParseFile",
+        "xmlRecoverFile",
+        "xmlParseMemory",
+        "xmlParseFile",
+        "xmlNanoHTTPOpenRedir",
+        "xmlNanoHTTPOpen",
+        "xmlCreateEntityParserCtxtInternal",
+        "xmlParseExternalEntityPrivate",
+        "xmlParseCheckTransition",
+        "xmlPythonFileWrite",
+        "xmlSchemaValidateFile",
+        "xmlSchemaValidateSetFilename",
+        "xmlSchemaNewMemParserCtxt",
+        "xmlSchemaNewParserCtxt",
+        "resultFilename",
+        "compareFileMem",
+        "baseFilename",
+        "xmlSchematronNewMemParserCtxt",
+        "xmlSchematronNewParserCtxt",
+        "xmlXIncludeParseFile",
+        "xmlBufferWrite",
+        "xmlFileWrite",
+        "xmlGzfileOpenW",
+        "xmlGzfileWrite",
+        "xmlGzfileOpen",
+        "xmlXzfileOpen",
+        "xmlFileOpenW",
+        "xmlGzfileMatch",
+        "xmlXzfileMatch",
+        "xmlZMemBuffAppend",
+        "xmlXzfileOpen_real",
+        "xmlGzfileOpen_real",
+        "xmlFileOpen_real",
+        "streamFile",
+        "parseAndPrintFile",
+        "xmlSaveToFilename",
+        "xmlSchemaNewParserCtxtUseDict",
+        "xmlOutputBufferWriteBinHex",
+        "xmlOutputBufferWriteBase64"
+    ],
+    "constraints": {
+        "xmlStringLenDecodeEntities": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "xmlNewInputFromFile": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "xmlCreateEntityParserCtxt": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "xmlCreateMemoryParserCtxt": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "xmlCreateURLParserCtxt": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "xmlCreateFileParserCtxt": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "htmlCreateFileParserCtxt": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "xmlParserInputBufferCreateMem": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "htmlParseFile": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "htmlSAXParseFile": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "htmlCreatePushParserCtxt": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "eq",
+                "lhs": 2,
+                "is_file": true
+            }
+        ],
+        "xmlParserGetDirectory": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "xmlParserInputBufferPush": [
+            {
+                "rel": "eq",
+                "lhs": 1,
+                "rhs": 0
+            },
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "htmlParseChunk": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "htmlCreateMemoryParserCtxt": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "xmlSaveFileEnc": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "xmlSaveFormatFileEnc": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "xmlSaveFormatFile": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "xmlSaveFile": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "xmlBufferAddHead": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "xmlBufferAdd": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "htmlSaveFileFormat": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "htmlSaveFileEnc": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "htmlSaveFile": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "xmlBufAdd": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "xmlParseCatalogFile": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "xmlLoadFileContent": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "xmlParseSGMLCatalog": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "xmlParseXMLCatalogFile": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "xmlRelaxNGNewMemParserCtxt": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "xmlRelaxNGNewParserCtxt": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "xmlParseInNodeContext": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "xmlIOHTTPOpen": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "xmlFileOpen": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "xmlFileMatch": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "xmlOutputBufferWrite": [
+            {
+                "rel": "eq",
+                "lhs": 1,
+                "rhs": 0
+            },
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "xmlParseChunk": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "xmlCreatePushParserCtxt": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "eq",
+                "lhs": 2,
+                "is_file": true
+            }
+        ],
+        "xmlSetupParserForBuffer": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "xmlParseCtxtExternalEntity": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "xmlParseExternalEntity": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "xmlParseEntity": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "xmlSAXParseEntity": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "xmlSAXParseFileWithData": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "xmlSAXParseFile": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "xmlSAXParseMemoryWithData": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "xmlSAXParseMemory": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "xmlSAXUserParseMemory": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "xmlSAXUserParseFile": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "xmlRecoverFile": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "xmlParseMemory": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "xmlParseFile": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "xmlNanoHTTPOpenRedir": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "xmlNanoHTTPOpen": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "xmlCreateEntityParserCtxtInternal": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "xmlParseExternalEntityPrivate": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "xmlParseCheckTransition": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "xmlPythonFileWrite": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "xmlSchemaValidateFile": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "xmlSchemaValidateSetFilename": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "xmlSchemaNewMemParserCtxt": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "xmlSchemaNewParserCtxt": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "resultFilename": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "compareFileMem": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            },
+            {
+                "rel": "eq",
+                "lhs": 1,
+                "rhs": 2
+            },
+            {
+                "rel": "le",
+                "lhs": 2,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "baseFilename": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "xmlSchematronNewMemParserCtxt": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "xmlSchematronNewParserCtxt": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "xmlXIncludeParseFile": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "xmlBufferWrite": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "xmlFileWrite": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "xmlGzfileOpenW": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "xmlGzfileWrite": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "xmlGzfileOpen": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "xmlXzfileOpen": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "xmlFileOpenW": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "xmlGzfileMatch": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "xmlXzfileMatch": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "xmlZMemBuffAppend": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "xmlXzfileOpen_real": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "xmlGzfileOpen_real": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "xmlFileOpen_real": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "streamFile": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "parseAndPrintFile": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "xmlSaveToFilename": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "xmlSchemaNewParserCtxtUseDict": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "xmlOutputBufferWriteBinHex": [
+            {
+                "rel": "eq",
+                "lhs": 1,
+                "rhs": 0
+            },
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "xmlOutputBufferWriteBase64": [
+            {
+                "rel": "eq",
+                "lhs": 1,
+                "rhs": 0
+            },
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ]
+    },
+    "skip": {
+        "xmlStringLenDecodeEntities": [
+            0,
+            3,
+            4,
+            5,
+            6
+        ],
+        "xmlNewInputFromFile": [
+            0
+        ],
+        "xmlCreateEntityParserCtxt": [
+            1,
+            2
+        ],
+        "xmlCreateMemoryParserCtxt": [],
+        "xmlCreateURLParserCtxt": [
+            1
+        ],
+        "xmlCreateFileParserCtxt": [],
+        "htmlCreateFileParserCtxt": [
+            1
+        ],
+        "xmlParserInputBufferCreateMem": [
+            2
+        ],
+        "htmlParseFile": [
+            1
+        ],
+        "htmlSAXParseFile": [
+            1,
+            2,
+            3
+        ],
+        "htmlCreatePushParserCtxt": [
+            0,
+            1,
+            5
+        ],
+        "xmlParserGetDirectory": [],
+        "xmlParserInputBufferPush": [
+            0
+        ],
+        "htmlParseChunk": [
+            0,
+            3
+        ],
+        "htmlCreateMemoryParserCtxt": [],
+        "xmlSaveFileEnc": [
+            1,
+            2
+        ],
+        "xmlSaveFormatFileEnc": [
+            1,
+            2,
+            3
+        ],
+        "xmlSaveFormatFile": [
+            1,
+            2
+        ],
+        "xmlSaveFile": [
+            1
+        ],
+        "xmlBufferAddHead": [
+            0
+        ],
+        "xmlBufferAdd": [
+            0
+        ],
+        "htmlSaveFileFormat": [
+            1,
+            2,
+            3
+        ],
+        "htmlSaveFileEnc": [
+            1,
+            2
+        ],
+        "htmlSaveFile": [
+            1
+        ],
+        "xmlBufAdd": [
+            0
+        ],
+        "xmlParseCatalogFile": [],
+        "xmlLoadFileContent": [],
+        "xmlParseSGMLCatalog": [
+            0,
+            1,
+            3
+        ],
+        "xmlParseXMLCatalogFile": [
+            0
+        ],
+        "xmlRelaxNGNewMemParserCtxt": [],
+        "xmlRelaxNGNewParserCtxt": [],
+        "xmlParseInNodeContext": [
+            0,
+            3,
+            4
+        ],
+        "xmlIOHTTPOpen": [],
+        "xmlFileOpen": [],
+        "xmlFileMatch": [],
+        "xmlOutputBufferWrite": [
+            0
+        ],
+        "xmlParseChunk": [
+            0,
+            3
+        ],
+        "xmlCreatePushParserCtxt": [
+            0,
+            1
+        ],
+        "xmlSetupParserForBuffer": [
+            0,
+            1
+        ],
+        "xmlParseCtxtExternalEntity": [
+            0,
+            2,
+            3
+        ],
+        "xmlParseExternalEntity": [
+            0,
+            1,
+            2,
+            3,
+            5,
+            6
+        ],
+        "xmlParseEntity": [],
+        "xmlSAXParseEntity": [
+            0
+        ],
+        "xmlSAXParseFileWithData": [
+            0,
+            2,
+            3
+        ],
+        "xmlSAXParseFile": [
+            0,
+            2
+        ],
+        "xmlSAXParseMemoryWithData": [
+            0,
+            3,
+            4
+        ],
+        "xmlSAXParseMemory": [
+            0,
+            3
+        ],
+        "xmlSAXUserParseMemory": [
+            0,
+            1
+        ],
+        "xmlSAXUserParseFile": [
+            0,
+            1
+        ],
+        "xmlRecoverFile": [],
+        "xmlParseMemory": [],
+        "xmlParseFile": [],
+        "xmlNanoHTTPOpenRedir": [
+            1,
+            2
+        ],
+        "xmlNanoHTTPOpen": [
+            1
+        ],
+        "xmlCreateEntityParserCtxtInternal": [
+            1,
+            2,
+            3
+        ],
+        "xmlParseExternalEntityPrivate": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            6,
+            7
+        ],
+        "xmlParseCheckTransition": [
+            0
+        ],
+        "xmlPythonFileWrite": [
+            0
+        ],
+        "xmlSchemaValidateFile": [
+            0,
+            2
+        ],
+        "xmlSchemaValidateSetFilename": [
+            0
+        ],
+        "xmlSchemaNewMemParserCtxt": [],
+        "xmlSchemaNewParserCtxt": [],
+        "resultFilename": [
+            1,
+            2
+        ],
+        "compareFileMem": [],
+        "baseFilename": [],
+        "xmlSchematronNewMemParserCtxt": [],
+        "xmlSchematronNewParserCtxt": [],
+        "xmlXIncludeParseFile": [
+            0
+        ],
+        "xmlBufferWrite": [
+            0
+        ],
+        "xmlFileWrite": [
+            0
+        ],
+        "xmlGzfileOpenW": [
+            1
+        ],
+        "xmlGzfileWrite": [
+            0
+        ],
+        "xmlGzfileOpen": [],
+        "xmlXzfileOpen": [],
+        "xmlFileOpenW": [],
+        "xmlGzfileMatch": [],
+        "xmlXzfileMatch": [],
+        "xmlZMemBuffAppend": [
+            0
+        ],
+        "xmlXzfileOpen_real": [],
+        "xmlGzfileOpen_real": [],
+        "xmlFileOpen_real": [],
+        "streamFile": [],
+        "parseAndPrintFile": [
+            1
+        ],
+        "xmlSaveToFilename": [
+            1,
+            2
+        ],
+        "xmlSchemaNewParserCtxtUseDict": [
+            1
+        ],
+        "xmlOutputBufferWriteBinHex": [
+            0
+        ],
+        "xmlOutputBufferWriteBase64": [
+            0
+        ]
+    }
+}

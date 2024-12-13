@@ -1,0 +1,206 @@
+{
+    "root": "/opt/afllive",
+    "typeinfo_file": "/opt/typeinfo.json",
+        "fork_on_init": true,
+    "max_millis": 10,
+    "targets": [
+        "Scale2D",
+        "MD5Update",
+        "av1_print_uncompressed_frame_header",
+        "av1_inverse_transform_block",
+        "fill_col_to_arr",
+        "fill_arr_to_col",
+        "inverse_transform_block",
+        "write_file",
+        "aom_video_writer_open"
+    ],
+    "constraints": {
+        "Scale2D": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "eq",
+                "lhs": 2,
+                "rhs": 3
+            },
+            {
+                "rel": "le",
+                "lhs": 3,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "MD5Update": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "av1_print_uncompressed_frame_header": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "eq",
+                "lhs": 2,
+                "is_file": true
+            }
+        ],
+        "av1_inverse_transform_block": [
+            {
+                "rel": "eq",
+                "lhs": 1,
+                "rhs": 0
+            },
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "fill_col_to_arr": [
+            {
+                "rel": "eq",
+                "lhs": 1,
+                "rhs": 0
+            },
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "fill_arr_to_col": [
+            {
+                "rel": "eq",
+                "lhs": 1,
+                "rhs": 0
+            },
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "inverse_transform_block": [
+            {
+                "rel": "eq",
+                "lhs": 1,
+                "rhs": 0
+            },
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "write_file": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "aom_video_writer_open": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ]
+    },
+    "skip": {
+        "Scale2D": [
+            2,
+            3,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+        ],
+        "MD5Update": [
+            0
+        ],
+        "av1_print_uncompressed_frame_header": [],
+        "av1_inverse_transform_block": [
+            0,
+            1,
+            2,
+            3,
+            6,
+            7,
+            8
+        ],
+        "fill_col_to_arr": [
+            0,
+            1
+        ],
+        "fill_arr_to_col": [
+            0,
+            1
+        ],
+        "inverse_transform_block": [
+            0,
+            1,
+            2,
+            5,
+            6
+        ],
+        "write_file": [
+            0,
+            3
+        ],
+        "aom_video_writer_open": [
+            1,
+            2
+        ]
+    }
+}

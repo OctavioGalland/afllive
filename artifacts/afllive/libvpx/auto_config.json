@@ -1,0 +1,206 @@
+{
+    "root": "/opt/afllive",
+    "typeinfo_file": "/opt/typeinfo.json",
+    "fork_on_init": true,
+    "no_max_millis": 10,
+    "targets": [
+        "MD5Update",
+        "vpx_video_writer_open",
+        "open_input_file",
+        "vp8dx_start_decode",
+        "inverse_transform_block_inter",
+        "inverse_transform_block_intra",
+        "fill_col_to_arr",
+        "fill_arr_to_col",
+        "Scale2D",
+        "is_single_file"
+    ],
+    "constraints": {
+        "MD5Update": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "vpx_video_writer_open": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "open_input_file": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ],
+        "vp8dx_start_decode": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "inverse_transform_block_inter": [
+            {
+                "rel": "eq",
+                "lhs": 1,
+                "rhs": 0
+            },
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "inverse_transform_block_intra": [
+            {
+                "rel": "eq",
+                "lhs": 1,
+                "rhs": 0
+            },
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "fill_col_to_arr": [
+            {
+                "rel": "eq",
+                "lhs": 1,
+                "rhs": 0
+            },
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "fill_arr_to_col": [
+            {
+                "rel": "eq",
+                "lhs": 1,
+                "rhs": 0
+            },
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "Scale2D": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "eq",
+                "lhs": 2,
+                "rhs": 3
+            },
+            {
+                "rel": "le",
+                "lhs": 3,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "is_single_file": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "is_file": true
+            }
+        ]
+    },
+    "skip": {
+        "MD5Update": [
+            0
+        ],
+        "vpx_video_writer_open": [
+            1,
+            2
+        ],
+        "open_input_file": [
+            1,
+            2,
+            3,
+            4
+        ],
+        "vp8dx_start_decode": [
+            0,
+            3,
+            4
+        ],
+        "inverse_transform_block_inter": [
+            0,
+            1,
+            4,
+            5
+        ],
+        "inverse_transform_block_intra": [
+            0,
+            1,
+            2,
+            5,
+            6
+        ],
+        "fill_col_to_arr": [
+            0,
+            1
+        ],
+        "fill_arr_to_col": [
+            0,
+            1
+        ],
+        "Scale2D": [
+            2,
+            3,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+        ],
+        "is_single_file": []
+    }
+}

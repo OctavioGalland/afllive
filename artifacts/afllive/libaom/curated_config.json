@@ -1,0 +1,142 @@
+{
+    "root": "/opt/afllive",
+    "typeinfo_file": "/opt/typeinfo.json",
+    "fork_on_init": true,
+    "max_millis": 10,
+    "targets": [
+        "aom_uleb_decode",
+        "av1_update_reference",
+        "aom_uleb_encode_fixed_size",
+        "av1_get_crc_value",
+        "decoder_decode",
+        "update_sharpness",
+        "y4m_parse_tags",
+        "aom_codec_decode"
+    ],
+    "constraints": {
+        "aom_uleb_decode": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "av1_update_reference": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "aom_uleb_encode_fixed_size": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "av1_get_crc_value": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "decoder_decode": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "update_sharpness": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "y4m_parse_tags": [
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "aom_codec_decode": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ]
+    },
+    "skip": {
+        "aom_uleb_decode": [
+            2,
+            3
+        ],
+        "av1_update_reference": [
+            0
+        ],
+        "aom_uleb_encode_fixed_size": [
+            1,
+            2,
+            3,
+            4
+        ],
+        "av1_get_crc_value": [
+            0
+        ],
+        "decoder_decode": [
+            0,
+            3
+        ],
+        "update_sharpness": [
+            0
+        ],
+        "y4m_parse_tags": [
+            0
+        ],
+        "aom_codec_decode": [
+            0,
+            3
+        ]
+    }
+}

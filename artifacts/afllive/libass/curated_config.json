@@ -1,0 +1,176 @@
+{
+    "root": "/opt/afllive",
+    "typeinfo_file": "/opt/typeinfo.json",
+    "targets": [
+        "ass_hash_buf",
+        "ass_process_chunk",
+        "ass_process_codec_private",
+        "ass_process_data",
+        "ass_read_memory",
+        "ass_read_utf16be",
+        "ass_utf16be_to_utf8",
+        "pack_mbcs_bytes"
+    ],
+    "constraints": {
+        "ass_hash_buf": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "ass_process_chunk": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "le",
+                "lhs": 2,
+                "rhs": {
+                    "constant": 18446744073709551615
+                }
+            },
+            {
+                "rel": "le",
+                "lhs": 3,
+                "rhs": {
+                    "constant": 18446744073709551615
+                }
+            }
+        ],
+        "ass_process_codec_private": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "ass_process_data": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "ass_read_memory": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "ass_read_utf16be": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 1
+                }
+            },
+            {
+                "deref": true,
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "ass_utf16be_to_utf8": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "pack_mbcs_bytes": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ]
+    },
+    "skip": {
+        "ass_hash_buf": [
+            2
+        ],
+        "ass_process_chunk": [
+            0
+        ],
+        "ass_process_codec_private": [
+            0
+        ],
+        "ass_process_data": [
+            0
+        ],
+        "ass_read_memory": [
+            0,
+            3
+        ],
+        "ass_read_utf16be": [
+            0
+        ],
+        "ass_utf16be_to_utf8": [
+            0,
+            1
+        ],
+        "pack_mbcs_bytes": []
+    }
+}

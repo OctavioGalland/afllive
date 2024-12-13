@@ -1,0 +1,619 @@
+{
+    "root": "/opt/afllive",
+    "max_millis": 5,
+    "typeinfo_file": "/opt/typeinfo.json",
+    "targets": [
+        "opus_custom_decode",
+        "opus_custom_decode_float",
+        "opus_custom_encode",
+        "opus_custom_encode_float",
+        "celt_decode_with_ec",
+        "celt_encode_with_ec",
+        "opus_projection_decode_float",
+        "opus_projection_decode",
+        "opus_projection_decoder_init",
+        "opus_projection_decoder_create",
+        "opus_projection_encode_float",
+        "opus_projection_encode",
+        "opus_packet_parse_impl",
+        "encode_size",
+        "opus_encode_float",
+        "opus_encode",
+        "opus_decode_float",
+        "opus_decode",
+        "opus_decode_native",
+        "opus_decode_frame",
+        "opus_encode_native",
+        "encode_multiframe_packet",
+        "opus_multistream_decode_float",
+        "opus_multistream_decode",
+        "opus_multistream_encode_float",
+        "opus_multistream_encode",
+        "opus_multistream_decode_native",
+        "opus_multistream_encode_native"
+    ],
+    "constraints": {
+        "opus_custom_decode": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "opus_custom_decode_float": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "opus_custom_encode": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "opus_custom_encode_float": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "celt_decode_with_ec": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "celt_encode_with_ec": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "opus_projection_decode_float": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "opus_projection_decode": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "opus_projection_decoder_init": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "opus_projection_decoder_create": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "opus_projection_encode_float": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "opus_projection_encode": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "opus_packet_parse_impl": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            },
+            {
+                "rel": "eq",
+                "lhs": 2,
+                "rhs": 3
+            },
+            {
+                "rel": "le",
+                "lhs": 3,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "encode_size": [
+            {
+                "rel": "eq",
+                "lhs": 1,
+                "rhs": 0
+            },
+            {
+                "rel": "le",
+                "lhs": 0,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "opus_encode_float": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "opus_encode": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "opus_decode_float": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "opus_decode": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "opus_decode_native": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "opus_decode_frame": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "opus_encode_native": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "encode_multiframe_packet": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "opus_multistream_decode_float": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "opus_multistream_decode": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "opus_multistream_encode_float": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "opus_multistream_encode": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "opus_multistream_decode_native": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ],
+        "opus_multistream_encode_native": [
+            {
+                "rel": "eq",
+                "lhs": 0,
+                "rhs": 1
+            },
+            {
+                "rel": "le",
+                "lhs": 1,
+                "rhs": {
+                    "constant": 4096
+                }
+            }
+        ]
+    },
+    "skip": {
+        "opus_custom_decode": [
+            0,
+            3,
+            4
+        ],
+        "opus_custom_decode_float": [
+            0,
+            3,
+            4
+        ],
+        "opus_custom_encode": [
+            0,
+            1,
+            2
+        ],
+        "opus_custom_encode_float": [
+            0,
+            1,
+            2
+        ],
+        "celt_decode_with_ec": [
+            0,
+            3,
+            4,
+            5,
+            6
+        ],
+        "celt_encode_with_ec": [
+            0,
+            1,
+            2,
+            5
+        ],
+        "opus_projection_decode_float": [
+            0,
+            3,
+            4,
+            5
+        ],
+        "opus_projection_decode": [
+            0,
+            3,
+            4,
+            5
+        ],
+        "opus_projection_decoder_init": [
+            0,
+            1,
+            2,
+            3,
+            4
+        ],
+        "opus_projection_decoder_create": [
+            0,
+            1,
+            2,
+            3,
+            6
+        ],
+        "opus_projection_encode_float": [
+            0,
+            1,
+            2
+        ],
+        "opus_projection_encode": [
+            0,
+            1,
+            2
+        ],
+        "opus_packet_parse_impl": [
+            2,
+            3,
+            6,
+            7
+        ],
+        "encode_size": [],
+        "opus_encode_float": [
+            0,
+            1,
+            2
+        ],
+        "opus_encode": [
+            0,
+            1,
+            2
+        ],
+        "opus_decode_float": [
+            0,
+            3,
+            4,
+            5
+        ],
+        "opus_decode": [
+            0,
+            3,
+            4,
+            5
+        ],
+        "opus_decode_native": [
+            0,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "opus_decode_frame": [
+            0,
+            3,
+            4,
+            5
+        ],
+        "opus_encode_native": [
+            0,
+            1,
+            2,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+        ],
+        "encode_multiframe_packet": [
+            0,
+            1,
+            2,
+            3,
+            6,
+            7,
+            8
+        ],
+        "opus_multistream_decode_float": [
+            0,
+            3,
+            4,
+            5
+        ],
+        "opus_multistream_decode": [
+            0,
+            3,
+            4,
+            5
+        ],
+        "opus_multistream_encode_float": [
+            0,
+            1,
+            2
+        ],
+        "opus_multistream_encode": [
+            0,
+            1,
+            2
+        ],
+        "opus_multistream_decode_native": [
+            0,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "opus_multistream_encode_native": [
+            0,
+            1,
+            2,
+            3,
+            6,
+            7,
+            8,
+            9
+        ]
+    }
+}
