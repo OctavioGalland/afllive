@@ -16,7 +16,7 @@ They will create a docker image for the specified fuzzing campaign, allow it to 
 Afterwards, they'll create a second docker image (identical to the first, except for the fact that it compiles the code with the `-fprofile-instr-generate -fcoverage-mapping` flags), which will iterate over the previously generated corpus (making use of a docker volume to give the container access to it) and use the scripts present in the [coverage\_utils directory](../coverage_utils/) to report coverage measured at 10 minutes intervals.
 After both containers are run, the results are copied to the host and they're erased.
 
-> Before running, both scripts will invoke `prepare_host_for_fuzzing.sh`, which sets up a number of settings to allow for more performant fuzzing. Additionally, the variable `vm.mmap_rnd_bits` is set to 28 in order to work around a bug present in old versions of LLVM which could result in suprious crashes when using ASAN.
+> Before running, both scripts will invoke `prepare_host_for_fuzzing.sh`, which sets up a number of settings to allow for more performant fuzzing. Additionally, on Linux hosts, the variable `vm.mmap_rnd_bits` is set to 28 in order to work around a bug present in old versions of LLVM which could result in suprious crashes when using ASAN.
 
 The `Dockerfile`s and scripts specifying the configuration for each fuzzing campaign are stored under the `sota/${SUBJECT}` and `afllive/${SUBJECT}` directories.
 The `Dockerfile`s and scripts specifying how code coverage is measured are stored under the `sota/${SUBJECT}/coverage` and `afllive/${SUBJECT}/coverage` directories.
@@ -39,6 +39,8 @@ For instance, the following runs a fuzzing campaign on `leptonica` for one minut
 ./run_afllive.sh leptonica generated results 60
 ```
 
+> Note that if specifying an output path under `/tmp/` can cause problems when running on Ubuntu if `docker` is installed as a snap.
+
 ### State of the Art
 
 In order to run a campaign using the state-of-the-art alternative (`FUDGE` or `FuzzGen`, depending on the subject), use:
@@ -57,8 +59,6 @@ Similarly, the following runs a fuzzing campagin on `leptonica` (using `FUDGE`) 
 
 > Not that `FuzzGen`'s fuzz drivers generate numerous OOM errors which, although they are reported as crashes, are bugs in the fuzz drivers and not in the underlying library.
 Only files named `crash-*` as counted as crashes.
-
-> Note that if specifying an output path under `/tmp/` can cause problems when running on Ubuntu if `docker` is installed as a snap.
 
 ## Results
 
