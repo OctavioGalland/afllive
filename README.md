@@ -1,9 +1,13 @@
 # AFLLive
 
-The key idea is to try and modify a program to fuzz a random function by randomizing the value of (some of) its arguments.
-In order to achieve this we run the target program through an LLVM pass specifying the location of a config file containing the various parameters through the `AH_CONFIG` environment variable. This pass will dump a description of the arguments that the target function receives to a json file, as well as instrumenting the binary to make it interact with both AFL++ (setting up deferred forking and shared-memory access) and our runtime library `libgen`. In addition, every usage of every parameter within the function will be replaced with a new value of the same type. These alternative values for the function's arguments are initialized by a function called `gen_values` which is made available by the `libgen.so` library. This library will pick up type information required to generate valid arguments from the json file generated earlier by the pass.
+The key idea is to fuzz a library within the context set up by a real world _host_ program using said library, thereby sidestepping the need to generate a fuzz-driver.
+In order to achieve this we run the target library and host program through an LLVM pass specifying the location of a config file containing the various functions and parameters to be fuzzed through the `AH_CONFIG` environment variable. This pass will dump a description of the arguments that the target function receives to a json file, as well as instrumenting the binaries to make them interact with both AFL++ (setting up deferred forking and shared-memory access) and our runtime library `libgen`. As part of this instrumentation process, parameters passed from the host to a target function will be replaced with a new value of the same type provided by the fuzzer. During a fuzzing campaign, these alternative values for the target function's arguments are initialized by a function called `gen_values`, which is made available by the `libgen` library. This library will receive random data from the fuzzer, and use the type information generated earlier to _deserialize_ this random data stream into valid function arguments (the user can specify an arbitrary set of _constraints_ that the parameters of each function must satisfy in order to drive down the false-positive rate, if deemed necessary). These newly generated values will replace the ones provided by the host program, and will later be fed back to the fuzzer to allow for coverage-guidance.
 
-## Config file
+## ICSE'25 artifacts
+
+The artifacts for our [ICSE'25 paper](https://mpi-softsec.github.io/papers/ICSE25-invivo.pdf) (and instructions on how to run them) can be found under the [artifacts](artifacts) folder.
+
+## Configfile
 
 The configuration should contain a json dictionary which _must_ include the following fields:
 `typeinfo_file` (string): location of the file where relevant type information will be recorded.
