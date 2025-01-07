@@ -8,6 +8,15 @@ print_usage () {
     echo "    boringssl, bzip2 (curated only), htslib, leptonica, libaom, libass, libexif (curated only), libgsm (curated only), libvpx, libxml2, openssl, opus"
 }
 
+copy_repo_to_directory () {
+    mkdir $1/afllive
+    for file in $(ls .. | grep -v $(basename $(pwd)))
+    do
+        cp -rf ../$file $1/afllive/
+    done
+    rm $(find $1/afllive -name "*.o" -o -name "*.so" -o -name "*.a" -o -name "afl-clang-fast" -o -name "afl-clang-fast++" -o -name "afl-fuzz")
+}
+
 if [ "$#" != "4" ]
 then
     echo "Wrong number of arguments"
@@ -59,7 +68,9 @@ cp "afllive/$subject/Dockerfile" "afllive/$subject/Dockerfile.backup"
 sed -i "s/\/60\//\/$seconds\//g" "afllive/$subject/Dockerfile"
 sed -i "s/\"60\"/\"$seconds\"/g" "afllive/$subject/Dockerfile"
 docker rmi "$fuzzing_image_name"
+copy_repo_to_directory afllive/$subject
 (cd afllive/$subject && docker build -t "$fuzzing_image_name" .)
+rm -rf afllive/$subject/afllive
 # restore old dockerfile
 mv "afllive/$subject/Dockerfile.backup" "afllive/$subject/Dockerfile"
  
@@ -79,7 +90,9 @@ docker rm "$fuzzing_container_name"
 coverage_image_name="${fuzzing_image_name}_coverage"
 cp -rf "afllive/$subject/coverage" "$output_folder/"
 docker rmi "$coverage_image_name"
+copy_repo_to_directory $output_folder/coverage
 (cd "$output_folder/coverage" && docker build -t "$coverage_image_name" .)
+rm -rf $output_folder/coverage/afllive
 
 # run coverage
 coverage_container_name="${fuzzing_container_name}_coverage"

@@ -12,7 +12,7 @@ RUN apt -y install ninja-build golang libunwind-dev
 RUN apt -y build-dep android-libboringssl
 
 WORKDIR /opt
-RUN git clone https://github.com/octaviogalland/afllive
+COPY afllive /opt/afllive
 
 # Build and install AFL++
 ENV LLVM_CONFIG=llvm-config-14

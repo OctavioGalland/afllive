@@ -19,7 +19,7 @@ RUN apt-get install -y gcc-$(gcc --version|head -n1|sed 's/\..*//'|sed 's/.* //'
 RUN apt-get install -y libboost-dev
 
 WORKDIR /opt
-RUN git clone https://github.com/octaviogalland/afllive
+COPY afllive /opt/afllive
 WORKDIR /opt/afllive/aflplusplus
 RUN git pull
 ENV LLVM_CONFIG=llvm-config-14

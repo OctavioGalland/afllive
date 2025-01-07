@@ -20,7 +20,7 @@ RUN apt-get install -y libboost-dev
 
 WORKDIR /opt
 
-RUN git clone https://github.com/octaviogalland/afllive
+COPY afllive /opt/afllive
 WORKDIR /opt/afllive/aflplusplus
 ENV LLVM_CONFIG=llvm-config-14
 RUN make -j$(nproc)

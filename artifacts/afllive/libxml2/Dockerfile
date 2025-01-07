@@ -13,7 +13,7 @@ RUN apt -y build-dep libxml2
 # Build and install AFL++
 ENV LLVM_CONFIG=llvm-config-14
 WORKDIR /opt
-RUN git clone https://github.com/octaviogalland/afllive
+COPY afllive /opt/afllive
 WORKDIR /opt/afllive/aflplusplus
 RUN make -j$(nproc)
 RUN make install

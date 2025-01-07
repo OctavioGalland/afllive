@@ -11,7 +11,7 @@ RUN apt-get install -y lld-14 llvm-14 llvm-14-dev clang-14
 RUN apt-get install -y gcc-$(gcc --version|head -n1|sed 's/\..*//'|sed 's/.* //')-plugin-dev libstdc++-$(gcc --version|head -n1|sed 's/\..*//'|sed 's/.* //')-dev
 
 WORKDIR /opt
-RUN git clone https://github.com/octaviogalland/afllive
+COPY afllive /opt/afllive
 WORKDIR /opt/afllive/aflplusplus
 ENV LLVM_CONFIG=llvm-config-14
 RUN make -j$(nproc)
