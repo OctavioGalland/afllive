@@ -30,7 +30,7 @@ RUN make -j$(nproc)
 WORKDIR /opt
 RUN git clone https://boringssl.googlesource.com/boringssl
 WORKDIR /opt/boringssl
-RUN git checkout chromium-stable
+RUN git checkout cd95210465496ac2337b313cf49f607762abe286
 
 # Setup env
 WORKDIR /opt
@@ -45,7 +45,5 @@ WORKDIR /opt/boringssl
 RUN cmake -GNinja -B build
 RUN ninja -C build
 
-WORKDIR /opt/
-
-CMD ["afl-fuzz", "-V", "60", "-o", "out", "-t", "100000", "--", "./boringssl/build/crypto/crypto_test"]
+CMD ["afl-fuzz", "-V", "60", "-o", "/opt/out", "-t", "100000", "--", "./build/crypto/crypto_test"]
 
