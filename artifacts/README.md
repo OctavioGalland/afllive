@@ -33,7 +33,7 @@ Where `generated`/`curated` specifies whether the automatically generated or man
 Valid values for `project` are: `boringssl`, `bzip2` (`curated` only), `htslib`, `leptonica`, `libaom`, `libass`, `libexif` (`curated` only), `libgsm` (`curated` only), `libvpx`, `libxml2`, `openssl` and `opus`.
 Note that in the cases where the static analysis failed to identify suitable amplifier points, only the `curated` version will run successfully.
 
-For instance, the following runs a fuzzing campaign on `leptonica` for one minute using the automatically infered amplification points/constraints, storing the resutls in `$PWD/results`:
+For instance, the following runs a fuzzing campaign on `leptonica` for one minute using the automatically infered amplification points/constraints, storing the results in `$PWD/results`:
 
 ```
 ./run_afllive.sh leptonica generated results 60
@@ -57,8 +57,8 @@ Similarly, the following runs a fuzzing campagin on `leptonica` (using `FUDGE`) 
 ./run_sota.sh leptonica results 60
 ```
 
-> Not that `FuzzGen`'s fuzz drivers generate numerous OOM errors which, although they are reported as crashes, are bugs in the fuzz drivers and not in the underlying library.
-Only files named `crash-*` as counted as crashes.
+> Note that `FuzzGen`'s fuzz drivers generate numerous OOM errors which, although they are reported as crashes, are bugs in the fuzz drivers and not in the underlying library.
+Only files named `crash-*` are counted as crashes.
 
 ## Results
 
@@ -72,5 +72,5 @@ Code-coverage will be stored in the file `${OUTPUT_PATH}/coverage_${SUBJECT}_0.t
 ${SUBJECT}_iter_0@${WINDOW}: ${COVERAGE}/${TOTAL}
 ```
 
-Where `${WINDOW}` is the 10-minute window being considered, `${COVERAGE}` is the coverage achieved by the fuzzer, and `${TOTAL}` is the total amount of lineso of code in the project (note that we do not cound the host application nor the fuzz driver in these figures).
+Where `${WINDOW}` is the 10-minute window being considered, `${COVERAGE}` is the coverage achieved by the fuzzer, and `${TOTAL}` is the total amount of lines of code in the project (note that we do not cound the host application nor the fuzz driver in these figures).
 
