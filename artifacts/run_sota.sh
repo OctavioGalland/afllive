@@ -1,5 +1,7 @@
 #!/bin/bash
 
+artifacts_folder=$(dirname $0)
+
 print_usage () {
     echo "Usage: $0 [project] [output_path] [campaign duration in seconds]"
     echo "Available projects:"
@@ -46,13 +48,13 @@ fi
 # build fuzzing image
 fuzzing_image_name="sota_$subject"
 # backup dockerfile
-cp "sota/$subject/run.sh" "sota/$subject/run.sh.backup"
+cp "$artifacts_folder/sota/$subject/run.sh" "$artifacts_folder/sota/$subject/run.sh.backup"
 # replace campaign duration with user-provided one
-sed -i "s/=60/=$seconds/g" "sota/$subject/run.sh"
+sed -i "s/=60/=$seconds/g" "$artifacts_folder/sota/$subject/run.sh"
 docker rmi "$fuzzing_image_name"
-(cd sota/$subject && docker build -t "$fuzzing_image_name" .)
+(cd $artifacts_folder/sota/$subject && docker build -t "$fuzzing_image_name" .)
 # restore old dockerfile
-mv "sota/$subject/run.sh.backup" "sota/$subject/run.sh"
+mv "$artifacts_folder/sota/$subject/run.sh.backup" "$artifacts_folder/sota/$subject/run.sh"
 
 # run fuzzing campaign
 fuzzing_container_name="sota_$subject_$(tr -dc a-z </dev/urandom | head -c 8)"
@@ -67,7 +69,7 @@ docker rm "$fuzzing_container_name"
 
 # build coverage image
 coverage_image_name="${fuzzing_image_name}_coverage"
-cp -rf "sota/$subject/coverage" "$output_folder/"
+cp -rf "$artifacts_folder/sota/$subject/coverage" "$output_folder/"
 docker rmi "$coverage_image_name"
 copy_repo_to_directory $output_folder/coverage
 (cd "$output_folder/coverage" && docker build -t "$coverage_image_name" .)

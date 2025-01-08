@@ -1,5 +1,6 @@
 #!/bin/bash
 
+artifacts_folder=$(dirname $0)
 testamp_subjects="libxml2 openssl opus"
 
 print_usage () {
@@ -10,9 +11,9 @@ print_usage () {
 
 copy_repo_to_directory () {
     mkdir $1/afllive
-    for file in $(ls .. | grep -v $(basename $(pwd)))
+    for file in $(ls $artifacts_folder/.. | grep -v artifacts)
     do
-        cp -rf ../$file $1/afllive/
+        cp -rf $artifacts_folder/../$file $1/afllive/
     done
     rm $(find $1/afllive -name "*.o" -o -name "*.so" -o -name "*.a" -o -name "afl-clang-fast" -o -name "afl-clang-fast++" -o -name "afl-fuzz")
 }
@@ -31,12 +32,12 @@ seconds=$4
 
 if [ "$config" == "generated" ]
 then
-    cp "afllive/$subject/auto_config.json" "afllive/$subject/config.json"
-    cp "afllive/$subject/auto_config.json" "afllive/$subject/coverage/config.json"
+    cp "$artifacts_folder/afllive/$subject/auto_config.json" "$artifacts_folder/afllive/$subject/config.json"
+    cp "$artifacts_folder/afllive/$subject/auto_config.json" "$artifacts_folder/afllive/$subject/coverage/config.json"
 elif [ "$config" == "curated" ]
 then
-    cp "afllive/$subject/curated_config.json" "afllive/$subject/config.json"
-    cp "afllive/$subject/curated_config.json" "afllive/$subject/coverage/config.json"
+    cp "$artifacts_folder/afllive/$subject/curated_config.json" "$artifacts_folder/afllive/$subject/config.json"
+    cp "$artifacts_folder/afllive/$subject/curated_config.json" "$artifacts_folder/afllive/$subject/coverage/config.json"
 else
     echo "Unknown argument: $config"
     print_usage
@@ -63,16 +64,16 @@ fi
 # build fuzzing image
 fuzzing_image_name="afllive_$subject"
 # backup dockerfile
-cp "afllive/$subject/Dockerfile" "afllive/$subject/Dockerfile.backup"
+cp "$artifacts_folder/afllive/$subject/Dockerfile" "$artifacts_folder/afllive/$subject/Dockerfile.backup"
 # replace campaign duration with user-provided one
-sed -i "s/\/60\//\/$seconds\//g" "afllive/$subject/Dockerfile"
-sed -i "s/\"60\"/\"$seconds\"/g" "afllive/$subject/Dockerfile"
+sed -i "s/\/60\//\/$seconds\//g" "$artifacts_folder/afllive/$subject/Dockerfile"
+sed -i "s/\"60\"/\"$seconds\"/g" "$artifacts_folder/afllive/$subject/Dockerfile"
 docker rmi "$fuzzing_image_name"
-copy_repo_to_directory afllive/$subject
-(cd afllive/$subject && docker build -t "$fuzzing_image_name" .)
-rm -rf afllive/$subject/afllive
+copy_repo_to_directory "$artifacts_folder/afllive/$subject"
+(cd $artifacts_folder/afllive/$subject && docker build -t "$fuzzing_image_name" .)
+rm -rf $artifacts_folder/afllive/$subject/afllive
 # restore old dockerfile
-mv "afllive/$subject/Dockerfile.backup" "afllive/$subject/Dockerfile"
+mv "$artifacts_folder/afllive/$subject/Dockerfile.backup" "$artifacts_folder/afllive/$subject/Dockerfile"
  
 # run fuzzing campaign
 fuzzing_container_name="afllive_$subject_$(tr -dc a-z </dev/urandom | head -c 8)"
@@ -88,7 +89,7 @@ docker rm "$fuzzing_container_name"
 
 # build coverage image
 coverage_image_name="${fuzzing_image_name}_coverage"
-cp -rf "afllive/$subject/coverage" "$output_folder/"
+cp -rf "$artifacts_folder/afllive/$subject/coverage" "$output_folder/"
 docker rmi "$coverage_image_name"
 copy_repo_to_directory $output_folder/coverage
 (cd "$output_folder/coverage" && docker build -t "$coverage_image_name" .)
@@ -103,7 +104,7 @@ docker cp "$coverage_container_name":"/opt/coverage_${subject}_0.txt" "$output_f
 docker rm "$coverage_container_name"
 
 # clean up config files
-rm "afllive/$subject/config.json" "afllive/$subject/coverage/config.json"
+rm "$artifacts_folder/afllive/$subject/config.json" "$artifacts_folder/afllive/$subject/coverage/config.json"
 
 echo "Done!"
 echo "Coverage file at $output_folder/coverage_${subject}_0.txt"
