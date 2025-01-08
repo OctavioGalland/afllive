@@ -6,7 +6,7 @@ RUN ln -s /usr/bin/clang-14 /usr/bin/clang
 RUN ln -s /usr/bin/clang++-14 /usr/bin/clang++
 
 WORKDIR /opt
-RUN git clone https://github.com/octaviogalland/afllive
+COPY afllive /opt/afllive
 
 RUN wget https://github.com/webmproject/libvpx/archive/refs/tags/v1.12.0.tar.gz
 RUN tar -xzf v1.12.0.tar.gz

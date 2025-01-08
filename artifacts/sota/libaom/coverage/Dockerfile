@@ -5,7 +5,7 @@ RUN apt -y install clang-14 git
 RUN apt -y install cmake perl yasm make gcc g++ wget
 
 WORKDIR /opt
-RUN git clone https://github.com/octaviogalland/afllive
+COPY afllive /opt/afllive
 
 WORKDIR /opt
 RUN git clone https://aomedia.googlesource.com/aom

@@ -11,7 +11,7 @@ RUN apt -y install gcc-$(gcc --version|head -n1|sed 's/\..*//'|sed 's/.* //')-pl
 RUN apt -y build-dep libgsm1-dev
 
 WORKDIR /opt
-RUN git clone https://github.com/octaviogalland/afllive
+COPY afllive /opt/afllive
 
 WORKDIR /opt
 RUN wget https://www.quut.com/gsm/gsm-1.0.22.tar.gz

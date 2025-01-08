@@ -6,6 +6,15 @@ print_usage () {
     echo "    htslib leptonica libaom libgsm libvpx"
 }
 
+copy_repo_to_directory () {
+    mkdir $1/afllive
+    for file in $(ls $artifacts_folder/.. | grep -v artifacts)
+    do
+        cp -rf $artifacts_folder/../$file $1/afllive/
+    done
+    rm $(find $1/afllive -name "*.o" -o -name "*.so" -o -name "*.a" -o -name "afl-clang-fast" -o -name "afl-clang-fast++" -o -name "afl-fuzz")
+}
+
 if [ "$#" != "3" ]
 then
     echo "Wrong number of arguments"
@@ -60,7 +69,9 @@ docker rm "$fuzzing_container_name"
 coverage_image_name="${fuzzing_image_name}_coverage"
 cp -rf "sota/$subject/coverage" "$output_folder/"
 docker rmi "$coverage_image_name"
+copy_repo_to_directory $output_folder/coverage
 (cd "$output_folder/coverage" && docker build -t "$coverage_image_name" .)
+rm -rf $output_folder/coverage/afllive
 
 # run coverage
 coverage_container_name="${fuzzing_container_name}_coverage"

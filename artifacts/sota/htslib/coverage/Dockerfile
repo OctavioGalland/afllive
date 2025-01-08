@@ -6,7 +6,7 @@ RUN apt -y install make autoconf automake zlib1g-dev libbz2-dev liblzma-dev libc
 
 # get coverage utils
 WORKDIR /opt
-RUN git clone https://github.com/octaviogalland/afllive
+COPY afllive /opt/afllive
 
 # get project
 WORKDIR /opt/
