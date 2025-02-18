@@ -16,6 +16,8 @@ They will create a docker image for the specified fuzzing campaign, allow it to 
 Afterwards, they'll create a second docker image (identical to the first, except for the fact that it compiles the code with the `-fprofile-instr-generate -fcoverage-mapping` flags), which will iterate over the previously generated corpus (making use of a docker volume to give the container access to it) and use the scripts present in the [coverage\_utils directory](../coverage_utils/) to report coverage measured at 10 minutes intervals.
 After both containers are run, the results are copied to the host and they're erased.
 
+> This was only tested in Ubuntu 24.04 and 22.04. While efforts were made to keep the scripts portable, the user should ideally run this inside an Ubuntu host/VM.
+
 > Before running, both scripts will invoke `prepare_host_for_fuzzing.sh`, which sets up a number of settings to allow for more performant fuzzing. Additionally, on Linux hosts, the variable `vm.mmap_rnd_bits` is set to 28 in order to work around a bug present in old versions of LLVM which could result in suprious crashes when using ASAN.
 
 The `Dockerfile`s and scripts specifying the configuration for each fuzzing campaign are stored under the `sota/${SUBJECT}` and `afllive/${SUBJECT}` directories.
