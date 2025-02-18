@@ -41,6 +41,8 @@ For instance, the following runs a fuzzing campaign on `leptonica` for one minut
 
 > Note that if specifying an output path under `/tmp/` can cause problems when running on Ubuntu if `docker` is installed as a snap.
 
+> If you have cloned this repository from the Software Heritage Archive the path to this folder most likely contains a colon (`:`). Paths with colons in them can't be mounted as volumes to `Docker` containers, and so running this script in such a circumstance would result in a failure. As such, please make to run this from a directory without colons in its absolute path.
+
 ### State of the Art
 
 In order to run a campaign using the state-of-the-art alternative (`FUDGE` or `FuzzGen`, depending on the subject), use:
