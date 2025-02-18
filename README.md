@@ -358,7 +358,7 @@ The reason we keep this setting as an environment variable instead of adding it 
 
 ### Autogeneration of config file (parser functions)
 
-See [config_generator](config_generator) for a script that will automatically identify parser-like functions and generate an appropriate config (requires [CodeQL](https://codeql.github.com/) in order to work). Note, however, that this config will be include absolute paths assuming that this repository is located under `/opt/afllive` (which was used when running our experiments within `Docker` but most likely **requires modification** for your use-case).
+See [config\_generator](config_generator) for a script that will automatically identify parser-like functions and generate an appropriate config (requires [CodeQL](https://codeql.github.com/) in order to work). Note, however, that this config will be include absolute paths assuming that this repository is located under `/opt/afllive` (which was used when running our experiments within `Docker` but most likely **requires modification** for your use-case).
 
 ### Constraints for arguments
 
@@ -390,7 +390,7 @@ In addition, the following is also accepted:
 
 which works exactly the same way, but uses a constant right hand side.
 
-> It is important to note that these constraints imply possible orders in which the parameters can be popualted (if parameter `1` should be less than parameter `2`, then parameter `2` should be populated before populating parameter `1`. This is done in order to have the required information available when enforcing constraints). This means that there cannot be circular dependencies between values, since there would be no way to populate them! The user is therefore responsible for making sure no such circular dependecies arise.
+> It is important to note that these constraints imply possible orders in which the parameters can be popualted (if parameter `1` should be less than parameter `2`, then parameter `2` should be populated before populating parameter `1`. This is done in order to have the required information available when enforcing constraints). This means that there cannot be circular dependencies between values, since there would be no way to populate them! The user is therefore responsible for making sure no such circular dependencies arise.
 
 > Another thing to note is that the numbers used to identify the arguments refers to their order ignoreing skipped arguments. For instance, if a function takes 5 arguments but the first and last one are marked as ignored (see `Skip arguments` down below), then the indices `0`, `1` and `2` within the constraints for that function refer to the second, third and fourth argument, respectively.
 
