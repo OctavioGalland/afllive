@@ -23,6 +23,302 @@ This repository is structured as follows:
   - [config\_generator/interesting\_functions.ql](config_generator/interesting_functions.ql): Code-QL script that implements several heuristics to detect potential amplifier points.
   - [config\_generator/derive\_constraints.py](config_generator/derive_constraints.py): Python script that takes the output of the preeceding script and attempts to automatically derive constraints and produce a valid `AFLLive` configuration file.
 
+## Running
+
+### Prerequisites
+
+This was implemented and tested in Ubuntu 22.04 and 24.04. This should work on other Linux distributions provided that `bash`, `boost` and LLVM 14 are installed:
+
+```Shell
+sudo apt-get update
+sudo apt-get install -y build-essential bash clang-14 libclang-14-dev llvm-14 llvm-14-dev llvm-14-tools llvm-14-linker-tools llvm-14-runtime libboost-all-dev
+```
+
+Since this repository includes a fork `AFL++`, its dependencies are also needed (excerpt from [`AFL++`'s INSTALL.md](https://github.com/AFLplusplus/AFLplusplus/blob/v4.02c/docs/INSTALL.md)):
+
+```Shell
+sudo apt-get update
+sudo apt-get install -y build-essential python3-dev automake cmake git flex bison libglib2.0-dev libpixman-1-dev python3-setuptools cargo libgtk-3-dev
+# try to install llvm 14 and install the distro default if that fails
+sudo apt-get install -y lld-14 llvm-14 llvm-14-dev clang-14 || sudo apt-get install -y lld llvm llvm-dev clang
+sudo apt-get install -y gcc-$(gcc --version|head -n1|sed 's/\..*//'|sed 's/.* //')-plugin-dev libstdc++-$(gcc --version|head -n1|sed 's/\..*//'|sed 's/.* //')-dev
+```
+
+In order to automatically derive constriants, follow CodeQL's guide on how to install it: [https://docs.github.com/en/code-security/codeql-cli/getting-started-with-the-codeql-cli/setting-up-the-codeql-cli](https://docs.github.com/en/code-security/codeql-cli/getting-started-with-the-codeql-cli/setting-up-the-codeql-cli).
+
+### Building
+
+At a minimum, we need to build `aflplusplus`, `libgen` and `instrumentation`.
+
+To build `AFL++` (as per upstream's instructions) run:
+
+```Shell
+cd afllpusplus
+export LLVM_CONFIG=llvm-config-14
+make all
+sudo make install
+cd ..
+```
+
+For `libgen` and `instrumentation` simply do:
+
+```Shell
+for component in libgen instrumentation
+do
+    cd $component
+    make
+    cd ..
+done
+```
+
+Note that there is no need to install these components, as our run-time configuration file will tell the compiler where to find them.
+
+
+### Example usage
+
+In this section we'll illustrate basic `AFLLive` usage with a sample vulnerable program, named `vulnerable.c`:
+
+```C
+#include <stdlib.h>
+#include <string.h>
+
+void parse(char *bytes, size_t size) {
+    if (size >= 4) {
+        if (bytes[0] == 'b') {
+            if (bytes[1] == 'a') {
+                if (bytes[2] == 'd') {
+                    if (bytes[3] == '!') {
+                        abort();
+                    }
+                }
+            }
+        }
+    }
+}
+
+int main(int argc, char *argv[]) {
+    char *buffer = "hello, world";
+    parse(buffer, strlen(buffer));
+    return 0;
+}
+```
+
+> Note that in this example the function being fuzzed resides inside the host program, but in practice it will be provided by a separate library. The instructions provided here apply regardless, as long as all the code is compiled with our instrumentation.
+
+In order to fuzz this program with `AFLLive` we need to compile it with our custom instrumentation, but first we need to do some setup.
+
+#### Common configuration options
+
+The fuzzer, as well as our instrumentation, will refer to a user-provided configuration file (in JSON format) to retrieve critical information during runtime.
+The location of this file is indicated by the `AH_CONFIG` environment variable.
+
+For starters, create an empty configuration file and set the relevant environment variable:
+
+```Shell
+touch config.json
+export AH_CONFIG="$(pwd)/config.json"
+```
+
+It is mandatory to provide the location of the repository in the configuration file (so that `afl-cc` will be able to find the instrumentation and runtime libraries).
+Additionally, during compilation, type information regarding amplification points needs to be dumped to a file (also in JSON format) so that it can later be retrieved, we also need to provide the path to this file as part of the configuration.
+To do so, add the following content to it:
+
+```
+{
+    "root": "<path to this repository>",
+    "typeinfo_file": "/tmp/typeinfo.json"
+}
+```
+
+#### Amplifier points and constraints
+
+As part of our example we want the fuzzer to fuzz the `parse` function, and we need to instruct the fuzzer that the buffer needs to have a length equal to the integer passed as a second argument.
+We achieve the former by setting the `targets` key inside the configuration JSON.
+
+```
+{
+    "root": "<path to this repository>",
+    "typeinfo_file": "/tmp/typeinfo.json",
+    "targets": ["parse"]
+}
+```
+
+> The `typeinfo_file` could point somewhere else, as we'd probably want to persist it. In this example it is stored in `/tmp` since it's a known user-writable path.
+
+For the latter, we can provide a dictionary mapping each target name to a list of constraints that need to be observed:
+
+```
+{
+    "root": "<path to this repository>",
+    "typeinfo_file": "/tmp/typeinfo.json",
+    "targets": ["parse"],
+    "constraints": {
+        "parse": [
+            {
+                "lhs": 0,
+                "rhs": 1,
+                "rel": "eq"
+            },
+            {
+                "lhs": 1,
+                "rhs": {
+                    "constant": 512
+                },
+                "rel": "le"
+            }
+        ]
+    }
+}
+```
+
+What this set of constraints is expressing are two constraints:
+
+- First, the first argument must have a length equal to the value of the second argument
+- Second, the second argument must have a value less or equal than the constant 512 (to prevent suprious OOM errors)
+
+Since the first parameter's value depends on the second one, and the second only depends in a constant, the fuzzer will deserialize a value into the second parameter first.
+Once the second parameter is populated, the first one will be deserialized and then coerced into satisfying the constraint.
+
+#### Performance tuning
+
+The configuration file generated so far would allow us to fuzz the program.
+But it would be inefficient for larger targets.
+
+The main reason for this is that after an amplifier point is reached, `AFLLive` will start a forkserver, and each fork will continue until a crash is trigerred, or until program termination.
+But intuitively we can think that a crash that results from mutation a function's parameters will ocurr shortly after that function is called, or it won't ocurr at all.
+Leveraging this insight we can set a timer so that execution will stop a given amount of milliseconds after `parse` is called:
+
+```
+{
+    "root": "<path to repo clone here>",
+    "typeinfo_file": "/tmp/typeinfo.json",
+    "targets": ["parse"],
+    "constraints": {
+        "parse": [
+            {
+                "lhs": 0,
+                "rhs": 1,
+                "rel": "eq"
+            },
+            {
+                "lhs": 1,
+                "rhs": {
+                    "constant": 512
+                },
+                "rel": "le"
+            }
+        ]
+    },
+    "max_millis": 5
+}
+```
+
+#### Compilation
+
+Once the configuration file is set and the `AH_CONFIG` environment variable is pointing to it, we can compile the program using `afl-clang-fast`:
+
+```Shell
+afl-clang-fast -O0 -fno-omit-frame-pointer vulnerable.c -o vulnerable
+```
+
+> Note that here we disable optimizations since the output of our sample function isn't used and the compiler might discard it. In larger subjects this shouldn't be needed.
+
+The output should include:
+
+```
+[AH] Harnessing main function: 'main'
+[AH] Harnessing: 'parse'
+```
+
+This means the instrumentation hooked all relevant initialization into the `main` function, and amplifier-point-specific logic into the `parse` function.
+
+We can inspect type information for the `parse` function by dumping the `typeinfo_file`:
+
+```Shell
+$ cat /tmp/typeinfo.json
+{
+    "targets": {
+        "parse": [
+            "type_0",
+            "type_2"
+        ]
+    },
+    "type_0": {
+        "basicType": "pointer",
+        "pointeeType": "type_1"
+    },
+    "type_1": {
+        "basicType": "integer",
+        "bitWidth": 8
+    },
+    "type_2": {
+        "basicType": "integer",
+        "bitWidth": 32
+    }
+}
+```
+
+#### Fuzzing
+
+To start fuzzing, we just execute `afl-fuzz` as usual (omitting the input directory, since the initial corpus will be recorded at rutime):
+
+```Shell
+afl-fuzz -o out -- ./vulnerable
+```
+
+We'll get a modified `AFL++` status screen showing which amplifier point is currently being targeted, and after a while we'll get a crash.
+At that point we can abort execution hitting Control-C.
+
+#### Reproducing findings
+
+The found crash will be located under `out/default/crashes/`, the exact name depending on the campaign.
+We can examine the crash manually:
+
+```
+$ hexdump -C out/default/crashes/parse-*
+00000000  08 56 dd 57 92 57 57 57  62 61 64 21              |.V.W.WWWbad!|
+0000000c
+```
+
+We can see that the first 4 bytes are the value of the second parameter (the `lenght` parameter), since it exceeds 512 it will be capped during runtime.
+The next 4 bytes are the length of buffer, which will be overridden during runtime with the value of `length`, and the remaining bytes are the contents of the buffer.
+
+In order to reproduce the crash, we need to modify the configuration file to instruct the fuzzer to amplify the execution of `parse`, regardless of whether it's running as part of a campaign or not.
+We do this by setting the `fuzz_target` key in the configuration file:
+
+```
+{
+    "root": "<path to repo clone here>",
+    "typeinfo_file": "/tmp/typeinfo.json",
+    "targets": ["parse"],
+    "constraints": {
+        "parse": [
+            {
+                "lhs": 0,
+                "rhs": 1,
+                "rel": "eq"
+            },
+            {
+                "lhs": 1,
+                "rhs": {
+                    "constant": 512
+                },
+                "rel": "le"
+            }
+        ]
+    },
+    "max_millis": 5,
+    "fuzz_target": "parse"
+}
+```
+
+When we run the binary again, it will read the input to deserialize from `stdin`, so we can just pipe the file output by `afl-fuzz`:
+
+```Shell
+$ ./vulnerable < out/default/crashes/parse-*
+Aborted
+```
+
 ## Configfile
 
 The configuration should contain a json dictionary which _must_ include the following fields:
