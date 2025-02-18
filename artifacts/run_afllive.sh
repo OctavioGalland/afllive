@@ -50,14 +50,8 @@ then
     output_folder="$(pwd)/$output_folder"
 fi
 
-# check if output folder is empty
 mkdir -p "$output_folder"
-
-if [ "$(ls $output_folder | wc -l)" != "0" ]
-then
-    echo "Output folder '$output_folder' exists and is not empty, abroting"
-    exit 1
-fi
+rm -rf "$output_folder/out" "$output_folder/coverage" "$output_folder/coverage_${subject}_0.txt"
 
 ./prepare_host_for_fuzzing.sh
 
