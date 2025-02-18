@@ -82,7 +82,7 @@ In this section we'll illustrate basic `AFLLive` usage with a sample vulnerable 
 #include <stdlib.h>
 #include <string.h>
 
-void parse(char *bytes, size_t size) {
+void parse(char *bytes, unsigned int size) {
     if (size >= 4) {
         if (bytes[0] == 'b') {
             if (bytes[1] == 'a') {
