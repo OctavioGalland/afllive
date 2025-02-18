@@ -7,6 +7,22 @@ In order to achieve this we run the target library and host program through an L
 
 The artifacts for our [ICSE'25 paper](https://mpi-softsec.github.io/papers/ICSE25-invivo.pdf) (and instructions on how to run them) can be found under the [artifacts](artifacts) folder.
 
+## Structure
+
+This repository is structured as follows:
+
+- [aflplusplus](aflplusplus): Our fork of `AFL++`, this component is in charge of orchestrating the fuzzing campaign, mutating inputs and detecting crashes.
+- [instrumentation](instrumentation): An additional instrumentation pass to be used by our version of `afl-cc`. It hooks amplifier points and replaces their arguments with return values from `libgen`.
+- [libgen](libgen): A run-time library against which instrumented binaries are linked. It communicates with [our fork of `AFL++`](aflplusplus), and de-serializes the byte-stream it provides with valid amplifier point parameters. It also serializes the initial set of parameters for each amplifier point, and sets a timer to terminate execution if the user requests it.
+- [testamp](testamp): Contains various utilities to facilitate amplification of a whole test suite, potentially consisting of multiple binaries.
+  - [testamp/pass](testamp/pass): Compilation pass which hooks amplifier points in order to record which ones are by which test run during test suite execution,
+  - [testamp/lib](testamp/lib): Writes into `/opt/fuzz.log` the name of all functions executed by each test in the test suite, along with the environment variables, working directory, and command line paramters.
+  - [testamp/setup\_fuzzers.py](testamp/setup_fuzzers.py): This script takes the output of running the previous two tools and greedily tries to run the least amount of tests that will execute all amplifier points recorded, allocating energy proportionately to the amount of tests being run.
+- [coverage\_utils](coverage_utils/): Set of scripts utilized to record coverage on exeprimental subjects (see [artifacts](artifacts)).
+- [config\_generator](config_generator/): Set of utilities to attempt to derive set of amplifier points and constraints for a given source-tree.
+  - [config\_generator/interesting\_functions.ql](config_generator/interesting_functions.ql): Code-QL script that implements several heuristics to detect potential amplifier points.
+  - [config\_generator/derive\_constraints.py](config_generator/derive_constraints.py): Python script that takes the output of the preeceding script and attempts to automatically derive constraints and produce a valid `AFLLive` configuration file.
+
 ## Configfile
 
 The configuration should contain a json dictionary which _must_ include the following fields:
